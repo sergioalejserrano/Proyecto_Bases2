@@ -54,13 +54,14 @@ Namespace My
             End Get
         End Property
         
-        <Global.System.Configuration.ApplicationScopedSettingAttribute(), _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
-         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString), _
-         Global.System.Configuration.DefaultSettingValueAttribute("Provider=MSDAORA;Data Source=taller;Password=12345;User ID=taller")> _
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=XE;Persist Security Info=True;User ID=taller;Password=12345;Unicode=T"& _ 
+            "rue")>  _
         Public ReadOnly Property Conexion() As String
             Get
-                Return CType(Me("Conexion"), String)
+                Return CType(Me("Conexion"),String)
             End Get
         End Property
     End Class
