@@ -182,4 +182,24 @@ Public Class DAOCliente
         Return resultado
     End Function
 #End Region
+
+#Region "Validar Contraseña"
+    Public Function password(pUser) As DataSet
+        vloConnection = New OracleConnection(ConfigurationManager.ConnectionStrings("OracleConnectionString").ConnectionString) ' Se crea la conexion a la bd
+        Try
+            vloConnection.Open()
+        Catch ex As Exception
+            Throw New Exception("No se pudo conectar al servidor de bd...")
+        End Try
+        vloComando = New OracleCommand("SP_VALIDARUSUARIO", vloConnection)
+        vloComando.CommandType = CommandType.StoredProcedure
+        Dim parametro As New OracleParameter("@Usuario", OracleDbType.Varchar2)
+        parametro.Value = pUser
+        vloComando.Parameters.Add(parametro)
+        Dim datosAda As New OracleDataAdapter(vloComando)
+        Dim datos As New DataSet
+        datosAda.Fill(datos)
+        Return datos
+    End Function
+#End Region
 End Class
