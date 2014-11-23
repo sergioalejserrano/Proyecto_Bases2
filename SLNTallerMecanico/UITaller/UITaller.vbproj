@@ -88,11 +88,23 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.vb">
+    <Compile Include="ClienteNuevo.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.vb">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <Compile Include="ClienteNuevo.Designer.vb">
+      <DependentUpon>ClienteNuevo.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClienteActualizar.Designer.vb">
+      <DependentUpon>ClienteActualizar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ClienteActualizar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClienteBorrar.Designer.vb">
+      <DependentUpon>ClienteBorrar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ClienteBorrar.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -112,8 +124,14 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <EmbeddedResource Include="ClienteNuevo.resx">
+      <DependentUpon>ClienteNuevo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClienteActualizar.resx">
+      <DependentUpon>ClienteActualizar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClienteBorrar.resx">
+      <DependentUpon>ClienteBorrar.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
