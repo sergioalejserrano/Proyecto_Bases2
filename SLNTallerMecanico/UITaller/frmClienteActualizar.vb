@@ -1,7 +1,7 @@
 ﻿
 Imports BEUTaller
 Imports BLTaller
-Public Class ClienteActualizar
+Public Class frmClienteActualizar
     Public cliente As New BEUCliente
     Public resultado As Boolean
     Private Sub btnActulizar_Click(sender As Object, e As EventArgs) Handles btnActulizar.Click

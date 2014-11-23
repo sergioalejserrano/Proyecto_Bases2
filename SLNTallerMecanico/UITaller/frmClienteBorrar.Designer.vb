@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class ClienteBorrar
+Partial Class frmClienteBorrar
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
@@ -52,7 +52,7 @@ Partial Class ClienteBorrar
         Me.txtID_CLIENTE.Size = New System.Drawing.Size(100, 20)
         Me.txtID_CLIENTE.TabIndex = 2
         '
-        'MantenimientoCliente
+        'frmClienteBorrar
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -60,8 +60,9 @@ Partial Class ClienteBorrar
         Me.Controls.Add(Me.txtID_CLIENTE)
         Me.Controls.Add(Me.lblCédula)
         Me.Controls.Add(Me.btnBorrar)
-        Me.Name = "MantenimientoCliente"
-        Me.Text = "MantenimientoCliente"
+        Me.Name = "frmClienteBorrar"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
+        Me.Text = "Borrar Cliente"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

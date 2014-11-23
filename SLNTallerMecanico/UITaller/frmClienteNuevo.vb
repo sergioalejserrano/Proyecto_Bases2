@@ -1,7 +1,7 @@
 ﻿
 Imports BEUTaller
 Imports BLTaller
-Public Class ClienteNuevo
+Public Class frmClienteNuevo
     Public cliente As New BEUCliente
     Public resultado As Boolean
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnAgregar.Click

@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class ClienteActualizar
+Partial Class frmClienteActualizar
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
@@ -85,7 +85,6 @@ Partial Class ClienteActualizar
         '
         Me.txtId_Cliente.Location = New System.Drawing.Point(116, 32)
         Me.txtId_Cliente.Name = "txtId_Cliente"
-        Me.txtId_Cliente.ReadOnly = True
         Me.txtId_Cliente.Size = New System.Drawing.Size(100, 20)
         Me.txtId_Cliente.TabIndex = 19
         Me.txtId_Cliente.Text = "1"
@@ -144,7 +143,7 @@ Partial Class ClienteActualizar
         Me.btnActulizar.Text = "Actualizar"
         Me.btnActulizar.UseVisualStyleBackColor = True
         '
-        'Mantenimiento2
+        'frmClienteActualizar
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -162,8 +161,9 @@ Partial Class ClienteActualizar
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.btnActulizar)
-        Me.Name = "Mantenimiento2"
-        Me.Text = "Mantenimiento2"
+        Me.Name = "frmClienteActualizar"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
+        Me.Text = "Actualizar Cliente"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

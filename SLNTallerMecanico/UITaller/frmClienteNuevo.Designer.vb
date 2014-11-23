@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class ClienteNuevo
+Partial Class frmClienteNuevo
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
@@ -39,7 +39,7 @@ Partial Class ClienteNuevo
         '
         'btnAgregar
         '
-        Me.btnAgregar.Location = New System.Drawing.Point(152, 208)
+        Me.btnAgregar.Location = New System.Drawing.Point(197, 226)
         Me.btnAgregar.Name = "btnAgregar"
         Me.btnAgregar.Size = New System.Drawing.Size(75, 23)
         Me.btnAgregar.TabIndex = 0
@@ -49,100 +49,106 @@ Partial Class ClienteNuevo
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(30, 38)
+        Me.Label1.Font = New System.Drawing.Font("Lucida Bright", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(9, 9)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(40, 13)
+        Me.Label1.Size = New System.Drawing.Size(78, 23)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Cedula"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(30, 65)
+        Me.Label2.Font = New System.Drawing.Font("Lucida Bright", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(9, 42)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(44, 13)
+        Me.Label2.Size = New System.Drawing.Size(93, 23)
         Me.Label2.TabIndex = 2
         Me.Label2.Text = "Nombre"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(30, 92)
+        Me.Label3.Font = New System.Drawing.Font("Lucida Bright", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(8, 78)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(44, 13)
+        Me.Label3.Size = New System.Drawing.Size(94, 23)
         Me.Label3.TabIndex = 3
         Me.Label3.Text = "Apellido"
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(30, 119)
+        Me.Label4.Font = New System.Drawing.Font("Lucida Bright", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(9, 112)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(52, 13)
+        Me.Label4.Size = New System.Drawing.Size(107, 23)
         Me.Label4.TabIndex = 4
         Me.Label4.Text = "Direccion"
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(30, 146)
+        Me.Label5.Font = New System.Drawing.Font("Lucida Bright", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(12, 149)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(49, 13)
+        Me.Label5.Size = New System.Drawing.Size(99, 23)
         Me.Label5.TabIndex = 5
         Me.Label5.Text = "Telefono"
         '
         'txtId_Cliente
         '
-        Me.txtId_Cliente.Location = New System.Drawing.Point(102, 35)
+        Me.txtId_Cliente.Location = New System.Drawing.Point(139, 12)
         Me.txtId_Cliente.Name = "txtId_Cliente"
-        Me.txtId_Cliente.Size = New System.Drawing.Size(100, 20)
+        Me.txtId_Cliente.Size = New System.Drawing.Size(133, 20)
         Me.txtId_Cliente.TabIndex = 6
         '
         'txtNombre
         '
-        Me.txtNombre.Location = New System.Drawing.Point(102, 62)
+        Me.txtNombre.Location = New System.Drawing.Point(139, 45)
         Me.txtNombre.Name = "txtNombre"
-        Me.txtNombre.Size = New System.Drawing.Size(100, 20)
+        Me.txtNombre.Size = New System.Drawing.Size(133, 20)
         Me.txtNombre.TabIndex = 7
         '
         'txtApellido
         '
-        Me.txtApellido.Location = New System.Drawing.Point(102, 89)
+        Me.txtApellido.Location = New System.Drawing.Point(139, 78)
         Me.txtApellido.Name = "txtApellido"
-        Me.txtApellido.Size = New System.Drawing.Size(100, 20)
+        Me.txtApellido.Size = New System.Drawing.Size(133, 20)
         Me.txtApellido.TabIndex = 8
         '
         'txtDireccion
         '
-        Me.txtDireccion.Location = New System.Drawing.Point(102, 116)
+        Me.txtDireccion.Location = New System.Drawing.Point(139, 112)
         Me.txtDireccion.Name = "txtDireccion"
-        Me.txtDireccion.Size = New System.Drawing.Size(100, 20)
+        Me.txtDireccion.Size = New System.Drawing.Size(133, 20)
         Me.txtDireccion.TabIndex = 9
         '
         'txtTelefono
         '
-        Me.txtTelefono.Location = New System.Drawing.Point(102, 143)
+        Me.txtTelefono.Location = New System.Drawing.Point(139, 149)
         Me.txtTelefono.Name = "txtTelefono"
-        Me.txtTelefono.Size = New System.Drawing.Size(100, 20)
+        Me.txtTelefono.Size = New System.Drawing.Size(133, 20)
         Me.txtTelefono.TabIndex = 10
         '
         'txtEmail
         '
-        Me.txtEmail.Location = New System.Drawing.Point(105, 174)
+        Me.txtEmail.Location = New System.Drawing.Point(139, 184)
         Me.txtEmail.Name = "txtEmail"
-        Me.txtEmail.Size = New System.Drawing.Size(100, 20)
+        Me.txtEmail.Size = New System.Drawing.Size(133, 20)
         Me.txtEmail.TabIndex = 12
         '
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(33, 177)
+        Me.Label6.Font = New System.Drawing.Font("Lucida Bright", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(12, 184)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(32, 13)
+        Me.Label6.Size = New System.Drawing.Size(65, 23)
         Me.Label6.TabIndex = 11
         Me.Label6.Text = "Email"
         '
-        'Form1
+        'frmClienteNuevo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -160,8 +166,9 @@ Partial Class ClienteNuevo
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.btnAgregar)
-        Me.Name = "Form1"
-        Me.Text = "Form1"
+        Me.Name = "frmClienteNuevo"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
+        Me.Text = "Agregar Cliente"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

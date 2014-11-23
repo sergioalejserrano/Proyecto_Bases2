@@ -1,7 +1,7 @@
 ﻿
 Imports BEUTaller
 Imports BLTaller
-Public Class ClienteBorrar
+Public Class frmClienteBorrar
     Public cliente As New BEUCliente
     Public resultado As Boolean
     Private Sub btnBorrar_Click(sender As Object, e As EventArgs) Handles btnBorrar.Click

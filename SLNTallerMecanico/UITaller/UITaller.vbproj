@@ -64,10 +64,14 @@
     <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Data.OracleClient" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
@@ -88,23 +92,46 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ClienteNuevo.vb">
+    <Compile Include="DTSReporteClientes.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DTSReporteClientes.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="frmClienteNuevo.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ClienteNuevo.Designer.vb">
-      <DependentUpon>ClienteNuevo.vb</DependentUpon>
+    <Compile Include="frmClienteNuevo.Designer.vb">
+      <DependentUpon>frmClienteNuevo.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ClienteActualizar.Designer.vb">
-      <DependentUpon>ClienteActualizar.vb</DependentUpon>
+    <Compile Include="frmClienteActualizar.Designer.vb">
+      <DependentUpon>frmClienteActualizar.vb</DependentUpon>
     </Compile>
-    <Compile Include="ClienteActualizar.vb">
+    <Compile Include="frmClienteActualizar.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ClienteBorrar.Designer.vb">
-      <DependentUpon>ClienteBorrar.vb</DependentUpon>
+    <Compile Include="frmClienteBorrar.Designer.vb">
+      <DependentUpon>frmClienteBorrar.vb</DependentUpon>
     </Compile>
-    <Compile Include="ClienteBorrar.vb">
+    <Compile Include="frmClienteBorrar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLoginTaller.Designer.vb">
+      <DependentUpon>frmLoginTaller.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmLoginTaller.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMDITaller.Designer.vb">
+      <DependentUpon>frmMDITaller.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMDITaller.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReporteClientes.Designer.vb">
+      <DependentUpon>frmReporteClientes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmReporteClientes.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -124,14 +151,23 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="ClienteNuevo.resx">
-      <DependentUpon>ClienteNuevo.vb</DependentUpon>
+    <EmbeddedResource Include="frmClienteNuevo.resx">
+      <DependentUpon>frmClienteNuevo.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ClienteActualizar.resx">
-      <DependentUpon>ClienteActualizar.vb</DependentUpon>
+    <EmbeddedResource Include="frmClienteActualizar.resx">
+      <DependentUpon>frmClienteActualizar.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ClienteBorrar.resx">
-      <DependentUpon>ClienteBorrar.vb</DependentUpon>
+    <EmbeddedResource Include="frmClienteBorrar.resx">
+      <DependentUpon>frmClienteBorrar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLoginTaller.resx">
+      <DependentUpon>frmLoginTaller.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMDITaller.resx">
+      <DependentUpon>frmMDITaller.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReporteClientes.resx">
+      <DependentUpon>frmReporteClientes.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -139,8 +175,20 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Report1.rdlc" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="DTSReporteClientes.xsc">
+      <DependentUpon>DTSReporteClientes.xsd</DependentUpon>
+    </None>
+    <None Include="DTSReporteClientes.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DTSReporteClientes.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DTSReporteClientes.xss">
+      <DependentUpon>DTSReporteClientes.xsd</DependentUpon>
+    </None>
     <None Include="My Project\app.manifest" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
