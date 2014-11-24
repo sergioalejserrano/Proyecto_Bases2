@@ -77,21 +77,33 @@ Public Class frmMDITaller
 
     Private m_ChildFormNumber As Integer
 
-    Private Sub ClienteToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ClienteToolStripMenuItem.Click
+    Private Sub ClienteToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles tsmClienteN.Click
         Dim ventana As frmClienteNuevo = New frmClienteNuevo
         ventana.ShowDialog()
     End Sub
 
-    Private Sub ClienteToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles ClienteToolStripMenuItem1.Click
+    Private Sub ClienteToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles tsmClienteM.Click
         Dim ventana2 As frmClienteActualizar = New frmClienteActualizar
         ventana2.ShowDialog()
         Dim ventana As frmClienteBorrar = New frmClienteBorrar
         ventana.ShowDialog()
-        
+
     End Sub
 
-    Private Sub ClienteToolStripMenuItem2_Click(sender As Object, e As EventArgs) Handles ClienteToolStripMenuItem2.Click
+    Private Sub ClienteToolStripMenuItem2_Click(sender As Object, e As EventArgs) Handles tsmClienteR.Click
         Dim ventana As frmReporteClientes = New frmReporteClientes
         ventana.ShowDialog()
+    End Sub
+
+    Private Sub ConectarseToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles tsmConectarse.Click
+        Dim ventana As frmLoginTaller = New frmLoginTaller
+        ventana.ShowDialog()
+    End Sub
+
+    Private Sub frmMDITaller_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        tsmNuevo.Enabled = False
+        tsmMantenimiento.Enabled = False
+        tsmReportes.Enabled = False
+        tsmDesconectarse.Visible = False
     End Sub
 End Class
