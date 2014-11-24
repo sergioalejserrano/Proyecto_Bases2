@@ -1,5 +1,4 @@
-﻿Imports System.Data
-Imports DAOTaller
+﻿Imports DAOTaller
 Imports BEUTaller
 
 Public Class BLCliente
