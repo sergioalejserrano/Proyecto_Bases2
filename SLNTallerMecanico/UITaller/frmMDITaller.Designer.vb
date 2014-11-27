@@ -177,53 +177,53 @@ Partial Class frmMDITaller
         'tsmClienteM
         '
         Me.tsmClienteM.Name = "tsmClienteM"
-        Me.tsmClienteM.Size = New System.Drawing.Size(152, 22)
+        Me.tsmClienteM.Size = New System.Drawing.Size(145, 22)
         Me.tsmClienteM.Text = "Cliente"
         '
         'tsmVehiculoM
         '
         Me.tsmVehiculoM.Name = "tsmVehiculoM"
-        Me.tsmVehiculoM.Size = New System.Drawing.Size(152, 22)
+        Me.tsmVehiculoM.Size = New System.Drawing.Size(145, 22)
         Me.tsmVehiculoM.Text = "Vehículo"
         '
         'tsmHojaDeParteM
         '
         Me.tsmHojaDeParteM.Name = "tsmHojaDeParteM"
-        Me.tsmHojaDeParteM.Size = New System.Drawing.Size(152, 22)
+        Me.tsmHojaDeParteM.Size = New System.Drawing.Size(145, 22)
         Me.tsmHojaDeParteM.Text = "Hoja de Parte"
         '
         'tsmFacturaM
         '
         Me.tsmFacturaM.Name = "tsmFacturaM"
-        Me.tsmFacturaM.Size = New System.Drawing.Size(152, 22)
+        Me.tsmFacturaM.Size = New System.Drawing.Size(145, 22)
         Me.tsmFacturaM.Text = "Factura"
         '
         'ToolStripSeparator3
         '
         Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
-        Me.ToolStripSeparator3.Size = New System.Drawing.Size(149, 6)
+        Me.ToolStripSeparator3.Size = New System.Drawing.Size(142, 6)
         '
         'tsmProveedorM
         '
         Me.tsmProveedorM.Name = "tsmProveedorM"
-        Me.tsmProveedorM.Size = New System.Drawing.Size(152, 22)
+        Me.tsmProveedorM.Size = New System.Drawing.Size(145, 22)
         Me.tsmProveedorM.Text = "Proveedor"
         '
         'tsmRepuestosM
         '
         Me.tsmRepuestosM.Name = "tsmRepuestosM"
-        Me.tsmRepuestosM.Size = New System.Drawing.Size(152, 22)
+        Me.tsmRepuestosM.Size = New System.Drawing.Size(145, 22)
         Me.tsmRepuestosM.Text = "Repuestos"
         '
         'ToolStripSeparator4
         '
         Me.ToolStripSeparator4.Name = "ToolStripSeparator4"
-        Me.ToolStripSeparator4.Size = New System.Drawing.Size(149, 6)
+        Me.ToolStripSeparator4.Size = New System.Drawing.Size(142, 6)
         '
         'tsmEmpleadoM
         '
         Me.tsmEmpleadoM.Name = "tsmEmpleadoM"
-        Me.tsmEmpleadoM.Size = New System.Drawing.Size(152, 22)
+        Me.tsmEmpleadoM.Size = New System.Drawing.Size(145, 22)
         Me.tsmEmpleadoM.Text = "Empleado"
         '
         'tsmReportes
@@ -236,53 +236,53 @@ Partial Class frmMDITaller
         'tsmClienteR
         '
         Me.tsmClienteR.Name = "tsmClienteR"
-        Me.tsmClienteR.Size = New System.Drawing.Size(152, 22)
+        Me.tsmClienteR.Size = New System.Drawing.Size(145, 22)
         Me.tsmClienteR.Text = "Cliente"
         '
         'tsmVehiculoR
         '
         Me.tsmVehiculoR.Name = "tsmVehiculoR"
-        Me.tsmVehiculoR.Size = New System.Drawing.Size(152, 22)
+        Me.tsmVehiculoR.Size = New System.Drawing.Size(145, 22)
         Me.tsmVehiculoR.Text = "Vehículo"
         '
         'tsmHojaDeParteR
         '
         Me.tsmHojaDeParteR.Name = "tsmHojaDeParteR"
-        Me.tsmHojaDeParteR.Size = New System.Drawing.Size(152, 22)
+        Me.tsmHojaDeParteR.Size = New System.Drawing.Size(145, 22)
         Me.tsmHojaDeParteR.Text = "Hoja de Parte"
         '
         'tsmFacturaR
         '
         Me.tsmFacturaR.Name = "tsmFacturaR"
-        Me.tsmFacturaR.Size = New System.Drawing.Size(152, 22)
+        Me.tsmFacturaR.Size = New System.Drawing.Size(145, 22)
         Me.tsmFacturaR.Text = "Factura"
         '
         'ToolStripSeparator5
         '
         Me.ToolStripSeparator5.Name = "ToolStripSeparator5"
-        Me.ToolStripSeparator5.Size = New System.Drawing.Size(149, 6)
+        Me.ToolStripSeparator5.Size = New System.Drawing.Size(142, 6)
         '
         'tsmProveedorR
         '
         Me.tsmProveedorR.Name = "tsmProveedorR"
-        Me.tsmProveedorR.Size = New System.Drawing.Size(152, 22)
+        Me.tsmProveedorR.Size = New System.Drawing.Size(145, 22)
         Me.tsmProveedorR.Text = "Proveedor"
         '
         'tsmRepuestosR
         '
         Me.tsmRepuestosR.Name = "tsmRepuestosR"
-        Me.tsmRepuestosR.Size = New System.Drawing.Size(152, 22)
+        Me.tsmRepuestosR.Size = New System.Drawing.Size(145, 22)
         Me.tsmRepuestosR.Text = "Repuestos"
         '
         'ToolStripSeparator6
         '
         Me.ToolStripSeparator6.Name = "ToolStripSeparator6"
-        Me.ToolStripSeparator6.Size = New System.Drawing.Size(149, 6)
+        Me.ToolStripSeparator6.Size = New System.Drawing.Size(142, 6)
         '
         'tsmEmpleadoR
         '
         Me.tsmEmpleadoR.Name = "tsmEmpleadoR"
-        Me.tsmEmpleadoR.Size = New System.Drawing.Size(152, 22)
+        Me.tsmEmpleadoR.Size = New System.Drawing.Size(145, 22)
         Me.tsmEmpleadoR.Text = "Empleados"
         '
         'HelpMenu

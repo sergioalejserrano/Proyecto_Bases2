@@ -12,21 +12,26 @@
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
-    <PublishUrl>publicar\</PublishUrl>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <PublishUrl>ftp://eleccion.net84.net/</PublishUrl>
     <Install>true</Install>
-    <InstallFrom>Disk</InstallFrom>
-    <UpdateEnabled>false</UpdateEnabled>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
     <UpdateMode>Foreground</UpdateMode>
     <UpdateInterval>7</UpdateInterval>
     <UpdateIntervalUnits>Days</UpdateIntervalUnits>
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>0</ApplicationRevision>
+    <InstallUrl>http://localhost/UITaller/</InstallUrl>
+    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
+    <WebPage>publish.htm</WebPage>
+    <ApplicationRevision>7</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
+    <BootstrapperComponentsUrl>C:\Users\Sergio\Desktop\Nueva carpeta</BootstrapperComponentsUrl>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -62,6 +67,21 @@
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>32B6E2F12106F17E2EF2F7E10CF6B2B38AE39F34</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>UITaller_ClaveTemporal.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
@@ -102,6 +122,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DTSReporteClientes.xsd</DependentUpon>
     </Compile>
+    <Compile Include="frmClienteBuscar.Designer.vb">
+      <DependentUpon>frmClienteBuscar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmClienteBuscar.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmClienteNuevo.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -121,6 +147,18 @@
     <Compile Include="frmClienteBorrar.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmEmpleadoNuevo.Designer.vb">
+      <DependentUpon>frmEmpleadoNuevo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmEmpleadoNuevo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHojadeParteNuevo.Designer.vb">
+      <DependentUpon>frmHojadeParteNuevo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmHojadeParteNuevo.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmLoginTaller.Designer.vb">
       <DependentUpon>frmLoginTaller.vb</DependentUpon>
     </Compile>
@@ -133,10 +171,34 @@
     <Compile Include="frmMDITaller.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmProveedorBuscar.Designer.vb">
+      <DependentUpon>frmProveedorBuscar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmProveedorBuscar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProveedorNuevo.Designer.vb">
+      <DependentUpon>frmProveedorNuevo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmProveedorNuevo.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmReporteClientes.Designer.vb">
       <DependentUpon>frmReporteClientes.vb</DependentUpon>
     </Compile>
     <Compile Include="frmReporteClientes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRepuestoNuevo.Designer.vb">
+      <DependentUpon>frmRepuestoNuevo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmRepuestoNuevo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVehiculoNuevo.Designer.vb">
+      <DependentUpon>frmVehiculoNuevo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmVehiculoNuevo.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -156,6 +218,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="frmClienteBuscar.resx">
+      <DependentUpon>frmClienteBuscar.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmClienteNuevo.resx">
       <DependentUpon>frmClienteNuevo.vb</DependentUpon>
     </EmbeddedResource>
@@ -165,14 +230,32 @@
     <EmbeddedResource Include="frmClienteBorrar.resx">
       <DependentUpon>frmClienteBorrar.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmEmpleadoNuevo.resx">
+      <DependentUpon>frmEmpleadoNuevo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHojadeParteNuevo.resx">
+      <DependentUpon>frmHojadeParteNuevo.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmLoginTaller.resx">
       <DependentUpon>frmLoginTaller.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMDITaller.resx">
       <DependentUpon>frmMDITaller.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmProveedorBuscar.resx">
+      <DependentUpon>frmProveedorBuscar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProveedorNuevo.resx">
+      <DependentUpon>frmProveedorNuevo.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmReporteClientes.resx">
       <DependentUpon>frmReporteClientes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRepuestoNuevo.resx">
+      <DependentUpon>frmRepuestoNuevo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVehiculoNuevo.resx">
+      <DependentUpon>frmVehiculoNuevo.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -215,7 +298,10 @@
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UITaller_ClaveTemporal.pfx" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5">
@@ -232,6 +318,11 @@
       <Visible>False</Visible>
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.ReportViewer.11.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft Report Viewer 2012 Runtime</ProductName>
+      <Install>true</Install>
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>

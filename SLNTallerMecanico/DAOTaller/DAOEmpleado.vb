@@ -8,7 +8,7 @@ Public Class DAOEmpleado
     Private vloComando As OracleCommand
 
 #Region "Validar Contraseña"
-    Public Function SP_INICIO_SESION(ByVal cliente As BEUEmpleado) As String
+    Public Function SP_INICIO_SESION(ByVal empleado As BEUEmpleado) As String
         vloConnection = New OracleConnection(ConfigurationManager.ConnectionStrings("OracleConnectionString").ConnectionString) ' Se crea la conexion a la bd
         Try
             vloConnection.Open()
@@ -19,12 +19,12 @@ Public Class DAOEmpleado
         vloComando.CommandType = CommandType.StoredProcedure
 
         Dim parametro As New OracleParameter("AID_EMPLEADO", OracleDbType.Int32)
-        parametro.Value = cliente.Id_Empleado
+        parametro.Value = empleado.Id_Empleado
         parametro.Direction = ParameterDirection.Input
         vloComando.Parameters.Add(parametro)
 
         parametro = New OracleParameter("ACONTRASENA", OracleDbType.Varchar2)
-        parametro.Value = cliente.Contrasena.ToString
+        parametro.Value = empleado.Contrasena.ToString
         parametro.Direction = ParameterDirection.Input
         vloComando.Parameters.Add(parametro)
 

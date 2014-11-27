@@ -181,4 +181,41 @@ Public Class DAOCliente
     End Function
 #End Region
 
+#Region "Buscar Cliente"
+    Public Function SP_BUSCAR_CLIENTE(ByVal cliente As BEUCliente) As BEUCliente
+        vloConnection = New OracleConnection(ConfigurationManager.ConnectionStrings("OracleConnectionString").ConnectionString) ' Se crea la conexion a la bd
+        Try
+            vloConnection.Open()
+        Catch ex As Exception
+            Throw New Exception("No se pudo conectar al servidor de bd...")
+        End Try
+        vloComando = New OracleCommand("SP_BUSCAR_CLIENTE", vloConnection)
+        vloComando.CommandType = CommandType.StoredProcedure
+
+        Dim parametro As New OracleParameter("P_ID_CLIENTE", OracleDbType.Int32)
+        parametro.Value = cliente.Id_Cliente
+        parametro.Direction = ParameterDirection.InputOutput
+        parametro.Size = 200
+        vloComando.Parameters.Add(parametro)
+
+        parametro = New OracleParameter("P_NOMBRE", OracleDbType.Varchar2)
+        parametro.Value = cliente.Nombre
+        parametro.Direction = ParameterDirection.InputOutput
+        parametro.Size = 200
+        vloComando.Parameters.Add(parametro)
+
+        parametro = New OracleParameter("P_APELLIDO", OracleDbType.Varchar2)
+        parametro.Value = cliente.Apellido
+        parametro.Direction = ParameterDirection.InputOutput
+        'parametro.Value = Nothing
+        parametro.Size = 200
+        vloComando.Parameters.Add(parametro)
+
+        vloComando.ExecuteNonQuery()
+        cliente.Id_Cliente = vloComando.Parameters("P_ID_CLIENTE").Value
+        cliente.Nombre = vloComando.Parameters("P_NOMBRE").Value.ToString
+        cliente.Apellido = vloComando.Parameters("P_APELLIDO").Value.ToString
+        Return cliente
+    End Function
+#End Region
 End Class

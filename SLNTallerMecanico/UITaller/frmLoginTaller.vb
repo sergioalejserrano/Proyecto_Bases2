@@ -1,5 +1,4 @@
-﻿
-Imports BEUTaller
+﻿Imports BEUTaller
 Imports BLTaller
 Public Class frmLoginTaller
 
@@ -13,7 +12,7 @@ Public Class frmLoginTaller
         Dim LISTEMP As String
 
         If txtUsuario.Text = "" Or txtPassword.Text = "" Then
-            MsgBox("Por complete los campos requeridos", MsgBoxStyle.OkOnly, MessageBoxIcon.Error)
+            MsgBox("Por favor complete los campos requeridos", MsgBoxStyle.OkOnly, MessageBoxIcon.Error)
         Else
             LISTEMP = New BLTaller.BLEmpleado().SP_INICIO_SESION(cliente)
 
@@ -23,6 +22,33 @@ Public Class frmLoginTaller
                 frmMDITaller.tsmNuevo.Enabled = True
                 frmMDITaller.tsmMantenimiento.Enabled = True
                 frmMDITaller.tsmReportes.Enabled = True
+                frmMDITaller.tsmDesconectarse.Visible = True
+                frmMDITaller.tsmConectarse.Visible = False
+                Me.Close()
+            ElseIf LISTEMP = "Mecanico" Then
+                userlogon = txtUsuario.Text
+                frmMDITaller.tsmConectarse.Enabled = False
+                'frmMDITaller.tsmNuevo.Enabled = True
+                'frmMDITaller.tsmMantenimiento.Enabled = True
+                frmMDITaller.tsmReportes.Enabled = True
+                frmMDITaller.tsmDesconectarse.Visible = True
+                frmMDITaller.tsmConectarse.Visible = False
+                Me.Close()
+            ElseIf LISTEMP = "Coordinador" Then
+                userlogon = txtUsuario.Text
+                frmMDITaller.tsmConectarse.Enabled = False
+                frmMDITaller.tsmNuevo.Enabled = True
+                frmMDITaller.tsmMantenimiento.Enabled = True
+                'frmMDITaller.tsmReportes.Enabled = True
+                frmMDITaller.tsmDesconectarse.Visible = True
+                frmMDITaller.tsmConectarse.Visible = False
+                Me.Close()
+            ElseIf LISTEMP = "Normal" Then
+                userlogon = txtUsuario.Text
+                frmMDITaller.tsmConectarse.Enabled = False
+                'frmMDITaller.tsmNuevo.Enabled = True
+                'frmMDITaller.tsmMantenimiento.Enabled = True
+                'frmMDITaller.tsmReportes.Enabled = True
                 frmMDITaller.tsmDesconectarse.Visible = True
                 frmMDITaller.tsmConectarse.Visible = False
                 Me.Close()

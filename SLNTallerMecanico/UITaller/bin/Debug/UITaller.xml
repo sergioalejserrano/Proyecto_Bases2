@@ -6,7 +6,111 @@ UITaller
 </name>
 </assembly>
 <members>
-<member name="P:UITaller.My.Resources.Resources.ResourceManager">
+<member name="T:UITaller.DTSReporteClientes.CLIENTEDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:UITaller.DTSReporteClientes.CLIENTERow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:UITaller.DTSReporteClientes.CLIENTERowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:UITaller.DTSReporteClientes">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:UITaller.DTSReporteClientesTableAdapters.CLIENTETableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:UITaller.DTSReporteClientesTableAdapters.TableAdapterManager.UpdateUpdatedRows(UITaller.DTSReporteClientes,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:UITaller.DTSReporteClientesTableAdapters.TableAdapterManager.UpdateInsertedRows(UITaller.DTSReporteClientes,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:UITaller.DTSReporteClientesTableAdapters.TableAdapterManager.UpdateDeletedRows(UITaller.DTSReporteClientes,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:UITaller.DTSReporteClientesTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:UITaller.DTSReporteClientesTableAdapters.TableAdapterManager.UpdateAll(UITaller.DTSReporteClientes)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:UITaller.DTSReporteClientesTableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:UITaller.DTSReporteClientesTableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:UITaller.DTSReporteClientesTableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member><member name="T:UITaller.DataSet1.EMPLEADODataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:UITaller.DataSet1.EMPLEADORow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:UITaller.DataSet1.EMPLEADORowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:UITaller.DataSet1">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:UITaller.DataSet1TableAdapters.EMPLEADOTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:UITaller.DataSet1TableAdapters.TableAdapterManager.UpdateUpdatedRows(UITaller.DataSet1,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:UITaller.DataSet1TableAdapters.TableAdapterManager.UpdateInsertedRows(UITaller.DataSet1,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:UITaller.DataSet1TableAdapters.TableAdapterManager.UpdateDeletedRows(UITaller.DataSet1,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:UITaller.DataSet1TableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:UITaller.DataSet1TableAdapters.TableAdapterManager.UpdateAll(UITaller.DataSet1)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:UITaller.DataSet1TableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:UITaller.DataSet1TableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:UITaller.DataSet1TableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member><member name="P:UITaller.My.Resources.Resources.ResourceManager">
 	<summary>
   Returns the cached ResourceManager instance used by this class.
 </summary>

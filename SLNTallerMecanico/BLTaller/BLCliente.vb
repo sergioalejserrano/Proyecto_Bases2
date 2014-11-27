@@ -30,4 +30,14 @@ Public Class BLCliente
         End Try
         Return resultado
     End Function
+
+    Function SP_BUSCAR_CLIENTE(ByVal cliente As BEUCliente) As BEUCliente
+        Try
+            cliente = New DAOTaller.DAOCliente().SP_BUSCAR_CLIENTE(cliente)
+        Catch ex As Exception
+
+        End Try
+        Return cliente
+    End Function
+
 End Class

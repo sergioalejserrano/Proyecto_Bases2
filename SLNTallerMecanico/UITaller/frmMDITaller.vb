@@ -106,4 +106,33 @@ Public Class frmMDITaller
         tsmReportes.Enabled = False
         tsmDesconectarse.Visible = False
     End Sub
+
+    Private Sub tsmVehiculoN_Click(sender As Object, e As EventArgs) Handles tsmVehiculoN.Click
+        Dim ventana As frmVehiculoNuevo = New frmVehiculoNuevo
+        ventana.ShowDialog()
+    End Sub
+
+    Private Sub tsmEmpleadoN_Click(sender As Object, e As EventArgs) Handles tsmEmpleadoN.Click
+        Dim ventana As frmEmpleadoNuevo = New frmEmpleadoNuevo
+        ventana.ShowDialog()
+    End Sub
+
+    Private Sub tsmHojaDeParteN_Click(sender As Object, e As EventArgs) Handles tsmHojaDeParteN.Click
+        Dim ventana As frmHojadeParteNuevo = New frmHojadeParteNuevo
+        ventana.ShowDialog()
+    End Sub
+
+    Private Sub tsmFacturaN_Click(sender As Object, e As EventArgs) Handles tsmFacturaN.Click
+
+    End Sub
+
+    Private Sub tsmProveedorN_Click(sender As Object, e As EventArgs) Handles tsmProveedorN.Click
+        Dim ventana As frmProveedorNuevo = New frmProveedorNuevo
+        ventana.ShowDialog()
+    End Sub
+
+    Private Sub tsmRepuestoN_Click(sender As Object, e As EventArgs) Handles tsmRepuestoN.Click
+        Dim ventana As frmRepuestoNuevo = New frmRepuestoNuevo
+        ventana.ShowDialog()
+    End Sub
 End Class
