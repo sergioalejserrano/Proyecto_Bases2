@@ -66,6 +66,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAOCliente.vb" />
+    <Compile Include="DAOConexion.vb" />
     <Compile Include="DAOEmpleado.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">

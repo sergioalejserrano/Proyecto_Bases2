@@ -4,17 +4,20 @@ Public Class frmLoginTaller
 
     Public Shared userlogon As String
     Public cliente As New BEUEmpleado
-
+    Public Shared usuario As String
+    Public Shared pass As String
     Private Sub OK_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles OK.Click
         Dim validapass As New BLEmpleado
-        cliente.Id_Empleado = txtUsuario.Text
-        cliente.Contrasena = txtPassword.Text
-        Dim LISTEMP As String
 
+        Dim LISTEMP As String
         If txtUsuario.Text = "" Or txtPassword.Text = "" Then
             MsgBox("Por favor complete los campos requeridos", MsgBoxStyle.OkOnly, MessageBoxIcon.Error)
         Else
-            LISTEMP = New BLTaller.BLEmpleado().SP_INICIO_SESION(cliente)
+
+            cliente.USERNAME = txtUsuario.Text.ToUpper
+            cliente.Contrasena = txtPassword.Text
+
+            LISTEMP = New BLTaller.BLEmpleado().SP_INICIO_SESION(cliente, cliente.USERNAME, cliente.Contrasena)
 
             If LISTEMP = "Administrador" Then
                 userlogon = txtUsuario.Text
@@ -63,4 +66,8 @@ Public Class frmLoginTaller
         Me.Close()
     End Sub
 
+    'Private Sub txtUsuario_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtUsuario.KeyPress
+    '    Dim Sep As Char
+    '    If Not (Char.IsNumber(e.KeyChar) Or e.KeyChar.Equals(Sep) Or Char.IsControl(e.KeyChar)) Then e.Handled = True
+    'End Sub
 End Class

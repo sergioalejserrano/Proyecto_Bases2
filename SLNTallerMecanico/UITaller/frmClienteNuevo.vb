@@ -28,4 +28,12 @@ Public Class frmClienteNuevo
         Dim Sep As Char
         If Not (Char.IsNumber(e.KeyChar) Or e.KeyChar.Equals(Sep) Or Char.IsControl(e.KeyChar)) Then e.Handled = True
     End Sub
+
+    Private Sub btnAgregar_MouseEnter(sender As Object, e As EventArgs) Handles btnAgregar.MouseEnter
+        btnAgregar.BackColor = Color.Gray
+    End Sub
+
+    Private Sub btnAgregar_MouseLeave(sender As Object, e As EventArgs) Handles btnAgregar.MouseLeave
+        btnAgregar.BackColor = Color.White
+    End Sub
 End Class

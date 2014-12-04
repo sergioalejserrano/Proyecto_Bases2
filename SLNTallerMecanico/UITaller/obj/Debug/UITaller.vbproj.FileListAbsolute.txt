@@ -103,8 +103,9 @@ C:\Users\Michelle\Dropbox\Bases de Datos 2\Proyecto\Proyecto_Bases2\SLNTallerMec
 C:\Users\Michelle\Dropbox\Bases de Datos 2\Proyecto\Proyecto_Bases2\SLNTallerMecanico\UITaller\obj\Debug\UITaller.frmProveedorNuevo.resources
 C:\Users\Michelle\Dropbox\Bases de Datos 2\Proyecto\Proyecto_Bases2\SLNTallerMecanico\UITaller\obj\Debug\UITaller.frmRepuestoNuevo.resources
 C:\Users\Sergio\Dropbox\UIA\Bases de Datos 2\Proyecto\Proyecto_Bases2\SLNTallerMecanico\UITaller\obj\Debug\UITaller.frmClienteBuscar.resources
-C:\Users\Sergio\Dropbox\UIA\Bases de Datos 2\Proyecto\Proyecto_Bases2\SLNTallerMecanico\UITaller\obj\Debug\UITaller.frmEmpleadoNuevo.resources
 C:\Users\Sergio\Dropbox\UIA\Bases de Datos 2\Proyecto\Proyecto_Bases2\SLNTallerMecanico\UITaller\obj\Debug\UITaller.frmHojadeParteNuevo.resources
 C:\Users\Sergio\Dropbox\UIA\Bases de Datos 2\Proyecto\Proyecto_Bases2\SLNTallerMecanico\UITaller\obj\Debug\UITaller.frmProveedorBuscar.resources
 C:\Users\Sergio\Dropbox\UIA\Bases de Datos 2\Proyecto\Proyecto_Bases2\SLNTallerMecanico\UITaller\obj\Debug\UITaller.frmProveedorNuevo.resources
 C:\Users\Sergio\Dropbox\UIA\Bases de Datos 2\Proyecto\Proyecto_Bases2\SLNTallerMecanico\UITaller\obj\Debug\UITaller.frmRepuestoNuevo.resources
+C:\Users\Sergio\Dropbox\UIA\Bases de Datos 2\Proyecto\Proyecto_Bases2\SLNTallerMecanico\UITaller\obj\Debug\UITaller.frmNuevoUsuario.resources
+C:\Users\Michelle\Dropbox\Bases de Datos 2\Proyecto\Proyecto_Bases2\SLNTallerMecanico\UITaller\obj\Debug\UITaller.frmNuevoUsuario.resources

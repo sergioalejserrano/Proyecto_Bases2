@@ -7,14 +7,16 @@ Public Class DAOCliente
     Public resultado As Boolean = False
     Private vloConnection As OracleConnection
     Private vloComando As OracleCommand
+    Private GetConnection As DAOConexion
+
 
 
 #Region "Agregar Cliente"
     Function SP_CLIENTE_NUEVO(ByVal cliente As BEUCliente) As Boolean
-        vloConnection = New OracleConnection(ConfigurationManager.ConnectionStrings("OracleConnectionString").ConnectionString) ' Se crea la conexion a la bd
+        'vloConnection = New OracleConnection(ConfigurationManager.ConnectionStrings("OracleConnectionString").ConnectionString) ' Se crea la conexion a la bd
         Try
-            vloConnection.Open() 'Se abre la conexión
-
+            ' vloConnection.Open() 'Se abre la conexión
+            GetConexion(DAOEmpleado.usuario, DAOEmpleado.pass)
         Catch ex As Exception
             MsgBox("No se pudo conectar al servidor de bd...", MsgBoxStyle.Critical)
             Throw New Exception("No se pudo conectar al servidor de bd...")
@@ -68,7 +70,8 @@ Public Class DAOCliente
         Catch ex As Exception
             resultado = False
         End Try
-        vloConnection.Close()
+        CloseConexion()
+        ' vloConnection.Close()
         Return resultado
     End Function
 #End Region
@@ -218,4 +221,26 @@ Public Class DAOCliente
         Return cliente
     End Function
 #End Region
+
+    Public Sub GetConexion(ByVal usuario, ByVal pass)
+        Dim vSTRConn As String = ""
+
+        vSTRConn &= "Data Source=XE;"
+        vSTRConn &= "User ID= " + usuario + " ;"
+        vSTRConn &= "Password= " + pass + " ;"
+
+        Try
+            vloConnection = New OracleConnection(vSTRConn)
+            vloConnection.Open()
+        Catch Exc As Exception
+            Throw New Exception(Exc.Message, Exc)
+        End Try
+    End Sub
+
+    Public Sub CloseConexion()
+        If Not (vloconnection Is Nothing) Then
+            vloconnection.Close()
+        End If
+    End Sub
+
 End Class

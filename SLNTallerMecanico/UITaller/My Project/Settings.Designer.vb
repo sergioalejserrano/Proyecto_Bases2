@@ -57,7 +57,7 @@ Namespace My
         <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=xe;Persist Security Info=True;User ID=taller;Password=12345;Unicode=T"& _ 
+         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=XE;Persist Security Info=True;User ID=taller;Password=12345;Unicode=T"& _ 
             "rue")>  _
         Public ReadOnly Property OracleConnection() As String
             Get

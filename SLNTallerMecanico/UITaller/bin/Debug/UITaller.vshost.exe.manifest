@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
   <asmv1:assemblyIdentity name="UITaller.exe" version="1.0.0.7" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
+  <description asmv2:iconFile="car26.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
     <assemblyIdentity name="UITaller" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
@@ -74,31 +75,31 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>atc17hJ/d7RyGc0m3Q/lV3gnZ2oiwnCN3MYTuGgZdXs=</dsig:DigestValue>
+        <dsig:DigestValue>AYXJt7+/eLz4t6JZWQnDh+3fDhQd3JEwzLICRL3yI7c=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="BLTaller.dll" size="25088">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="BLTaller.dll" size="25600">
       <assemblyIdentity name="BLTaller" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>56LADUORtOn0AYjHod2IC28aKDZXYZeCq5Ji1hiPn18=</dsig:DigestValue>
+        <dsig:DigestValue>mfryasxZscqV1MKtHV2bg0eldKdQyTtr+qtVTS4r6/c=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DAOTaller.dll" size="29696">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DAOTaller.dll" size="33280">
       <assemblyIdentity name="DAOTaller" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>csytmJ7cO04rNdSCkMeINsrlB5ihJk8qszQr7ETo+Sw=</dsig:DigestValue>
+        <dsig:DigestValue>HGV4Uyzuj1KwhkzFlxbXpQgPrjTcQndVfOc1m6ulSs4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -115,17 +116,26 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="UITaller.exe" size="216576">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="UITaller.exe" size="2148352">
       <assemblyIdentity name="UITaller" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>w1UrE9q+5nMMj6Sj8n8G1QH4lquiTA1yuxELDd8D08I=</dsig:DigestValue>
+        <dsig:DigestValue>HMzWb7qL9UosmlJyMOiFkG+uAXf36JnXxGuQqyk1f9g=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
+  <file name="car26.ico" size="370070">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>wHxmdNzwbWQ/kO8kQqmszqnaBposvMioKU/DBhPNkII=</dsig:DigestValue>
+    </hash>
+  </file>
   <file name="UITaller.exe.config" size="624">
     <hash>
       <dsig:Transforms>

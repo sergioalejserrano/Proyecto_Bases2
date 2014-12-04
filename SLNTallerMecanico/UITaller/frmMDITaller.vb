@@ -113,8 +113,8 @@ Public Class frmMDITaller
     End Sub
 
     Private Sub tsmEmpleadoN_Click(sender As Object, e As EventArgs) Handles tsmEmpleadoN.Click
-        Dim ventana As frmEmpleadoNuevo = New frmEmpleadoNuevo
-        ventana.ShowDialog()
+        Dim ventana1 As frmNuevoUsuario = New frmNuevoUsuario
+        ventana1.ShowDialog()
     End Sub
 
     Private Sub tsmHojaDeParteN_Click(sender As Object, e As EventArgs) Handles tsmHojaDeParteN.Click
