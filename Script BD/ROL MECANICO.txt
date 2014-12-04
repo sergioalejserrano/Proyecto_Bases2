@@ -1,0 +1,36 @@
+create or replace 
+PROCEDURE SP_HOJADEPARTE_NUEVO 
+(
+ ID_HOJA IN INT, HORAYFECHAENTRADA IN DATE, HORAYFECHASALIDA IN DATE,
+ MANODEOBRA IN INT, DETALLE IN VARCHAR2, VIN IN char, ID_EMPLEADO IN INT, ID_PRESUPUESTO IN INT
+) AS 
+BEGIN
+INSERT INTO TALLER.HOJADEPARTE
+VALUES(id_empleado, horayfechaentrada , horayfechasalida, manodeobra, detalle, vin, id_empleado, id_presupuesto );
+END SP_HOJADEPARTE_NUEVO;
+/
+
+/*BORRAR HOJA DE PARTE*/
+create or replace 
+PROCEDURE SP_BORRAR_HOJADEPARTE
+(
+  AID_HOJA IN INT
+) AS 
+BEGIN
+ DELETE FROM TALLER.HOJADEPARTE WHERE id_hoja = aid_hoja;
+END SP_BORRAR_HOJADEPARTE;
+/
+/*BORRAR HOJA DE PARTE*/
+create or replace 
+PROCEDURE SP_ACTUALIZAR_HOJADEPARTE
+(
+ AID_HOJA IN INT, AHORAYFECHAENTRADA IN DATE, AHORAYFECHASALIDA IN DATE,
+ AMANODEOBRA IN INT, ADETALLE IN VARCHAR2, AVIN IN char, AID_EMPLEADO IN INT, AID_PRESUPUESTO IN INT
+) AS 
+BEGIN
+UPDATE TALLER.HOJADEPARTE set id_hoja = aid_hoja, horayfechaentrada = ahorayfechaentrada,
+horayfechasalida = ahorayfechasalida, manodeobra = amanodeobra,
+detalle = adetalle, vin = avin, id_empleado = aid_empleado, id_repuesto = aid_presupuesto
+WHERE id_hoja = aid_hoja;
+
+END SP_ACTUALIZAR_HOJADEPARTE;

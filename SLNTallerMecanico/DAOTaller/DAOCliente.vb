@@ -195,19 +195,19 @@ Public Class DAOCliente
         vloComando = New OracleCommand("SP_BUSCAR_CLIENTE", vloConnection)
         vloComando.CommandType = CommandType.StoredProcedure
 
-        Dim parametro As New OracleParameter("P_ID_CLIENTE", OracleDbType.Int32)
+        Dim parametro As New OracleParameter("ID_CLIENTE", OracleDbType.Int32)
         parametro.Value = cliente.Id_Cliente
         parametro.Direction = ParameterDirection.InputOutput
         parametro.Size = 200
         vloComando.Parameters.Add(parametro)
 
-        parametro = New OracleParameter("P_NOMBRE", OracleDbType.Varchar2)
+        parametro = New OracleParameter("NOMBREO", OracleDbType.Varchar2)
         parametro.Value = cliente.Nombre
         parametro.Direction = ParameterDirection.InputOutput
         parametro.Size = 200
         vloComando.Parameters.Add(parametro)
 
-        parametro = New OracleParameter("P_APELLIDO", OracleDbType.Varchar2)
+        parametro = New OracleParameter("APELLIDOO", OracleDbType.Varchar2)
         parametro.Value = cliente.Apellido
         parametro.Direction = ParameterDirection.InputOutput
         'parametro.Value = Nothing
@@ -222,6 +222,7 @@ Public Class DAOCliente
     End Function
 #End Region
 
+#Region "Conexión"
     Public Sub GetConexion(ByVal usuario, ByVal pass)
         Dim vSTRConn As String = ""
 
@@ -243,4 +244,6 @@ Public Class DAOCliente
         End If
     End Sub
 
+#End Region
+   
 End Class
