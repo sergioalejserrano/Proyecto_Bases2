@@ -51,7 +51,7 @@ Partial Class frmClienteNuevo
         Me.btnAgregar.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnAgregar.ImageAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.btnAgregar.Location = New System.Drawing.Point(191, 210)
+        Me.btnAgregar.Location = New System.Drawing.Point(192, 220)
         Me.btnAgregar.Name = "btnAgregar"
         Me.btnAgregar.Size = New System.Drawing.Size(108, 77)
         Me.btnAgregar.TabIndex = 0
@@ -152,7 +152,7 @@ Partial Class frmClienteNuevo
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(6, 252)
+        Me.Label7.Location = New System.Drawing.Point(12, 291)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(110, 13)
         Me.Label7.TabIndex = 30
@@ -209,7 +209,7 @@ Partial Class frmClienteNuevo
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(323, 293)
+        Me.ClientSize = New System.Drawing.Size(330, 313)
         Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.Label8)

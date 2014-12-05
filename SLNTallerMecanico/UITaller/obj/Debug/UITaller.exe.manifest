@@ -44,6 +44,11 @@
   </dependency>
   <dependency>
     <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="ComponentFactory.Krypton.Toolkit" version="4.4.0.0" publicKeyToken="A87E673E9ECB6E8E" language="neutral" processorArchitecture="msil" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
       <assemblyIdentity name="Microsoft.ReportViewer.Common" version="11.0.0.0" publicKeyToken="89845DCD8080CC91" language="neutral" processorArchitecture="msil" />
     </dependentAssembly>
   </dependency>
@@ -80,26 +85,26 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="BLTaller.dll" size="25600">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="BLTaller.dll" size="26624">
       <assemblyIdentity name="BLTaller" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>DginNsDv1/tt0rwaa28BxTRBYSVriwo3p7y3du4r43M=</dsig:DigestValue>
+        <dsig:DigestValue>LiaImYKyM/oMUhUdB86NQGz4FtKibpfvFwBJGlLj8pc=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DAOTaller.dll" size="33280">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DAOTaller.dll" size="37888">
       <assemblyIdentity name="DAOTaller" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>7fna6rCk58EflTwhxdTHD2Crm4qAYd7T7YneFmJk83w=</dsig:DigestValue>
+        <dsig:DigestValue>F9yvV0Sx+lHRZRqtGpJHkGYswXkiEWePjda8S29r0Cw=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -116,14 +121,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="UITaller.exe" size="2148352">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="UITaller.exe" size="2151424">
       <assemblyIdentity name="UITaller" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>yK20O+0qz6tZXh7/Zk+EULGvJkiJwQTnOuE+9+1R0DQ=</dsig:DigestValue>
+        <dsig:DigestValue>nQHYA74iEu2Ah8k/tdyXdTTymF6l/8sP32hE/JY6oBU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

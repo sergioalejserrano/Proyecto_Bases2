@@ -9,8 +9,6 @@ Public Class DAOCliente
     Private vloComando As OracleCommand
     Private GetConnection As DAOConexion
 
-
-
 #Region "Agregar Cliente"
     Function SP_CLIENTE_NUEVO(ByVal cliente As BEUCliente) As Boolean
         'vloConnection = New OracleConnection(ConfigurationManager.ConnectionStrings("OracleConnectionString").ConnectionString) ' Se crea la conexion a la bd
@@ -195,19 +193,19 @@ Public Class DAOCliente
         vloComando = New OracleCommand("SP_BUSCAR_CLIENTE", vloConnection)
         vloComando.CommandType = CommandType.StoredProcedure
 
-        Dim parametro As New OracleParameter("ID_CLIENTE", OracleDbType.Int32)
+        Dim parametro As New OracleParameter("P_ID_CLIENTE", OracleDbType.Int32)
         parametro.Value = cliente.Id_Cliente
         parametro.Direction = ParameterDirection.InputOutput
         parametro.Size = 200
         vloComando.Parameters.Add(parametro)
 
-        parametro = New OracleParameter("NOMBREO", OracleDbType.Varchar2)
+        parametro = New OracleParameter("P_NOMBRE", OracleDbType.Varchar2)
         parametro.Value = cliente.Nombre
         parametro.Direction = ParameterDirection.InputOutput
         parametro.Size = 200
         vloComando.Parameters.Add(parametro)
 
-        parametro = New OracleParameter("APELLIDOO", OracleDbType.Varchar2)
+        parametro = New OracleParameter("P_APELLIDO", OracleDbType.Varchar2)
         parametro.Value = cliente.Apellido
         parametro.Direction = ParameterDirection.InputOutput
         'parametro.Value = Nothing
@@ -215,9 +213,71 @@ Public Class DAOCliente
         vloComando.Parameters.Add(parametro)
 
         vloComando.ExecuteNonQuery()
-        cliente.Id_Cliente = vloComando.Parameters("P_ID_CLIENTE").Value
+        cliente.Id_Cliente = Convert.ToInt32(vloComando.Parameters("P_ID_CLIENTE").Value.ToString())
+        'cliente.Id_Cliente = vloComando.Parameters("P_ID_CLIENTE").Value
         cliente.Nombre = vloComando.Parameters("P_NOMBRE").Value.ToString
         cliente.Apellido = vloComando.Parameters("P_APELLIDO").Value.ToString
+        Return cliente
+    End Function
+#End Region
+
+#Region "Seleccionar Cliente"
+    Function SP_Select_Cliente(ByVal cliente As BEUCliente) As BEUCliente
+        vloConnection = New OracleConnection(ConfigurationManager.ConnectionStrings("OracleConnectionString").ConnectionString) ' Se crea la conexion a la bd
+        Try
+            vloConnection.Open()
+        Catch ex As Exception
+            Throw New Exception("No se pudo conectar al servidor de bd...")
+        End Try
+
+        vloComando = New OracleCommand("SP_SELECT_CLIENTE", vloConnection)
+        vloComando.CommandType = CommandType.StoredProcedure
+
+        Dim parametro As New OracleParameter("P_ID_CLIENTE", OracleDbType.Int32)
+        parametro.Value = cliente.Id_Cliente
+        parametro.Direction = ParameterDirection.Input
+        'parametro.Value = Nothing
+        parametro.Size = 200
+        vloComando.Parameters.Add(parametro)
+
+        parametro = New OracleParameter("P_NOMBRE", OracleDbType.Varchar2)
+        parametro.Value = cliente.Nombre
+        parametro.Direction = ParameterDirection.Output
+        parametro.Size = 200
+        vloComando.Parameters.Add(parametro)
+
+        parametro = New OracleParameter("P_APELLIDO", OracleDbType.Varchar2)
+        parametro.Value = cliente.Apellido
+        parametro.Direction = ParameterDirection.Output
+        parametro.Size = 200
+        vloComando.Parameters.Add(parametro)
+
+        parametro = New OracleParameter("P_DIRECCION", OracleDbType.Varchar2)
+        parametro.Value = cliente.Direccion
+        parametro.Direction = ParameterDirection.Output
+        parametro.Size = 200
+        vloComando.Parameters.Add(parametro)
+
+        parametro = New OracleParameter("P_TELEFONO", OracleDbType.Varchar2)
+        parametro.Value = cliente.Telefono
+        parametro.Direction = ParameterDirection.Output
+        parametro.Size = 200
+        vloComando.Parameters.Add(parametro)
+
+        parametro = New OracleParameter("P_EMAIL", OracleDbType.Varchar2)
+        parametro.Value = cliente.email
+        parametro.Direction = ParameterDirection.Output
+        parametro.Size = 200
+        vloComando.Parameters.Add(parametro)
+
+        vloComando.ExecuteNonQuery()
+        cliente.Id_Cliente = Convert.ToInt32(vloComando.Parameters("P_ID_CLIENTE").Value.ToString())
+        cliente.Nombre = vloComando.Parameters("P_NOMBRE").Value.ToString
+        cliente.Apellido = vloComando.Parameters("P_APELLIDO").Value.ToString
+        cliente.Direccion = vloComando.Parameters("P_DIRECCION").Value.ToString
+        cliente.Telefono = vloComando.Parameters("P_TELEFONO").Value.ToString
+        cliente.email = vloComando.Parameters("P_EMAIL").Value.ToString
+        vloConnection.Close()
         Return cliente
     End Function
 #End Region

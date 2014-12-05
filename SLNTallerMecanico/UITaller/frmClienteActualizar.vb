@@ -17,4 +17,19 @@ Public Class frmClienteActualizar
             resultado = New BLTaller.BLCliente().SP_ACTUALIZAR_CLIENTE(cliente)
         End If
     End Sub
+
+    Private Sub txtId_Cliente_Leave(sender As Object, e As EventArgs) Handles txtId_Cliente.Leave
+        cliente.Nombre = String.Empty
+        cliente.Apellido = String.Empty
+        cliente.Direccion = String.Empty
+        cliente.Telefono = String.Empty
+        cliente.email = String.Empty
+        cliente.Id_Cliente = txtId_Cliente.Text
+        cliente = New BLTaller.BLCliente().SP_SELECT_CLIENTE(cliente)
+        txtNombre.Text = cliente.Nombre
+        txtApellido.Text = cliente.Apellido
+        txtDireccion.Text = cliente.Telefono
+        txtTelefono.Text = cliente.Telefono
+        txtEmail.Text = cliente.email
+    End Sub
 End Class

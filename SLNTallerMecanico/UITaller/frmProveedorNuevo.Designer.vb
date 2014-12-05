@@ -34,7 +34,7 @@ Partial Class frmProveedorNuevo
         Me.lblCedulaJuridica = New System.Windows.Forms.Label()
         Me.txtTelefono = New System.Windows.Forms.TextBox()
         Me.lblTelefono = New System.Windows.Forms.Label()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
+        Me.txtDireccion = New System.Windows.Forms.TextBox()
         Me.lblDireccion = New System.Windows.Forms.Label()
         Me.btnRegistrar = New System.Windows.Forms.Button()
         Me.Label7 = New System.Windows.Forms.Label()
@@ -145,12 +145,12 @@ Partial Class frmProveedorNuevo
         Me.lblTelefono.TabIndex = 29
         Me.lblTelefono.Text = "Teléfono"
         '
-        'TextBox6
+        'txtDireccion
         '
-        Me.TextBox6.Location = New System.Drawing.Point(207, 237)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(133, 20)
-        Me.TextBox6.TabIndex = 34
+        Me.txtDireccion.Location = New System.Drawing.Point(207, 237)
+        Me.txtDireccion.Name = "txtDireccion"
+        Me.txtDireccion.Size = New System.Drawing.Size(133, 20)
+        Me.txtDireccion.TabIndex = 34
         '
         'lblDireccion
         '
@@ -217,7 +217,7 @@ Partial Class frmProveedorNuevo
         Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.btnRegistrar)
-        Me.Controls.Add(Me.TextBox6)
+        Me.Controls.Add(Me.txtDireccion)
         Me.Controls.Add(Me.lblDireccion)
         Me.Controls.Add(Me.txtCedulaJuridica)
         Me.Controls.Add(Me.lblCedulaJuridica)
@@ -249,7 +249,7 @@ Partial Class frmProveedorNuevo
     Friend WithEvents lblCedulaJuridica As System.Windows.Forms.Label
     Friend WithEvents txtTelefono As System.Windows.Forms.TextBox
     Friend WithEvents lblTelefono As System.Windows.Forms.Label
-    Friend WithEvents TextBox6 As System.Windows.Forms.TextBox
+    Friend WithEvents txtDireccion As System.Windows.Forms.TextBox
     Friend WithEvents lblDireccion As System.Windows.Forms.Label
     Friend WithEvents btnRegistrar As System.Windows.Forms.Button
     Friend WithEvents Label7 As System.Windows.Forms.Label

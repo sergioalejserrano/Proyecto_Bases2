@@ -64,6 +64,9 @@
   <ItemGroup>
     <Compile Include="BLCliente.vb" />
     <Compile Include="BLEmpleado.vb" />
+    <Compile Include="BLHojaDeParte.vb" />
+    <Compile Include="BLProveedor.vb" />
+    <Compile Include="BLVehiculo.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>

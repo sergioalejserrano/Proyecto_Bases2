@@ -1,7 +1,6 @@
 ﻿Imports BEUTaller
 Imports System.Configuration
 Imports Oracle.DataAccess.Client
-'Imports System.Data.OracleClient
 Public Class DAOEmpleado
     Public resultado As Boolean = False
     Private vloConnection As OracleConnection
@@ -103,7 +102,7 @@ Public Class DAOEmpleado
     End Function
 #End Region
 
-
+#Region "Agregar Usuario"
     Public Function SP_NUEVO_USUARIO(ByVal pNombre As String, ByVal pApellido As String, ByVal pusuario As String, ByVal ppass As String, ByVal ptipo As String, ByVal pestado As Char)
         vloConnection = New OracleConnection(ConfigurationManager.ConnectionStrings("OracleConnectionString").ConnectionString) ' Se crea la conexion a la bd
         Try
@@ -157,7 +156,9 @@ Public Class DAOEmpleado
         End Try
         Return resultado
     End Function
+#End Region
 
+#Region "Agregar Empleado"
     Public Function SP_EMPLEADO_NUEVO(ByVal pNombre As String, ByVal pApellido As String, ByVal pusuario As String, ByVal ptipo As String)
         vloConnection = New OracleConnection(ConfigurationManager.ConnectionStrings("OracleConnectionString").ConnectionString) ' Se crea la conexion a la bd
         Try
@@ -209,6 +210,7 @@ Public Class DAOEmpleado
         End Try
         Return resultado
     End Function
+#End Region
 
 #Region "Conexión"
     Public Sub GetConexion(ByVal usuario, ByVal pass)

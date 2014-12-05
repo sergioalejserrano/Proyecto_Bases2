@@ -87,6 +87,7 @@
     <ApplicationIcon>car26.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ComponentFactory.Krypton.Toolkit, Version=4.4.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e" />
     <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
     <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
     <Reference Include="System" />

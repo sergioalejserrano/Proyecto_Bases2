@@ -138,7 +138,7 @@ Partial Class frmClienteBuscar
         Me.btnSeleccionar.Text = "Seleccionar"
         Me.btnSeleccionar.UseVisualStyleBackColor = True
         '
-        'frmBuscarCliente
+        'frmClienteBuscar
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -149,7 +149,7 @@ Partial Class frmClienteBuscar
         Me.Controls.Add(Me.txtNombreResultado)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.GroupBox1)
-        Me.Name = "frmBuscarCliente"
+        Me.Name = "frmClienteBuscar"
         Me.Text = "Buscar Cliente"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()

@@ -30,7 +30,6 @@ Partial Class frmVehiculoNuevo
         Me.lblPlaca = New System.Windows.Forms.Label()
         Me.txtMarca = New System.Windows.Forms.TextBox()
         Me.lblMarca = New System.Windows.Forms.Label()
-        Me.txtAno = New System.Windows.Forms.TextBox()
         Me.lblAno = New System.Windows.Forms.Label()
         Me.txtColor = New System.Windows.Forms.TextBox()
         Me.lblColor = New System.Windows.Forms.Label()
@@ -44,6 +43,7 @@ Partial Class frmVehiculoNuevo
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
+        Me.txtAno = New System.Windows.Forms.TextBox()
         Me.SuspendLayout()
         '
         'txtModelo
@@ -65,8 +65,11 @@ Partial Class frmVehiculoNuevo
         '
         'txtVIN
         '
+        Me.txtVIN.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
+        Me.txtVIN.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.HistoryList
         Me.txtVIN.Location = New System.Drawing.Point(142, 23)
         Me.txtVIN.Name = "txtVIN"
+        Me.txtVIN.ShortcutsEnabled = False
         Me.txtVIN.Size = New System.Drawing.Size(133, 20)
         Me.txtVIN.TabIndex = 10
         '
@@ -113,13 +116,6 @@ Partial Class frmVehiculoNuevo
         Me.lblMarca.Size = New System.Drawing.Size(71, 23)
         Me.lblMarca.TabIndex = 13
         Me.lblMarca.Text = "Marca"
-        '
-        'txtAno
-        '
-        Me.txtAno.Location = New System.Drawing.Point(142, 157)
-        Me.txtAno.Name = "txtAno"
-        Me.txtAno.Size = New System.Drawing.Size(133, 20)
-        Me.txtAno.TabIndex = 16
         '
         'lblAno
         '
@@ -238,11 +234,19 @@ Partial Class frmVehiculoNuevo
         Me.Label6.TabIndex = 28
         Me.Label6.Text = "*"
         '
+        'txtAno
+        '
+        Me.txtAno.Location = New System.Drawing.Point(142, 159)
+        Me.txtAno.Name = "txtAno"
+        Me.txtAno.Size = New System.Drawing.Size(133, 20)
+        Me.txtAno.TabIndex = 29
+        '
         'frmVehiculoNuevo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(362, 335)
+        Me.Controls.Add(Me.txtAno)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label4)
@@ -255,7 +259,6 @@ Partial Class frmVehiculoNuevo
         Me.Controls.Add(Me.lblCliente)
         Me.Controls.Add(Me.txtColor)
         Me.Controls.Add(Me.lblColor)
-        Me.Controls.Add(Me.txtAno)
         Me.Controls.Add(Me.lblAno)
         Me.Controls.Add(Me.txtMarca)
         Me.Controls.Add(Me.lblMarca)
@@ -279,7 +282,6 @@ Partial Class frmVehiculoNuevo
     Friend WithEvents lblPlaca As System.Windows.Forms.Label
     Friend WithEvents txtMarca As System.Windows.Forms.TextBox
     Friend WithEvents lblMarca As System.Windows.Forms.Label
-    Friend WithEvents txtAno As System.Windows.Forms.TextBox
     Friend WithEvents lblAno As System.Windows.Forms.Label
     Friend WithEvents txtColor As System.Windows.Forms.TextBox
     Friend WithEvents lblColor As System.Windows.Forms.Label
@@ -293,4 +295,5 @@ Partial Class frmVehiculoNuevo
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents Label6 As System.Windows.Forms.Label
+    Friend WithEvents txtAno As System.Windows.Forms.TextBox
 End Class

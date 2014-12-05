@@ -286,16 +286,22 @@ END SP_CLIENTE_NUEVO;
 
 --Nuevo Vehiculo
 
-CREATE or REPLACE PROCEDURE SP_VEHICULO_NUEVO 
+create or replace 
+PROCEDURE SP_VEHICULO_NUEVO 
 (
-  VIN IN CHAR, PLACA IN CHAR, MARCA IN VARCHAR2, MODELO IN VARCHAR2,
-  ANNO IN CHAR, COLOR IN VARCHAR2, ID_CLIENTE IN INT
+  P_VIN IN CHAR, 
+  P_PLACA IN CHAR, 
+  P_MARCA IN VARCHAR2, 
+  P_MODELO IN VARCHAR2,
+  P_ANNO IN CHAR, 
+  P_COLOR IN VARCHAR2, 
+  P_ID_CLIENTE IN number
 ) AS 
 BEGIN
- INSERT INTO VEHICULO
- VALUES(VIN, PLACA, MARCA, MODELO, ANNO, COLOR, ID_CLIENTE);
+  insert into vehiculo
+  values(p_vin, p_placa, p_marca, p_modelo, nvl(p_anno, null),
+  nvl(p_color, null), p_id_cliente);
 END SP_VEHICULO_NUEVO;
-/
 
 -- Nuevo Empleado
 
@@ -309,18 +315,52 @@ BEGIN
  VALUES(ID_EMPLEADO, NOMBRE, APELLIDO, TIPO);
 END SP_EMPLEADO_NUEVO;
 
+--numero de hoja
+create or replace
+procedure SP_NUM_HOJA(
+P_NUM_HOJA out hojadeparte.id_hoja%type
+)as
+begin
+select max(id_hoja)+1
+into p_num_hoja
+from hojadeparte;
+end;
+--Select Cliente
+create or replace
+procedure SP_SELECT_CLIENTE
+(
+  P_ID_CLIENTE in int,
+  P_NOMBRE OUT VARCHAR2,
+  P_APELLIDO OUT VARCHAR2,
+  P_DIRECCION OUT VARCHAR2,
+  P_TELEFONO OUT VARCHAR2,
+  P_EMAIL OUT VARCHAR2
+)as
+begin
+ select nombre, apellido, direccion,telefono,email
+ into p_nombre, P_apellido, p_direccion, p_telefono, p_email
+    from cliente
+    where id_cliente = p_id_cliente;
+end sp_select_cliente;
+
 --Nuevo Proveedor
 
-CREATE or REPLACE PROCEDURE SP_PROVEEDOR_NUEVO 
+create or replace 
+PROCEDURE SP_PROVEEDOR_NUEVO 
 (
-  ID_PROVEEDOR IN INT, NOMBRE IN VARCHAR2, APELLIDO IN VARCHAR2, PAIS IN VARCHAR2,
-  PROVINCIA IN VARCHAR2, TELEFONO IN VARCHAR2, DIRECCION IN VARCHAR2
+  ID_PROVEEDOR IN INT, 
+  NOMBRE IN VARCHAR2,
+  APELLIDO IN VARCHAR2, 
+  PAIS IN VARCHAR2,
+  PROVINCIA IN VARCHAR2, 
+  TELEFONO IN VARCHAR2, 
+  DIRECCION IN VARCHAR2
 ) AS 
 BEGIN
  INSERT INTO PROVEEDOR
- VALUES(ID_PROVEEDOR, NOMBRE, APELLIDO, PAIS, PROVINCIA, TELEFONO, DIRECCION);
+ VALUES(ID_PROVEEDOR, NOMBRE, nvl(APELLIDO, null), 
+ PAIS, nvl(PROVINCIA,null), TELEFONO, nvl(DIRECCION,null));
 END SP_PROVEEDOR_NUEVO;
-/
 
 --Borrar Cliente
 CREATE or REPLACE PROCEDURE SP_BORRAR_CLIENTE
@@ -625,18 +665,40 @@ VALUES(4, 'SECRETARIO', 'SECRETARIO', 'SECRETARIO', 1, 4);
 insert into cliente
 values(1234, 'Juan', 'Perez', 'san jose', '12345678', 'jnc@dhdh.com');
 
---BUSCAR CLIENTE POR CÉDULA
-CREATE OR REPLACE PROCEDURE SP_BUSCAR_CLIENTE(
-    ID_CLIENTE IN INT,
-    NOMBREO OUT VARCHAR2,
-    APELLIDOO OUT VARCHAR2
-)AS
+--BUSCAR CLIENTE
+create or replace 
+PROCEDURE SP_BUSCAR_CLIENTE
+(    
+    P_ID_CLIENTE IN out INT,
+   P_NOMBRE in OUT VARCHAR2,
+    P_APELLIDO in OUT VARCHAR2
+) AS 
 BEGIN
-    SELECT NOMBRE, APELLIDO INTO NOMBREO, APELLIDOO
-    FROM CLIENTE
-    WHERE ID_CLIENTE = ID_CLIENTE;
-END;
-/
+    select id_cliente, nombre, apellido
+    into p_id_cliente, p_nombre, p_apellido
+    from cliente
+    where id_cliente = nvl(p_id_cliente, id_cliente)
+    and nombre = nvl(p_nombre, nombre) 
+    and apellido = nvl(p_apellido, apellido);
+End sp_buscar_cliente;
+
+--Buscar Proveedor
+
+create or replace 
+PROCEDURE SP_BUSCAR_PROVEEDOR
+(    
+    P_ID_PROVEEDOR IN out INT,
+   P_NOMBRE in OUT VARCHAR2,
+    P_APELLIDO in OUT VARCHAR2
+) AS 
+BEGIN
+    select id_PROVEEDOR, nombre, apellido
+    into p_id_proveedor, p_nombre, p_apellido
+    from proveedor
+    where id_proveedor = nvl(p_id_proveedor, id_proveedor)
+    and nombre = nvl(p_nombre, nombre)
+    and apellido = nvl(p_apellido, apellido);
+End sp_buscar_proveedor;
 
 create or replace 
 PROCEDURE SP_INICIO_SESION
