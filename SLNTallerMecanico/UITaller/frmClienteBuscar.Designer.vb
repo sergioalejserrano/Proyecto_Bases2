@@ -26,8 +26,6 @@ Partial Class frmClienteBuscar
         Me.btnBuscar = New System.Windows.Forms.Button()
         Me.txtCedula = New System.Windows.Forms.TextBox()
         Me.lblCedula = New System.Windows.Forms.Label()
-        Me.txtNombre = New System.Windows.Forms.TextBox()
-        Me.lblNombre = New System.Windows.Forms.Label()
         Me.txtNombreResultado = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txtCedulaResultado = New System.Windows.Forms.TextBox()
@@ -41,8 +39,6 @@ Partial Class frmClienteBuscar
         Me.GroupBox1.Controls.Add(Me.btnBuscar)
         Me.GroupBox1.Controls.Add(Me.txtCedula)
         Me.GroupBox1.Controls.Add(Me.lblCedula)
-        Me.GroupBox1.Controls.Add(Me.txtNombre)
-        Me.GroupBox1.Controls.Add(Me.lblNombre)
         Me.GroupBox1.Location = New System.Drawing.Point(14, 22)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(515, 120)
@@ -52,7 +48,7 @@ Partial Class frmClienteBuscar
         '
         'btnBuscar
         '
-        Me.btnBuscar.Location = New System.Drawing.Point(394, 70)
+        Me.btnBuscar.Location = New System.Drawing.Point(377, 60)
         Me.btnBuscar.Name = "btnBuscar"
         Me.btnBuscar.Size = New System.Drawing.Size(89, 31)
         Me.btnBuscar.TabIndex = 13
@@ -61,37 +57,20 @@ Partial Class frmClienteBuscar
         '
         'txtCedula
         '
-        Me.txtCedula.Location = New System.Drawing.Point(354, 44)
+        Me.txtCedula.Location = New System.Drawing.Point(138, 46)
         Me.txtCedula.Name = "txtCedula"
-        Me.txtCedula.Size = New System.Drawing.Size(103, 20)
+        Me.txtCedula.Size = New System.Drawing.Size(199, 20)
         Me.txtCedula.TabIndex = 12
         '
         'lblCedula
         '
         Me.lblCedula.AutoSize = True
         Me.lblCedula.Font = New System.Drawing.Font("Lucida Bright", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblCedula.Location = New System.Drawing.Point(263, 39)
+        Me.lblCedula.Location = New System.Drawing.Point(47, 41)
         Me.lblCedula.Name = "lblCedula"
         Me.lblCedula.Size = New System.Drawing.Size(78, 23)
         Me.lblCedula.TabIndex = 11
         Me.lblCedula.Text = "Cédula"
-        '
-        'txtNombre
-        '
-        Me.txtNombre.Location = New System.Drawing.Point(123, 44)
-        Me.txtNombre.Name = "txtNombre"
-        Me.txtNombre.Size = New System.Drawing.Size(103, 20)
-        Me.txtNombre.TabIndex = 10
-        '
-        'lblNombre
-        '
-        Me.lblNombre.AutoSize = True
-        Me.lblNombre.Font = New System.Drawing.Font("Lucida Bright", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblNombre.Location = New System.Drawing.Point(32, 39)
-        Me.lblNombre.Name = "lblNombre"
-        Me.lblNombre.Size = New System.Drawing.Size(93, 23)
-        Me.lblNombre.TabIndex = 9
-        Me.lblNombre.Text = "Nombre"
         '
         'txtNombreResultado
         '
@@ -160,8 +139,6 @@ Partial Class frmClienteBuscar
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
     Friend WithEvents txtCedula As System.Windows.Forms.TextBox
     Friend WithEvents lblCedula As System.Windows.Forms.Label
-    Friend WithEvents txtNombre As System.Windows.Forms.TextBox
-    Friend WithEvents lblNombre As System.Windows.Forms.Label
     Friend WithEvents btnBuscar As System.Windows.Forms.Button
     Friend WithEvents txtNombreResultado As System.Windows.Forms.TextBox
     Friend WithEvents Label1 As System.Windows.Forms.Label

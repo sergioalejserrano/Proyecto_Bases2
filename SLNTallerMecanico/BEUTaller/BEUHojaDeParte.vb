@@ -5,7 +5,6 @@
     Public Property ManodeObra As Integer = Integer.MinValue
     Public Property Detalle As String = String.Empty
     Public Property VIN As String = String.Empty
-    Public Property Id_Empleado As Integer = Integer.MinValue
-    Public Property Id_Repuesto As Integer = Integer.MinValue
+    Public Property Id_Empleado As String = String.Empty
 
 End Class

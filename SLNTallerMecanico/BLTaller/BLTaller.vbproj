@@ -63,9 +63,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BLCliente.vb" />
+    <Compile Include="BLDetalleFactura.vb" />
     <Compile Include="BLEmpleado.vb" />
+    <Compile Include="BLFactura.vb" />
     <Compile Include="BLHojaDeParte.vb" />
     <Compile Include="BLProveedor.vb" />
+    <Compile Include="BLStock.vb" />
     <Compile Include="BLVehiculo.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">

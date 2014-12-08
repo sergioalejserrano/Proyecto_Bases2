@@ -1,4 +1,4 @@
-﻿Public Class Detalle_Factura
+﻿Public Class BEUDetalleFactura
     Public Property Id_Detalle_Factura As Integer = Integer.MinValue
     Public Property Id_Factura As Integer = Integer.MinValue
     Public Property Id_Repuesto As Integer = Integer.MinValue

@@ -4,7 +4,7 @@ Imports BLTaller
 Public Class frmProveedorBuscar
     Public proveedor As New BEUProveedor
     Private Sub btnSeleccionar_Click(sender As Object, e As EventArgs) Handles btnSeleccionar.Click
-        If txtNombreResultado.Text = "" And txtCedulaResultado.Text = "" Then
+        If txtNombreResultado.Text = "" Or txtCedulaResultado.Text = "" Then
             MessageBox.Show("Realice una búsqueda para continuar.")
         Else
             proveedor.Id_Proveedor = txtCedulaResultado.Text
@@ -23,27 +23,14 @@ Public Class frmProveedorBuscar
         proveedor.Id_Proveedor = Integer.MinValue
         proveedor.Nombre = String.Empty
         proveedor.Apellido = ""
-        If txtNombre.Text = "" And txtIdProveedor.Text = "" Then
-            MessageBox.Show("Ingrese el nombre o el id del proveedor para la realizar la búsqueda.")
-        ElseIf txtIdProveedor.Text = "" Then
-            Dim lsnombre As New List(Of String)
-            Dim nombre As String
-            For Each nombre In txtNombre.Text.Split(" ")
-                lsnombre.Add(nombre)
-            Next
-            proveedor.Nombre = lsnombre.Item(0)
-            proveedor.Apellido = lsnombre.Item(1)
-            proveedor = New BLTaller.BLProveedor().SP_BUSCAR_PROVEEDOR(proveedor)
-            txtNombreResultado.Text = proveedor.Nombre & " " & proveedor.Apellido
-            txtCedulaResultado.Text = proveedor.Id_Proveedor
-            txtNombre.Text = ""
+        If txtIdProveedor.Text = "" Then
+            MessageBox.Show("Ingrese el id del proveedor para la realizar la búsqueda.")
         Else
             proveedor.Id_Proveedor = txtIdProveedor.Text
-            proveedor = New BLTaller.BLProveedor().SP_BUSCAR_PROVEEDOR(proveedor)
+            proveedor = New BLTaller.BLProveedor().SP_SELECT_PROVEEDOR(proveedor)
             txtNombreResultado.Text = proveedor.Nombre & " " & proveedor.Apellido
             txtCedulaResultado.Text = proveedor.Id_Proveedor
             txtIdProveedor.Text = ""
-
         End If
     End Sub
 End Class

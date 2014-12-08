@@ -12,23 +12,23 @@
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
-    <IsWebBootstrapper>true</IsWebBootstrapper>
-    <PublishUrl>ftp://eleccion.net84.net/</PublishUrl>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\Sergio\Dropbox\UIA\Bases de Datos 2\Proyecto\Instalador\</PublishUrl>
     <Install>true</Install>
-    <InstallFrom>Web</InstallFrom>
-    <UpdateEnabled>true</UpdateEnabled>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
     <UpdateMode>Foreground</UpdateMode>
     <UpdateInterval>7</UpdateInterval>
     <UpdateIntervalUnits>Days</UpdateIntervalUnits>
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <InstallUrl>http://localhost/UITaller/</InstallUrl>
-    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
+    <TargetCulture>es-CR</TargetCulture>
     <WebPage>publish.htm</WebPage>
-    <ApplicationRevision>7</ApplicationRevision>
+    <ApplicationRevision>16</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
     <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
     <BootstrapperComponentsUrl>C:\Users\Sergio\Desktop\Nueva carpeta</BootstrapperComponentsUrl>
@@ -87,7 +87,6 @@
     <ApplicationIcon>car26.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="ComponentFactory.Krypton.Toolkit, Version=4.4.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e" />
     <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
     <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
     <Reference Include="System" />
@@ -121,6 +120,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DataSetStock.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetStock.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DTSReporteClientes.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -149,6 +153,12 @@
       <DependentUpon>frmClienteBorrar.vb</DependentUpon>
     </Compile>
     <Compile Include="frmClienteBorrar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFactura.Designer.vb">
+      <DependentUpon>frmFactura.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmFactura.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmHojadeParteNuevo.Designer.vb">
@@ -193,6 +203,18 @@
     <Compile Include="frmReporteClientes.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmReporteEmpleado.Designer.vb">
+      <DependentUpon>frmReporteEmpleado.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmReporteEmpleado.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRepuestoBuscar.Designer.vb">
+      <DependentUpon>frmRepuestoBuscar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmRepuestoBuscar.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmRepuestoNuevo.Designer.vb">
       <DependentUpon>frmRepuestoNuevo.vb</DependentUpon>
     </Compile>
@@ -220,6 +242,11 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="ReporteEmpleados.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReporteEmpleados.xsd</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="frmClienteBuscar.resx">
@@ -233,6 +260,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmClienteBorrar.resx">
       <DependentUpon>frmClienteBorrar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFactura.resx">
+      <DependentUpon>frmFactura.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmHojadeParteNuevo.resx">
       <DependentUpon>frmHojadeParteNuevo.vb</DependentUpon>
@@ -255,6 +285,12 @@
     <EmbeddedResource Include="frmReporteClientes.resx">
       <DependentUpon>frmReporteClientes.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmReporteEmpleado.resx">
+      <DependentUpon>frmReporteEmpleado.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRepuestoBuscar.resx">
+      <DependentUpon>frmRepuestoBuscar.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmRepuestoNuevo.resx">
       <DependentUpon>frmRepuestoNuevo.vb</DependentUpon>
     </EmbeddedResource>
@@ -268,6 +304,7 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Report1.rdlc" />
+    <EmbeddedResource Include="Report2.rdlc" />
   </ItemGroup>
   <ItemGroup>
     <None Include="DataSet1.xsc">
@@ -280,6 +317,17 @@
     </None>
     <None Include="DataSet1.xss">
       <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetStock.xsc">
+      <DependentUpon>DataSetStock.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetStock.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetStock.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSetStock.xss">
+      <DependentUpon>DataSetStock.xsd</DependentUpon>
     </None>
     <None Include="DTSReporteClientes.xsc">
       <DependentUpon>DTSReporteClientes.xsd</DependentUpon>
@@ -297,6 +345,7 @@
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
     </None>
+    <None Include="My Project\DataSources\BEUTaller.BEUStock.datasource" />
     <None Include="My Project\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <CustomToolNamespace>My</CustomToolNamespace>
@@ -304,6 +353,17 @@
     </None>
     <None Include="App.config">
       <SubType>Designer</SubType>
+    </None>
+    <None Include="ReporteEmpleados.xsc">
+      <DependentUpon>ReporteEmpleados.xsd</DependentUpon>
+    </None>
+    <None Include="ReporteEmpleados.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ReporteEmpleados.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ReporteEmpleados.xss">
+      <DependentUpon>ReporteEmpleados.xsd</DependentUpon>
     </None>
     <None Include="UITaller_ClaveTemporal.pfx" />
   </ItemGroup>
@@ -323,11 +383,6 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
-    <BootstrapperPackage Include="Microsoft.ReportViewer.11.0">
-      <Visible>False</Visible>
-      <ProductName>Microsoft Report Viewer 2012 Runtime</ProductName>
-      <Install>true</Install>
-    </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BEUTaller\BEUTaller.vbproj">
@@ -341,7 +396,14 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="car26.ico" />
+    <None Include="Resources\cobrar.png" />
+    <None Include="Resources\paybill.png" />
+    <None Include="Resources\new.png" />
+    <None Include="Resources\blue.jpg" />
     <None Include="Resources\Mechanic interface.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

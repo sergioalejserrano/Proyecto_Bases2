@@ -34,7 +34,6 @@ Partial Class frmMDITaller
         Me.tsmClienteN = New System.Windows.Forms.ToolStripMenuItem()
         Me.tsmVehiculoN = New System.Windows.Forms.ToolStripMenuItem()
         Me.tsmHojaDeParteN = New System.Windows.Forms.ToolStripMenuItem()
-        Me.tsmFacturaN = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.tsmProveedorN = New System.Windows.Forms.ToolStripMenuItem()
         Me.tsmRepuestoN = New System.Windows.Forms.ToolStripMenuItem()
@@ -115,7 +114,7 @@ Partial Class frmMDITaller
         '
         'tsmNuevo
         '
-        Me.tsmNuevo.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsmClienteN, Me.tsmVehiculoN, Me.tsmHojaDeParteN, Me.tsmFacturaN, Me.ToolStripSeparator1, Me.tsmProveedorN, Me.tsmRepuestoN, Me.ToolStripSeparator2, Me.tsmEmpleadoN})
+        Me.tsmNuevo.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsmClienteN, Me.tsmVehiculoN, Me.tsmHojaDeParteN, Me.ToolStripSeparator1, Me.tsmProveedorN, Me.tsmRepuestoN, Me.ToolStripSeparator2, Me.tsmEmpleadoN})
         Me.tsmNuevo.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tsmNuevo.Name = "tsmNuevo"
         Me.tsmNuevo.Size = New System.Drawing.Size(58, 21)
@@ -141,13 +140,6 @@ Partial Class frmMDITaller
         Me.tsmHojaDeParteN.Name = "tsmHojaDeParteN"
         Me.tsmHojaDeParteN.Size = New System.Drawing.Size(156, 22)
         Me.tsmHojaDeParteN.Text = "Hoja de Parte"
-        '
-        'tsmFacturaN
-        '
-        Me.tsmFacturaN.BackColor = System.Drawing.Color.White
-        Me.tsmFacturaN.Name = "tsmFacturaN"
-        Me.tsmFacturaN.Size = New System.Drawing.Size(156, 22)
-        Me.tsmFacturaN.Text = "Factura"
         '
         'ToolStripSeparator1
         '
@@ -426,7 +418,6 @@ Partial Class frmMDITaller
     Friend WithEvents tsmClienteN As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents tsmVehiculoN As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents tsmHojaDeParteN As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents tsmFacturaN As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents tsmProveedorN As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents tsmRepuestoN As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents tsmEmpleadoN As System.Windows.Forms.ToolStripMenuItem

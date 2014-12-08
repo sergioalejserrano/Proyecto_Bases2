@@ -21,4 +21,13 @@ Public Class BLEmpleado
         End Try
         Return resultado
     End Function
+
+    Function SP_SELECT_EMPLEADO(ByVal EMPLEADO As BEUEmpleado) As BEUEmpleado
+        Try
+            EMPLEADO = New DAOTaller.DAOEmpleado().SP_SELECT_EMPLEADO(EMPLEADO)
+        Catch ex As Exception
+
+        End Try
+        Return EMPLEADO
+    End Function
 End Class

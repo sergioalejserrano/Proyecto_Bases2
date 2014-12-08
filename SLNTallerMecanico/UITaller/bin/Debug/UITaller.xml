@@ -6,7 +6,59 @@ UITaller
 </name>
 </assembly>
 <members>
-<member name="T:UITaller.DTSReporteClientes.CLIENTEDataTable">
+<member name="T:UITaller.ReporteEmpleados.EMPLEADODataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:UITaller.ReporteEmpleados.EMPLEADORow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:UITaller.ReporteEmpleados.EMPLEADORowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:UITaller.ReporteEmpleados">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:UITaller.ReporteEmpleadosTableAdapters.EMPLEADOTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:UITaller.ReporteEmpleadosTableAdapters.TableAdapterManager.UpdateUpdatedRows(UITaller.ReporteEmpleados,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:UITaller.ReporteEmpleadosTableAdapters.TableAdapterManager.UpdateInsertedRows(UITaller.ReporteEmpleados,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:UITaller.ReporteEmpleadosTableAdapters.TableAdapterManager.UpdateDeletedRows(UITaller.ReporteEmpleados,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:UITaller.ReporteEmpleadosTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:UITaller.ReporteEmpleadosTableAdapters.TableAdapterManager.UpdateAll(UITaller.ReporteEmpleados)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:UITaller.ReporteEmpleadosTableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:UITaller.ReporteEmpleadosTableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:UITaller.ReporteEmpleadosTableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member><member name="T:UITaller.DTSReporteClientes.CLIENTEDataTable">
 	<summary>
 Represents the strongly named DataTable class.
 </summary>
@@ -55,6 +107,58 @@ Update Order Option
 Used to sort self-referenced table's rows
 </summary>
 </member><member name="T:UITaller.DTSReporteClientesTableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member><member name="T:UITaller.DataSetStock.STOCKDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:UITaller.DataSetStock.STOCKRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:UITaller.DataSetStock.STOCKRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:UITaller.DataSetStock">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:UITaller.DataSetStockTableAdapters.STOCKTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:UITaller.DataSetStockTableAdapters.TableAdapterManager.UpdateUpdatedRows(UITaller.DataSetStock,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:UITaller.DataSetStockTableAdapters.TableAdapterManager.UpdateInsertedRows(UITaller.DataSetStock,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:UITaller.DataSetStockTableAdapters.TableAdapterManager.UpdateDeletedRows(UITaller.DataSetStock,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:UITaller.DataSetStockTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:UITaller.DataSetStockTableAdapters.TableAdapterManager.UpdateAll(UITaller.DataSetStock)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:UITaller.DataSetStockTableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:UITaller.DataSetStockTableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:UITaller.DataSetStockTableAdapters.TableAdapterManager">
 	<summary>
 TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
 </summary>
@@ -112,24 +216,40 @@ TableAdapterManager is used to coordinate TableAdapters in the dataset to enable
 </summary>
 </member><member name="P:UITaller.My.Resources.Resources.ResourceManager">
 	<summary>
-  Returns the cached ResourceManager instance used by this class.
+  Devuelve la instancia de ResourceManager almacenada en caché utilizada por esta clase.
 </summary>
 </member><member name="P:UITaller.My.Resources.Resources.Culture">
 	<summary>
-  Overrides the current thread's CurrentUICulture property for all
-  resource lookups using this strongly typed resource class.
+  Reemplaza la propiedad CurrentUICulture del subproceso actual para todas las
+  búsquedas de recursos mediante esta clase de recurso fuertemente tipado.
+</summary>
+</member><member name="P:UITaller.My.Resources.Resources._new">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:UITaller.My.Resources.Resources.blue">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:UITaller.My.Resources.Resources.cobrar">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member><member name="P:UITaller.My.Resources.Resources.Mechanic_interface">
 	<summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member><member name="P:UITaller.My.Resources.Resources.NuevoCliente">
 	<summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:UITaller.My.Resources.Resources.paybill">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member><member name="T:UITaller.My.Resources.Resources">
 	<summary>
-  A strongly-typed resource class, for looking up localized strings, etc.
+  Clase de recurso fuertemente tipado, para buscar cadenas traducidas, etc.
 </summary>
 </member>
 </members>

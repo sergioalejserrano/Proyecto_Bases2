@@ -109,6 +109,7 @@ Public Class frmMDITaller
 
     Private Sub tsmVehiculoN_Click(sender As Object, e As EventArgs) Handles tsmVehiculoN.Click
         Dim ventana As frmVehiculoNuevo = New frmVehiculoNuevo
+        ventana.Text = "Nuevo Vehiculo"
         ventana.ShowDialog()
     End Sub
 
@@ -122,17 +123,36 @@ Public Class frmMDITaller
         ventana.ShowDialog()
     End Sub
 
-    Private Sub tsmFacturaN_Click(sender As Object, e As EventArgs) Handles tsmFacturaN.Click
-
+    Private Sub tsmFacturaN_Click(sender As Object, e As EventArgs)
+        Dim ventana As frmFactura = New frmFactura
+        ventana.ShowDialog()
     End Sub
 
     Private Sub tsmProveedorN_Click(sender As Object, e As EventArgs) Handles tsmProveedorN.Click
         Dim ventana As frmProveedorNuevo = New frmProveedorNuevo
+        ventana.Text = "Nuevo Proveedor"
         ventana.ShowDialog()
     End Sub
 
     Private Sub tsmRepuestoN_Click(sender As Object, e As EventArgs) Handles tsmRepuestoN.Click
         Dim ventana As frmRepuestoNuevo = New frmRepuestoNuevo
+        ventana.ShowDialog()
+    End Sub
+
+    Private Sub tsmProveedorM_Click(sender As Object, e As EventArgs) Handles tsmProveedorM.Click
+        Dim ventana As frmProveedorNuevo = New frmProveedorNuevo
+        ventana.Text = "Actualizar Proveedor"
+        ventana.ShowDialog()
+    End Sub
+
+    Private Sub tsmVehiculoM_Click(sender As Object, e As EventArgs) Handles tsmVehiculoM.Click
+        Dim ventana As frmVehiculoNuevo = New frmVehiculoNuevo
+        ventana.Text = "Actualizar Vehiculo"
+        ventana.ShowDialog()
+    End Sub
+
+    Private Sub tsmEmpleadoR_Click(sender As Object, e As EventArgs) Handles tsmEmpleadoR.Click
+        Dim ventana As frmReporteEmpleado = New frmReporteEmpleado
         ventana.ShowDialog()
     End Sub
 End Class

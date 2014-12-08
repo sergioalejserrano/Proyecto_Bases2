@@ -41,11 +41,12 @@ Partial Class frmProveedorNuevo
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'txtApellido
         '
-        Me.txtApellido.Location = New System.Drawing.Point(208, 68)
+        Me.txtApellido.Location = New System.Drawing.Point(209, 94)
         Me.txtApellido.Name = "txtApellido"
         Me.txtApellido.Size = New System.Drawing.Size(133, 20)
         Me.txtApellido.TabIndex = 24
@@ -54,7 +55,7 @@ Partial Class frmProveedorNuevo
         '
         Me.lblApellido.AutoSize = True
         Me.lblApellido.Font = New System.Drawing.Font("Lucida Bright", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblApellido.Location = New System.Drawing.Point(39, 65)
+        Me.lblApellido.Location = New System.Drawing.Point(40, 91)
         Me.lblApellido.Name = "lblApellido"
         Me.lblApellido.Size = New System.Drawing.Size(94, 23)
         Me.lblApellido.TabIndex = 23
@@ -62,7 +63,7 @@ Partial Class frmProveedorNuevo
         '
         'txtNombre
         '
-        Me.txtNombre.Location = New System.Drawing.Point(207, 34)
+        Me.txtNombre.Location = New System.Drawing.Point(208, 60)
         Me.txtNombre.Name = "txtNombre"
         Me.txtNombre.Size = New System.Drawing.Size(133, 20)
         Me.txtNombre.TabIndex = 22
@@ -71,7 +72,7 @@ Partial Class frmProveedorNuevo
         '
         Me.lblNombre.AutoSize = True
         Me.lblNombre.Font = New System.Drawing.Font("Lucida Bright", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblNombre.Location = New System.Drawing.Point(40, 31)
+        Me.lblNombre.Location = New System.Drawing.Point(41, 57)
         Me.lblNombre.Name = "lblNombre"
         Me.lblNombre.Size = New System.Drawing.Size(93, 23)
         Me.lblNombre.TabIndex = 21
@@ -79,7 +80,7 @@ Partial Class frmProveedorNuevo
         '
         'txtProvincia
         '
-        Me.txtProvincia.Location = New System.Drawing.Point(207, 139)
+        Me.txtProvincia.Location = New System.Drawing.Point(208, 165)
         Me.txtProvincia.Name = "txtProvincia"
         Me.txtProvincia.Size = New System.Drawing.Size(133, 20)
         Me.txtProvincia.TabIndex = 28
@@ -88,7 +89,7 @@ Partial Class frmProveedorNuevo
         '
         Me.lblProvincia.AutoSize = True
         Me.lblProvincia.Font = New System.Drawing.Font("Lucida Bright", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblProvincia.Location = New System.Drawing.Point(38, 136)
+        Me.lblProvincia.Location = New System.Drawing.Point(39, 162)
         Me.lblProvincia.Name = "lblProvincia"
         Me.lblProvincia.Size = New System.Drawing.Size(103, 23)
         Me.lblProvincia.TabIndex = 27
@@ -96,7 +97,7 @@ Partial Class frmProveedorNuevo
         '
         'txtPais
         '
-        Me.txtPais.Location = New System.Drawing.Point(208, 105)
+        Me.txtPais.Location = New System.Drawing.Point(209, 131)
         Me.txtPais.Name = "txtPais"
         Me.txtPais.Size = New System.Drawing.Size(133, 20)
         Me.txtPais.TabIndex = 26
@@ -105,7 +106,7 @@ Partial Class frmProveedorNuevo
         '
         Me.lblPais.AutoSize = True
         Me.lblPais.Font = New System.Drawing.Font("Lucida Bright", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblPais.Location = New System.Drawing.Point(39, 102)
+        Me.lblPais.Location = New System.Drawing.Point(85, 126)
         Me.lblPais.Name = "lblPais"
         Me.lblPais.Size = New System.Drawing.Size(49, 23)
         Me.lblPais.TabIndex = 25
@@ -113,7 +114,7 @@ Partial Class frmProveedorNuevo
         '
         'txtCedulaJuridica
         '
-        Me.txtCedulaJuridica.Location = New System.Drawing.Point(207, 206)
+        Me.txtCedulaJuridica.Location = New System.Drawing.Point(209, 30)
         Me.txtCedulaJuridica.Name = "txtCedulaJuridica"
         Me.txtCedulaJuridica.Size = New System.Drawing.Size(133, 20)
         Me.txtCedulaJuridica.TabIndex = 32
@@ -122,15 +123,15 @@ Partial Class frmProveedorNuevo
         '
         Me.lblCedulaJuridica.AutoSize = True
         Me.lblCedulaJuridica.Font = New System.Drawing.Font("Lucida Bright", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblCedulaJuridica.Location = New System.Drawing.Point(40, 203)
+        Me.lblCedulaJuridica.Location = New System.Drawing.Point(56, 25)
         Me.lblCedulaJuridica.Name = "lblCedulaJuridica"
-        Me.lblCedulaJuridica.Size = New System.Drawing.Size(163, 23)
+        Me.lblCedulaJuridica.Size = New System.Drawing.Size(78, 23)
         Me.lblCedulaJuridica.TabIndex = 31
-        Me.lblCedulaJuridica.Text = "Cédula Jurídica"
+        Me.lblCedulaJuridica.Text = "Cédula"
         '
         'txtTelefono
         '
-        Me.txtTelefono.Location = New System.Drawing.Point(207, 172)
+        Me.txtTelefono.Location = New System.Drawing.Point(208, 198)
         Me.txtTelefono.Name = "txtTelefono"
         Me.txtTelefono.Size = New System.Drawing.Size(133, 20)
         Me.txtTelefono.TabIndex = 30
@@ -139,7 +140,7 @@ Partial Class frmProveedorNuevo
         '
         Me.lblTelefono.AutoSize = True
         Me.lblTelefono.Font = New System.Drawing.Font("Lucida Bright", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblTelefono.Location = New System.Drawing.Point(41, 169)
+        Me.lblTelefono.Location = New System.Drawing.Point(42, 195)
         Me.lblTelefono.Name = "lblTelefono"
         Me.lblTelefono.Size = New System.Drawing.Size(99, 23)
         Me.lblTelefono.TabIndex = 29
@@ -164,7 +165,7 @@ Partial Class frmProveedorNuevo
         '
         'btnRegistrar
         '
-        Me.btnRegistrar.Location = New System.Drawing.Point(371, 68)
+        Me.btnRegistrar.Location = New System.Drawing.Point(387, 94)
         Me.btnRegistrar.Name = "btnRegistrar"
         Me.btnRegistrar.Size = New System.Drawing.Size(111, 124)
         Me.btnRegistrar.TabIndex = 35
@@ -183,7 +184,7 @@ Partial Class frmProveedorNuevo
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(346, 39)
+        Me.Label10.Location = New System.Drawing.Point(347, 65)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(11, 13)
         Me.Label10.TabIndex = 40
@@ -192,7 +193,7 @@ Partial Class frmProveedorNuevo
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(346, 108)
+        Me.Label1.Location = New System.Drawing.Point(347, 134)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(11, 13)
         Me.Label1.TabIndex = 41
@@ -201,17 +202,27 @@ Partial Class frmProveedorNuevo
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(346, 175)
+        Me.Label2.Location = New System.Drawing.Point(347, 201)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(11, 13)
         Me.Label2.TabIndex = 42
         Me.Label2.Text = "*"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(347, 33)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(11, 13)
+        Me.Label3.TabIndex = 43
+        Me.Label3.Text = "*"
         '
         'frmProveedorNuevo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(510, 314)
+        Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Label10)
@@ -256,4 +267,5 @@ Partial Class frmProveedorNuevo
     Friend WithEvents Label10 As System.Windows.Forms.Label
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents Label3 As System.Windows.Forms.Label
 End Class

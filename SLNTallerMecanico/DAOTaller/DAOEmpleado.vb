@@ -212,6 +212,55 @@ Public Class DAOEmpleado
     End Function
 #End Region
 
+
+#Region "Select Empleado"
+    Function SP_SELECT_EMPLEADO(ByVal empleado As BEUEmpleado) As BEUEmpleado
+        vloConnection = New OracleConnection(ConfigurationManager.ConnectionStrings("OracleConnectionString").ConnectionString) ' Se crea la conexion a la bd
+        Try
+            vloConnection.Open()
+        Catch ex As Exception
+            Throw New Exception("No se pudo conectar al servidor de bd...")
+        End Try
+        vloComando = New OracleCommand("SP_SELECT_EMPLEADO", vloConnection)
+        vloComando.CommandType = CommandType.StoredProcedure
+
+        Dim parametro As New OracleParameter("P_ID_EMPLEADO", OracleDbType.Int32)
+        parametro.Value = empleado.ID_EMPLEADO
+        parametro.Direction = ParameterDirection.Input
+        parametro.Size = 200
+        vloComando.Parameters.Add(parametro)
+
+        parametro = New OracleParameter("P_NOMBRE", OracleDbType.Varchar2)
+        parametro.Value = empleado.Nombre
+        parametro.Direction = ParameterDirection.Output
+        parametro.Size = 200
+        vloComando.Parameters.Add(parametro)
+
+        parametro = New OracleParameter("P_APELLIDO", OracleDbType.Varchar2)
+        parametro.Value = empleado.Apellido
+        parametro.Direction = ParameterDirection.Output
+        'parametro.Value = Nothing
+        parametro.Size = 200
+        vloComando.Parameters.Add(parametro)
+
+        parametro = New OracleParameter("P_TIPO", OracleDbType.Varchar2)
+        parametro.Value = empleado.Tipo
+        parametro.Direction = ParameterDirection.Output
+        'parametro.Value = Nothing
+        parametro.Size = 200
+        vloComando.Parameters.Add(parametro)
+
+        vloComando.ExecuteNonQuery()
+
+        empleado.ID_EMPLEADO = vloComando.Parameters("P_ID_EMPLEADO").Value.ToString
+        empleado.Nombre = vloComando.Parameters("P_NOMBRE").Value.ToString
+        empleado.Apellido = vloComando.Parameters("P_APELLIDO").Value.ToString
+        empleado.Tipo = vloComando.Parameters("P_TIPO").Value.ToString
+        
+        Return empleado
+    End Function
+#End Region
+
 #Region "Conexión"
     Public Sub GetConexion(ByVal usuario, ByVal pass)
         Dim vSTRConn As String = ""

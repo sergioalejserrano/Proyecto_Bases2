@@ -11,9 +11,7 @@ Public Class DAOCliente
 
 #Region "Agregar Cliente"
     Function SP_CLIENTE_NUEVO(ByVal cliente As BEUCliente) As Boolean
-        'vloConnection = New OracleConnection(ConfigurationManager.ConnectionStrings("OracleConnectionString").ConnectionString) ' Se crea la conexion a la bd
         Try
-            ' vloConnection.Open() 'Se abre la conexión
             GetConexion(DAOEmpleado.usuario, DAOEmpleado.pass)
         Catch ex As Exception
             MsgBox("No se pudo conectar al servidor de bd...", MsgBoxStyle.Critical)
@@ -69,7 +67,6 @@ Public Class DAOCliente
             resultado = False
         End Try
         CloseConexion()
-        ' vloConnection.Close()
         Return resultado
     End Function
 #End Region
@@ -90,7 +87,7 @@ Public Class DAOCliente
             Dim cmd As New OracleCommand(sql, vloConnection) 'Se crea la variable "cmd" que va contener el nombre del proceso almacenado y los datos
             ' de la conexión a oracle
             cmd.CommandType = CommandType.StoredProcedure ' Se le indica que se le va pasar un proceso almacenado
-            Dim parametro As New OracleParameter("ID_CLIENTE", OracleDbType.Int32) ' Se declara la variable "parametro" que contiene el nombre y el tipo
+            Dim parametro As New OracleParameter("ID_CLIENTEB", OracleDbType.Int32) ' Se declara la variable "parametro" que contiene el nombre y el tipo
             ' del atributo de la tabla en este caso la de Cliente.
             parametro.Value = cliente.Id_Cliente ' Le asiganamos el valor de la variable
             cmd.Parameters.Add(parametro) 'Agregamos el valor a la variable parametro
@@ -134,28 +131,28 @@ Public Class DAOCliente
             Dim cmd As New OracleCommand(sql, vloConnection) 'Se crea la variable "cmd" que va contener el nombre del proceso almacenado y los datos
             ' de la conexión a oracle
             cmd.CommandType = CommandType.StoredProcedure ' Se le indica que se le va pasar un proceso almacenado
-            Dim parametro As New OracleParameter("ID_CLIENTE", OracleDbType.Int32) ' Se declara la variable "parametro" que contiene el nombre y el tipo
+            Dim parametro As New OracleParameter("AID_CLIENTE", OracleDbType.Int32) ' Se declara la variable "parametro" que contiene el nombre y el tipo
             ' del atributo de la tabla en este caso la de Cliente.
             parametro.Value = cliente.Id_Cliente ' Le asiganamos el valor de la variable
             cmd.Parameters.Add(parametro) 'Agregamos el valor a la variable parametro
 
-            parametro = New OracleParameter("NOMBRE", OracleDbType.Varchar2)
+            parametro = New OracleParameter("ANOMBRE", OracleDbType.Varchar2)
             parametro.Value = cliente.Nombre
             cmd.Parameters.Add(parametro)
 
-            parametro = New OracleParameter("APELLIDO", OracleDbType.Varchar2)
+            parametro = New OracleParameter("AAPELLIDO", OracleDbType.Varchar2)
             parametro.Value = cliente.Apellido
             cmd.Parameters.Add(parametro)
 
-            parametro = New OracleParameter("DIRECCION", OracleDbType.Varchar2)
+            parametro = New OracleParameter("ADIRECCION", OracleDbType.Varchar2)
             parametro.Value = cliente.Direccion
             cmd.Parameters.Add(parametro)
 
-            parametro = New OracleParameter("TELEFONO", OracleDbType.Varchar2)
+            parametro = New OracleParameter("ATELEFONO", OracleDbType.Varchar2)
             parametro.Value = cliente.Telefono
             cmd.Parameters.Add(parametro)
 
-            parametro = New OracleParameter("EMAIL", OracleDbType.Varchar2)
+            parametro = New OracleParameter("AEMAIL", OracleDbType.Varchar2)
             parametro.Value = cliente.email
             cmd.Parameters.Add(parametro)
 
@@ -179,45 +176,6 @@ Public Class DAOCliente
         End Try
         vloConnection.Close()
         Return resultado
-    End Function
-#End Region
-
-#Region "Buscar Cliente"
-    Public Function SP_BUSCAR_CLIENTE(ByVal cliente As BEUCliente) As BEUCliente
-        vloConnection = New OracleConnection(ConfigurationManager.ConnectionStrings("OracleConnectionString").ConnectionString) ' Se crea la conexion a la bd
-        Try
-            vloConnection.Open()
-        Catch ex As Exception
-            Throw New Exception("No se pudo conectar al servidor de bd...")
-        End Try
-        vloComando = New OracleCommand("SP_BUSCAR_CLIENTE", vloConnection)
-        vloComando.CommandType = CommandType.StoredProcedure
-
-        Dim parametro As New OracleParameter("P_ID_CLIENTE", OracleDbType.Int32)
-        parametro.Value = cliente.Id_Cliente
-        parametro.Direction = ParameterDirection.InputOutput
-        parametro.Size = 200
-        vloComando.Parameters.Add(parametro)
-
-        parametro = New OracleParameter("P_NOMBRE", OracleDbType.Varchar2)
-        parametro.Value = cliente.Nombre
-        parametro.Direction = ParameterDirection.InputOutput
-        parametro.Size = 200
-        vloComando.Parameters.Add(parametro)
-
-        parametro = New OracleParameter("P_APELLIDO", OracleDbType.Varchar2)
-        parametro.Value = cliente.Apellido
-        parametro.Direction = ParameterDirection.InputOutput
-        'parametro.Value = Nothing
-        parametro.Size = 200
-        vloComando.Parameters.Add(parametro)
-
-        vloComando.ExecuteNonQuery()
-        cliente.Id_Cliente = Convert.ToInt32(vloComando.Parameters("P_ID_CLIENTE").Value.ToString())
-        'cliente.Id_Cliente = vloComando.Parameters("P_ID_CLIENTE").Value
-        cliente.Nombre = vloComando.Parameters("P_NOMBRE").Value.ToString
-        cliente.Apellido = vloComando.Parameters("P_APELLIDO").Value.ToString
-        Return cliente
     End Function
 #End Region
 
@@ -286,10 +244,11 @@ Public Class DAOCliente
     Public Sub GetConexion(ByVal usuario, ByVal pass)
         Dim vSTRConn As String = ""
 
-        vSTRConn &= "Data Source=XE;"
+        vSTRConn &= "Data Source=192.168.1.2;"
+
         vSTRConn &= "User ID= " + usuario + " ;"
         vSTRConn &= "Password= " + pass + " ;"
-
+        vSTRConn &= " Unicode = True;"
         Try
             vloConnection = New OracleConnection(vSTRConn)
             vloConnection.Open()

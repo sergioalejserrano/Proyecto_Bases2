@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <PublishUrlHistory>ftp://eleccion.net84.net/|F:\|ftp://31.170.160.89/|C:\Users\Sergio\Desktop\Nueva carpeta\|publicar\</PublishUrlHistory>
+    <PublishUrlHistory>C:\Users\Sergio\Dropbox\UIA\Bases de Datos 2\Proyecto\Instalador\|ftp://eleccion.net84.net/|F:\|ftp://31.170.160.89/|C:\Users\Sergio\Desktop\Nueva carpeta\</PublishUrlHistory>
     <InstallUrlHistory>http://localhost/UITaller/|\\31.170.160.89\setup.exe\</InstallUrlHistory>
     <SupportUrlHistory />
     <UpdateUrlHistory />

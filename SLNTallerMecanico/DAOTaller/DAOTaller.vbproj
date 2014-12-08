@@ -67,9 +67,12 @@
   <ItemGroup>
     <Compile Include="DAOCliente.vb" />
     <Compile Include="DAOConexion.vb" />
+    <Compile Include="DAODetalleFactura.vb" />
     <Compile Include="DAOEmpleado.vb" />
+    <Compile Include="DAOFactura.vb" />
     <Compile Include="DAOHojaDeParte.vb" />
     <Compile Include="DAOProveedor.vb" />
+    <Compile Include="DAOStock.vb" />
     <Compile Include="DAOVehiculo.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
