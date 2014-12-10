@@ -75,7 +75,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>kojcHlw4k1n4lLIBgcWYLBsUNunUjiScmWTIwPIiNRs=</dsig:DigestValue>
+        <dsig:DigestValue>XiwZ6VoWSYq+N8vz1KvLE8So27eOc0zEWN1OJSNfmDM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -87,7 +87,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>UiOGYPGZDr/S/83aEeBfR4xNXb2IxU4jG94hSirLe44=</dsig:DigestValue>
+        <dsig:DigestValue>rEfs/l+T9o72lTKqStTOlEj89F3WMhdXhmK2rb0BPHM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -99,7 +99,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>dBKAzcSCqqPoYDLMjcOXYYn1S7KWG6/BpEnQEFdpFKg=</dsig:DigestValue>
+        <dsig:DigestValue>XXYkIqR9RLkm/aiGL8oS/Y/VzWQt+P4DRezenDUUrIM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -123,7 +123,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>nOm8ALM7af6d9apGH/goL64DnakqskNZ29swnL59vdU=</dsig:DigestValue>
+        <dsig:DigestValue>8CBdy1TpZ5tn9p/F1wWKzb4IhjZnTuZ7d4ek6KHLXWg=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -136,13 +136,13 @@
       <dsig:DigestValue>wHxmdNzwbWQ/kO8kQqmszqnaBposvMioKU/DBhPNkII=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="UITaller.exe.config" size="826">
+  <file name="UITaller.exe.config" size="806">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>a1Vs44nwxuCijmF0clhOiAnqTQva4vMEcTgjECAVeg8=</dsig:DigestValue>
+      <dsig:DigestValue>oWuq659M7cOFAIPnSYWkFY57KIFpbk3T5J/s8p64D2k=</dsig:DigestValue>
     </hash>
   </file>
   <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">
