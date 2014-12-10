@@ -22,6 +22,7 @@ Partial Class frmClienteBuscar
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmClienteBuscar))
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.btnBuscar = New System.Windows.Forms.Button()
         Me.txtCedula = New System.Windows.Forms.TextBox()
@@ -36,6 +37,7 @@ Partial Class frmClienteBuscar
         '
         'GroupBox1
         '
+        Me.GroupBox1.BackColor = System.Drawing.Color.Azure
         Me.GroupBox1.Controls.Add(Me.btnBuscar)
         Me.GroupBox1.Controls.Add(Me.txtCedula)
         Me.GroupBox1.Controls.Add(Me.lblCedula)
@@ -44,10 +46,12 @@ Partial Class frmClienteBuscar
         Me.GroupBox1.Size = New System.Drawing.Size(515, 120)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Buscar Cliente"
         '
         'btnBuscar
         '
+        Me.btnBuscar.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnBuscar.Font = New System.Drawing.Font("Microsoft NeoGothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnBuscar.Location = New System.Drawing.Point(377, 60)
         Me.btnBuscar.Name = "btnBuscar"
         Me.btnBuscar.Size = New System.Drawing.Size(89, 31)
@@ -83,6 +87,7 @@ Partial Class frmClienteBuscar
         'Label1
         '
         Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Lucida Bright", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(46, 187)
         Me.Label1.Name = "Label1"
@@ -101,6 +106,7 @@ Partial Class frmClienteBuscar
         'lblCedulaResultado
         '
         Me.lblCedulaResultado.AutoSize = True
+        Me.lblCedulaResultado.BackColor = System.Drawing.Color.Transparent
         Me.lblCedulaResultado.Font = New System.Drawing.Font("Lucida Bright", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblCedulaResultado.Location = New System.Drawing.Point(46, 260)
         Me.lblCedulaResultado.Name = "lblCedulaResultado"
@@ -110,6 +116,11 @@ Partial Class frmClienteBuscar
         '
         'btnSeleccionar
         '
+        Me.btnSeleccionar.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnSeleccionar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.btnSeleccionar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Azure
+        Me.btnSeleccionar.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnSeleccionar.Font = New System.Drawing.Font("Microsoft NeoGothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnSeleccionar.Location = New System.Drawing.Point(431, 192)
         Me.btnSeleccionar.Name = "btnSeleccionar"
         Me.btnSeleccionar.Size = New System.Drawing.Size(98, 93)
@@ -121,6 +132,7 @@ Partial Class frmClienteBuscar
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.ClientSize = New System.Drawing.Size(543, 339)
         Me.Controls.Add(Me.btnSeleccionar)
         Me.Controls.Add(Me.txtCedulaResultado)
@@ -128,6 +140,7 @@ Partial Class frmClienteBuscar
         Me.Controls.Add(Me.txtNombreResultado)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.GroupBox1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmClienteBuscar"
         Me.Text = "Buscar Cliente"
         Me.GroupBox1.ResumeLayout(False)

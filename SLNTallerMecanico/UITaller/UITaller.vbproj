@@ -89,6 +89,7 @@
   <ItemGroup>
     <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
     <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Oracle.DataAccess, Version=4.121.1.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=x86" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.OracleClient" />
@@ -119,6 +120,31 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet2.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet3.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetFactura.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetFactura.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetHojadeParte.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetHojadeParte.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetRepuesto.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetRepuesto.xsd</DependentUpon>
     </Compile>
     <Compile Include="DataSetStock.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -153,6 +179,12 @@
       <DependentUpon>frmClienteBorrar.vb</DependentUpon>
     </Compile>
     <Compile Include="frmClienteBorrar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEmpleadoBuscar.Designer.vb">
+      <DependentUpon>frmEmpleadoBuscar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmEmpleadoBuscar.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmFactura.Designer.vb">
@@ -209,6 +241,36 @@
     <Compile Include="frmReporteEmpleado.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmReporteFactura.Designer.vb">
+      <DependentUpon>frmReporteFactura.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmReporteFactura.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReporteHojaDeParte.Designer.vb">
+      <DependentUpon>frmReporteHojaDeParte.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmReporteHojaDeParte.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReporteProveedor.Designer.vb">
+      <DependentUpon>frmReporteProveedor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmReporteProveedor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReporteRepuesto.Designer.vb">
+      <DependentUpon>frmReporteRepuesto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmReporteRepuesto.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReporteVehiculo.Designer.vb">
+      <DependentUpon>frmReporteVehiculo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmReporteVehiculo.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmRepuestoBuscar.Designer.vb">
       <DependentUpon>frmRepuestoBuscar.vb</DependentUpon>
     </Compile>
@@ -219,6 +281,12 @@
       <DependentUpon>frmRepuestoNuevo.vb</DependentUpon>
     </Compile>
     <Compile Include="frmRepuestoNuevo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVehiculoBuscar.Designer.vb">
+      <DependentUpon>frmVehiculoBuscar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmVehiculoBuscar.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmVehiculoNuevo.Designer.vb">
@@ -261,6 +329,9 @@
     <EmbeddedResource Include="frmClienteBorrar.resx">
       <DependentUpon>frmClienteBorrar.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmEmpleadoBuscar.resx">
+      <DependentUpon>frmEmpleadoBuscar.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmFactura.resx">
       <DependentUpon>frmFactura.vb</DependentUpon>
     </EmbeddedResource>
@@ -288,23 +359,46 @@
     <EmbeddedResource Include="frmReporteEmpleado.resx">
       <DependentUpon>frmReporteEmpleado.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmReporteFactura.resx">
+      <DependentUpon>frmReporteFactura.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReporteHojaDeParte.resx">
+      <DependentUpon>frmReporteHojaDeParte.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReporteProveedor.resx">
+      <DependentUpon>frmReporteProveedor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReporteRepuesto.resx">
+      <DependentUpon>frmReporteRepuesto.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReporteVehiculo.resx">
+      <DependentUpon>frmReporteVehiculo.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmRepuestoBuscar.resx">
       <DependentUpon>frmRepuestoBuscar.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmRepuestoNuevo.resx">
       <DependentUpon>frmRepuestoNuevo.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmVehiculoBuscar.resx">
+      <DependentUpon>frmVehiculoBuscar.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmVehiculoNuevo.resx">
       <DependentUpon>frmVehiculoNuevo.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Report1.rdlc" />
     <EmbeddedResource Include="Report2.rdlc" />
+    <EmbeddedResource Include="Report3.rdlc" />
+    <EmbeddedResource Include="Report4.rdlc" />
+    <EmbeddedResource Include="Report5.rdlc" />
+    <EmbeddedResource Include="Report6.rdlc" />
+    <EmbeddedResource Include="Report7.rdlc" />
   </ItemGroup>
   <ItemGroup>
     <None Include="DataSet1.xsc">
@@ -317,6 +411,61 @@
     </None>
     <None Include="DataSet1.xss">
       <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet2.xsc">
+      <DependentUpon>DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet2.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSet2.xss">
+      <DependentUpon>DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet3.xsc">
+      <DependentUpon>DataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet3.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSet3.xss">
+      <DependentUpon>DataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetFactura.xsc">
+      <DependentUpon>DataSetFactura.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetFactura.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetFactura.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSetFactura.xss">
+      <DependentUpon>DataSetFactura.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetHojadeParte.xsc">
+      <DependentUpon>DataSetHojadeParte.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetHojadeParte.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetHojadeParte.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSetHojadeParte.xss">
+      <DependentUpon>DataSetHojadeParte.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetRepuesto.xsc">
+      <DependentUpon>DataSetRepuesto.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetRepuesto.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetRepuesto.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSetRepuesto.xss">
+      <DependentUpon>DataSetRepuesto.xsd</DependentUpon>
     </None>
     <None Include="DataSetStock.xsc">
       <DependentUpon>DataSetStock.xsd</DependentUpon>
@@ -396,11 +545,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="car26.ico" />
-    <None Include="Resources\cobrar.png" />
-    <None Include="Resources\paybill.png" />
-    <None Include="Resources\new.png" />
-    <None Include="Resources\blue.jpg" />
-    <None Include="Resources\Mechanic interface.png" />
+    <None Include="Resources\actualizar.bmp" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />

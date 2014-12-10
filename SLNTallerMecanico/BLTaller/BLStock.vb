@@ -13,6 +13,15 @@ Public Class BLStock
         Return resultado
     End Function
 
+    Function SP_BORRAR_STOCK(ByVal repuesto As BEUStock) As Boolean
+        Try
+            resultado = New DAOTaller.DAOStock().SP_BORRAR_STOCK(repuesto)
+        Catch ex As Exception
+
+        End Try
+        Return resultado
+    End Function
+
     Function SP_RESTAR_STOCK(ByVal repuesto As BEUStock, ByVal cantidad As Integer) As Boolean
         Try
             resultado = New DAOTaller.DAOStock().SP_RESTAR_STOCK(repuesto, cantidad)

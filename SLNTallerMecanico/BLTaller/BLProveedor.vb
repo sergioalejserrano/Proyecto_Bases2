@@ -19,7 +19,14 @@ Public Class BLProveedor
         End Try
         Return resultado
     End Function
+    Function SP_BORRAR_VEHICULO(ByVal proveedor As BEUProveedor) As Boolean
+        Try
+            resultado = New DAOTaller.DAOProveedor().SP_BORRAR_PROVEEDOR(proveedor)
+        Catch ex As Exception
 
+        End Try
+        Return resultado
+    End Function
     Function SP_ACTUALIZAR_PROVEEDOR(ByVal proveedor As BEUProveedor) As Boolean
         Try
             resultado = New DAOTaller.DAOProveedor().SP_ACTUALIZAR_PROVEEDOR(proveedor)

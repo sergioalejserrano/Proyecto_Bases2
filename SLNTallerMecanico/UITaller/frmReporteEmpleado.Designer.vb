@@ -24,13 +24,24 @@ Partial Class frmReporteEmpleado
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim ReportDataSource1 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
-        Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
-        Me.ReporteEmpleados = New UITaller.ReporteEmpleados()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmReporteEmpleado))
         Me.EMPLEADOBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.ReporteEmpleados = New UITaller.ReporteEmpleados()
+        Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
         Me.EMPLEADOTableAdapter = New UITaller.ReporteEmpleadosTableAdapters.EMPLEADOTableAdapter()
-        CType(Me.ReporteEmpleados, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EMPLEADOBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ReporteEmpleados, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'EMPLEADOBindingSource
+        '
+        Me.EMPLEADOBindingSource.DataMember = "EMPLEADO"
+        Me.EMPLEADOBindingSource.DataSource = Me.ReporteEmpleados
+        '
+        'ReporteEmpleados
+        '
+        Me.ReporteEmpleados.DataSetName = "ReporteEmpleados"
+        Me.ReporteEmpleados.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'ReportViewer1
         '
@@ -44,16 +55,6 @@ Partial Class frmReporteEmpleado
         Me.ReportViewer1.Size = New System.Drawing.Size(749, 365)
         Me.ReportViewer1.TabIndex = 0
         '
-        'ReporteEmpleados
-        '
-        Me.ReporteEmpleados.DataSetName = "ReporteEmpleados"
-        Me.ReporteEmpleados.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'EMPLEADOBindingSource
-        '
-        Me.EMPLEADOBindingSource.DataMember = "EMPLEADO"
-        Me.EMPLEADOBindingSource.DataSource = Me.ReporteEmpleados
-        '
         'EMPLEADOTableAdapter
         '
         Me.EMPLEADOTableAdapter.ClearBeforeFill = True
@@ -64,10 +65,11 @@ Partial Class frmReporteEmpleado
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(749, 365)
         Me.Controls.Add(Me.ReportViewer1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmReporteEmpleado"
-        Me.Text = "frmReporteEmpleado"
-        CType(Me.ReporteEmpleados, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Text = "Reporte de Empleados"
         CType(Me.EMPLEADOBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ReporteEmpleados, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

@@ -22,6 +22,7 @@ Partial Class frmVehiculoNuevo
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmVehiculoNuevo))
         Me.txtModelo = New System.Windows.Forms.TextBox()
         Me.lblModelo = New System.Windows.Forms.Label()
         Me.txtVIN = New System.Windows.Forms.TextBox()
@@ -44,6 +45,7 @@ Partial Class frmVehiculoNuevo
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.txtAno = New System.Windows.Forms.TextBox()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'txtModelo
@@ -56,6 +58,7 @@ Partial Class frmVehiculoNuevo
         'lblModelo
         '
         Me.lblModelo.AutoSize = True
+        Me.lblModelo.BackColor = System.Drawing.Color.Transparent
         Me.lblModelo.Font = New System.Drawing.Font("Lucida Bright", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblModelo.Location = New System.Drawing.Point(11, 119)
         Me.lblModelo.Name = "lblModelo"
@@ -76,6 +79,7 @@ Partial Class frmVehiculoNuevo
         'lblVIN
         '
         Me.lblVIN.AutoSize = True
+        Me.lblVIN.BackColor = System.Drawing.Color.Transparent
         Me.lblVIN.Font = New System.Drawing.Font("Lucida Bright", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblVIN.Location = New System.Drawing.Point(12, 20)
         Me.lblVIN.Name = "lblVIN"
@@ -93,6 +97,7 @@ Partial Class frmVehiculoNuevo
         'lblPlaca
         '
         Me.lblPlaca.AutoSize = True
+        Me.lblPlaca.BackColor = System.Drawing.Color.Transparent
         Me.lblPlaca.Font = New System.Drawing.Font("Lucida Bright", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblPlaca.Location = New System.Drawing.Point(11, 54)
         Me.lblPlaca.Name = "lblPlaca"
@@ -110,6 +115,7 @@ Partial Class frmVehiculoNuevo
         'lblMarca
         '
         Me.lblMarca.AutoSize = True
+        Me.lblMarca.BackColor = System.Drawing.Color.Transparent
         Me.lblMarca.Font = New System.Drawing.Font("Lucida Bright", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblMarca.Location = New System.Drawing.Point(12, 87)
         Me.lblMarca.Name = "lblMarca"
@@ -120,6 +126,7 @@ Partial Class frmVehiculoNuevo
         'lblAno
         '
         Me.lblAno.AutoSize = True
+        Me.lblAno.BackColor = System.Drawing.Color.Transparent
         Me.lblAno.Font = New System.Drawing.Font("Lucida Bright", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblAno.Location = New System.Drawing.Point(12, 154)
         Me.lblAno.Name = "lblAno"
@@ -137,6 +144,7 @@ Partial Class frmVehiculoNuevo
         'lblColor
         '
         Me.lblColor.AutoSize = True
+        Me.lblColor.BackColor = System.Drawing.Color.Transparent
         Me.lblColor.Font = New System.Drawing.Font("Lucida Bright", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblColor.Location = New System.Drawing.Point(12, 192)
         Me.lblColor.Name = "lblColor"
@@ -147,6 +155,7 @@ Partial Class frmVehiculoNuevo
         'lblCliente
         '
         Me.lblCliente.AutoSize = True
+        Me.lblCliente.BackColor = System.Drawing.Color.Transparent
         Me.lblCliente.Font = New System.Drawing.Font("Lucida Bright", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblCliente.Location = New System.Drawing.Point(12, 226)
         Me.lblCliente.Name = "lblCliente"
@@ -156,15 +165,21 @@ Partial Class frmVehiculoNuevo
         '
         'btnRegistrar
         '
-        Me.btnRegistrar.Location = New System.Drawing.Point(178, 273)
+        Me.btnRegistrar.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnRegistrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnRegistrar.Font = New System.Drawing.Font("Microsoft NeoGothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnRegistrar.Image = CType(resources.GetObject("btnRegistrar.Image"), System.Drawing.Image)
+        Me.btnRegistrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnRegistrar.Location = New System.Drawing.Point(204, 287)
         Me.btnRegistrar.Name = "btnRegistrar"
-        Me.btnRegistrar.Size = New System.Drawing.Size(96, 36)
+        Me.btnRegistrar.Size = New System.Drawing.Size(122, 52)
         Me.btnRegistrar.TabIndex = 20
         Me.btnRegistrar.Text = "Registrar"
         Me.btnRegistrar.UseVisualStyleBackColor = True
         '
         'txtCliente
         '
+        Me.txtCliente.Cursor = System.Windows.Forms.Cursors.Default
         Me.txtCliente.Location = New System.Drawing.Point(141, 228)
         Me.txtCliente.Name = "txtCliente"
         Me.txtCliente.ReadOnly = True
@@ -173,16 +188,22 @@ Partial Class frmVehiculoNuevo
         '
         'btnBuscar
         '
+        Me.btnBuscar.BackgroundImage = CType(resources.GetObject("btnBuscar.BackgroundImage"), System.Drawing.Image)
+        Me.btnBuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.btnBuscar.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnBuscar.Font = New System.Drawing.Font("Microsoft NeoGothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnBuscar.Location = New System.Drawing.Point(234, 226)
         Me.btnBuscar.Name = "btnBuscar"
         Me.btnBuscar.Size = New System.Drawing.Size(75, 23)
         Me.btnBuscar.TabIndex = 22
         Me.btnBuscar.Text = "Buscar"
+        Me.btnBuscar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btnBuscar.UseVisualStyleBackColor = True
         '
         'Label1
         '
         Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Location = New System.Drawing.Point(281, 26)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(11, 13)
@@ -192,6 +213,7 @@ Partial Class frmVehiculoNuevo
         'Label2
         '
         Me.Label2.AutoSize = True
+        Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Location = New System.Drawing.Point(280, 57)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(11, 13)
@@ -201,6 +223,7 @@ Partial Class frmVehiculoNuevo
         'Label3
         '
         Me.Label3.AutoSize = True
+        Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Location = New System.Drawing.Point(281, 90)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(11, 13)
@@ -210,6 +233,7 @@ Partial Class frmVehiculoNuevo
         'Label4
         '
         Me.Label4.AutoSize = True
+        Me.Label4.BackColor = System.Drawing.Color.Transparent
         Me.Label4.Location = New System.Drawing.Point(280, 122)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(11, 13)
@@ -219,7 +243,8 @@ Partial Class frmVehiculoNuevo
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(231, 312)
+        Me.Label5.BackColor = System.Drawing.Color.Transparent
+        Me.Label5.Location = New System.Drawing.Point(261, 361)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(110, 13)
         Me.Label5.TabIndex = 27
@@ -228,6 +253,7 @@ Partial Class frmVehiculoNuevo
         'Label6
         '
         Me.Label6.AutoSize = True
+        Me.Label6.BackColor = System.Drawing.Color.Transparent
         Me.Label6.Location = New System.Drawing.Point(315, 228)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(11, 13)
@@ -241,11 +267,28 @@ Partial Class frmVehiculoNuevo
         Me.txtAno.Size = New System.Drawing.Size(133, 20)
         Me.txtAno.TabIndex = 29
         '
+        'Button1
+        '
+        Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.Button1.Font = New System.Drawing.Font("Microsoft NeoGothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
+        Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button1.Location = New System.Drawing.Point(41, 287)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(122, 52)
+        Me.Button1.TabIndex = 48
+        Me.Button1.Text = "Borrar"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'frmVehiculoNuevo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(362, 335)
+        Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.ClientSize = New System.Drawing.Size(383, 383)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.txtAno)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label5)
@@ -268,6 +311,7 @@ Partial Class frmVehiculoNuevo
         Me.Controls.Add(Me.lblVIN)
         Me.Controls.Add(Me.txtModelo)
         Me.Controls.Add(Me.lblModelo)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmVehiculoNuevo"
         Me.Text = "Nuevo Vehiculo"
         Me.ResumeLayout(False)
@@ -296,4 +340,5 @@ Partial Class frmVehiculoNuevo
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents Label6 As System.Windows.Forms.Label
     Friend WithEvents txtAno As System.Windows.Forms.TextBox
+    Friend WithEvents Button1 As System.Windows.Forms.Button
 End Class

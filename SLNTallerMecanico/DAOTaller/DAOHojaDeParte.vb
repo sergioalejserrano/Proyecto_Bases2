@@ -70,10 +70,12 @@ Public Class DAOHojaDeParte
 
             parametro = New OracleParameter("VIN", OracleDbType.Char)
             parametro.Value = hoja.VIN
+            parametro.Size = 17
             cmd.Parameters.Add(parametro)
 
             parametro = New OracleParameter("ID_EMPLEADO", OracleDbType.Varchar2)
             parametro.Value = hoja.Id_Empleado
+
             cmd.Parameters.Add(parametro)
 
             Dim resgistrosActualizados As Integer 'Se crea la variable "resgistrosActualizados"

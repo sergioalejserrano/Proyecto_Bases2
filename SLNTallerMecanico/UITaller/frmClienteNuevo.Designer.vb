@@ -45,55 +45,62 @@ Partial Class frmClienteNuevo
         '
         'btnAgregar
         '
-        Me.btnAgregar.BackColor = System.Drawing.Color.White
-        Me.btnAgregar.BackgroundImage = Global.UITaller.My.Resources.Resources.NuevoCliente
+        Me.btnAgregar.BackColor = System.Drawing.SystemColors.Control
         Me.btnAgregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.btnAgregar.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnAgregar.ImageAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.btnAgregar.Location = New System.Drawing.Point(192, 220)
+        Me.btnAgregar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnAgregar.Font = New System.Drawing.Font("Microsoft NeoGothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAgregar.Image = CType(resources.GetObject("btnAgregar.Image"), System.Drawing.Image)
+        Me.btnAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnAgregar.Location = New System.Drawing.Point(227, 258)
         Me.btnAgregar.Name = "btnAgregar"
-        Me.btnAgregar.Size = New System.Drawing.Size(108, 77)
+        Me.btnAgregar.Size = New System.Drawing.Size(122, 67)
         Me.btnAgregar.TabIndex = 0
+        Me.btnAgregar.Text = "Registrar"
         Me.btnAgregar.UseVisualStyleBackColor = False
         '
         'lblCedula
         '
         Me.lblCedula.AutoSize = True
-        Me.lblCedula.Font = New System.Drawing.Font("Lucida Bright", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCedula.BackColor = System.Drawing.Color.Transparent
+        Me.lblCedula.Font = New System.Drawing.Font("Lucida Bright", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblCedula.Location = New System.Drawing.Point(24, 10)
         Me.lblCedula.Name = "lblCedula"
-        Me.lblCedula.Size = New System.Drawing.Size(64, 20)
+        Me.lblCedula.Size = New System.Drawing.Size(78, 23)
         Me.lblCedula.TabIndex = 1
         Me.lblCedula.Text = "Cédula"
         '
         'lblApellido
         '
         Me.lblApellido.AutoSize = True
-        Me.lblApellido.Font = New System.Drawing.Font("Lucida Bright", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblApellido.Location = New System.Drawing.Point(27, 79)
+        Me.lblApellido.BackColor = System.Drawing.Color.Transparent
+        Me.lblApellido.Font = New System.Drawing.Font("Lucida Bright", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblApellido.Location = New System.Drawing.Point(23, 89)
         Me.lblApellido.Name = "lblApellido"
-        Me.lblApellido.Size = New System.Drawing.Size(76, 20)
+        Me.lblApellido.Size = New System.Drawing.Size(94, 23)
         Me.lblApellido.TabIndex = 3
         Me.lblApellido.Text = "Apellido"
         '
         'lblDireccion
         '
         Me.lblDireccion.AutoSize = True
-        Me.lblDireccion.Font = New System.Drawing.Font("Lucida Bright", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblDireccion.Location = New System.Drawing.Point(28, 113)
+        Me.lblDireccion.BackColor = System.Drawing.Color.Transparent
+        Me.lblDireccion.Font = New System.Drawing.Font("Lucida Bright", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblDireccion.Location = New System.Drawing.Point(12, 134)
         Me.lblDireccion.Name = "lblDireccion"
-        Me.lblDireccion.Size = New System.Drawing.Size(84, 20)
+        Me.lblDireccion.Size = New System.Drawing.Size(107, 23)
         Me.lblDireccion.TabIndex = 4
         Me.lblDireccion.Text = "Dirección"
         '
         'lblTelefono
         '
         Me.lblTelefono.AutoSize = True
-        Me.lblTelefono.Font = New System.Drawing.Font("Lucida Bright", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblTelefono.Location = New System.Drawing.Point(24, 150)
+        Me.lblTelefono.BackColor = System.Drawing.Color.Transparent
+        Me.lblTelefono.Font = New System.Drawing.Font("Lucida Bright", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTelefono.Location = New System.Drawing.Point(20, 175)
         Me.lblTelefono.Name = "lblTelefono"
-        Me.lblTelefono.Size = New System.Drawing.Size(78, 20)
+        Me.lblTelefono.Size = New System.Drawing.Size(99, 23)
         Me.lblTelefono.TabIndex = 5
         Me.lblTelefono.Text = "Teléfono"
         '
@@ -101,58 +108,60 @@ Partial Class frmClienteNuevo
         '
         Me.txtId_Cliente.Location = New System.Drawing.Point(139, 12)
         Me.txtId_Cliente.Name = "txtId_Cliente"
-        Me.txtId_Cliente.Size = New System.Drawing.Size(133, 20)
+        Me.txtId_Cliente.Size = New System.Drawing.Size(161, 20)
         Me.txtId_Cliente.TabIndex = 6
         '
         'txtNombre
         '
-        Me.txtNombre.Location = New System.Drawing.Point(139, 45)
+        Me.txtNombre.Location = New System.Drawing.Point(139, 51)
         Me.txtNombre.Name = "txtNombre"
-        Me.txtNombre.Size = New System.Drawing.Size(133, 20)
+        Me.txtNombre.Size = New System.Drawing.Size(161, 20)
         Me.txtNombre.TabIndex = 7
         '
         'txtApellido
         '
-        Me.txtApellido.Location = New System.Drawing.Point(139, 78)
+        Me.txtApellido.Location = New System.Drawing.Point(139, 92)
         Me.txtApellido.Name = "txtApellido"
-        Me.txtApellido.Size = New System.Drawing.Size(133, 20)
+        Me.txtApellido.Size = New System.Drawing.Size(161, 20)
         Me.txtApellido.TabIndex = 8
         '
         'txtDireccion
         '
-        Me.txtDireccion.Location = New System.Drawing.Point(139, 112)
+        Me.txtDireccion.Location = New System.Drawing.Point(139, 134)
         Me.txtDireccion.Name = "txtDireccion"
-        Me.txtDireccion.Size = New System.Drawing.Size(133, 20)
+        Me.txtDireccion.Size = New System.Drawing.Size(161, 20)
         Me.txtDireccion.TabIndex = 9
         '
         'txtTelefono
         '
-        Me.txtTelefono.Location = New System.Drawing.Point(139, 149)
+        Me.txtTelefono.Location = New System.Drawing.Point(139, 175)
         Me.txtTelefono.Name = "txtTelefono"
-        Me.txtTelefono.Size = New System.Drawing.Size(133, 20)
+        Me.txtTelefono.Size = New System.Drawing.Size(161, 20)
         Me.txtTelefono.TabIndex = 10
         '
         'txtEmail
         '
-        Me.txtEmail.Location = New System.Drawing.Point(139, 184)
+        Me.txtEmail.Location = New System.Drawing.Point(139, 216)
         Me.txtEmail.Name = "txtEmail"
-        Me.txtEmail.Size = New System.Drawing.Size(133, 20)
+        Me.txtEmail.Size = New System.Drawing.Size(161, 20)
         Me.txtEmail.TabIndex = 12
         '
         'lblEmail
         '
         Me.lblEmail.AutoSize = True
-        Me.lblEmail.Font = New System.Drawing.Font("Lucida Bright", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblEmail.Location = New System.Drawing.Point(27, 185)
+        Me.lblEmail.BackColor = System.Drawing.Color.Transparent
+        Me.lblEmail.Font = New System.Drawing.Font("Lucida Bright", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblEmail.Location = New System.Drawing.Point(37, 211)
         Me.lblEmail.Name = "lblEmail"
-        Me.lblEmail.Size = New System.Drawing.Size(50, 20)
+        Me.lblEmail.Size = New System.Drawing.Size(65, 23)
         Me.lblEmail.TabIndex = 11
         Me.lblEmail.Text = "Email"
         '
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(12, 291)
+        Me.Label7.BackColor = System.Drawing.Color.Transparent
+        Me.Label7.Location = New System.Drawing.Point(9, 330)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(110, 13)
         Me.Label7.TabIndex = 30
@@ -161,7 +170,8 @@ Partial Class frmClienteNuevo
         'Label11
         '
         Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(278, 15)
+        Me.Label11.BackColor = System.Drawing.Color.Transparent
+        Me.Label11.Location = New System.Drawing.Point(307, 16)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(11, 13)
         Me.Label11.TabIndex = 36
@@ -170,7 +180,8 @@ Partial Class frmClienteNuevo
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(278, 50)
+        Me.Label8.BackColor = System.Drawing.Color.Transparent
+        Me.Label8.Location = New System.Drawing.Point(307, 57)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(11, 13)
         Me.Label8.TabIndex = 37
@@ -179,7 +190,8 @@ Partial Class frmClienteNuevo
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(278, 81)
+        Me.Label9.BackColor = System.Drawing.Color.Transparent
+        Me.Label9.Location = New System.Drawing.Point(308, 95)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(11, 13)
         Me.Label9.TabIndex = 38
@@ -188,7 +200,8 @@ Partial Class frmClienteNuevo
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(278, 152)
+        Me.Label10.BackColor = System.Drawing.Color.Transparent
+        Me.Label10.Location = New System.Drawing.Point(310, 178)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(11, 13)
         Me.Label10.TabIndex = 39
@@ -197,10 +210,11 @@ Partial Class frmClienteNuevo
         'lblNombre
         '
         Me.lblNombre.AutoSize = True
-        Me.lblNombre.Font = New System.Drawing.Font("Lucida Bright", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblNombre.Location = New System.Drawing.Point(24, 46)
+        Me.lblNombre.BackColor = System.Drawing.Color.Transparent
+        Me.lblNombre.Font = New System.Drawing.Font("Lucida Bright", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblNombre.Location = New System.Drawing.Point(24, 52)
         Me.lblNombre.Name = "lblNombre"
-        Me.lblNombre.Size = New System.Drawing.Size(69, 20)
+        Me.lblNombre.Size = New System.Drawing.Size(93, 23)
         Me.lblNombre.TabIndex = 2
         Me.lblNombre.Text = "Nombre"
         '
@@ -208,8 +222,10 @@ Partial Class frmClienteNuevo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(330, 313)
+        Me.BackColor = System.Drawing.Color.Azure
+        Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.ClientSize = New System.Drawing.Size(373, 352)
         Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.Label8)

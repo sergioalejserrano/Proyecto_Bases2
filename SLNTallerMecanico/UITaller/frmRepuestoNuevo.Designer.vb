@@ -22,6 +22,7 @@ Partial Class frmRepuestoNuevo
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmRepuestoNuevo))
         Me.txtPrecio = New System.Windows.Forms.TextBox()
         Me.lblPrecio = New System.Windows.Forms.Label()
         Me.txtCantidad = New System.Windows.Forms.TextBox()
@@ -37,6 +38,7 @@ Partial Class frmRepuestoNuevo
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'txtPrecio
@@ -49,6 +51,7 @@ Partial Class frmRepuestoNuevo
         'lblPrecio
         '
         Me.lblPrecio.AutoSize = True
+        Me.lblPrecio.BackColor = System.Drawing.Color.Transparent
         Me.lblPrecio.Font = New System.Drawing.Font("Lucida Bright", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblPrecio.Location = New System.Drawing.Point(11, 113)
         Me.lblPrecio.Name = "lblPrecio"
@@ -66,6 +69,7 @@ Partial Class frmRepuestoNuevo
         'lblCantidad
         '
         Me.lblCantidad.AutoSize = True
+        Me.lblCantidad.BackColor = System.Drawing.Color.Transparent
         Me.lblCantidad.Font = New System.Drawing.Font("Lucida Bright", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblCantidad.Location = New System.Drawing.Point(11, 76)
         Me.lblCantidad.Name = "lblCantidad"
@@ -83,6 +87,7 @@ Partial Class frmRepuestoNuevo
         'lblNombre
         '
         Me.lblNombre.AutoSize = True
+        Me.lblNombre.BackColor = System.Drawing.Color.Transparent
         Me.lblNombre.Font = New System.Drawing.Font("Lucida Bright", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblNombre.Location = New System.Drawing.Point(12, 42)
         Me.lblNombre.Name = "lblNombre"
@@ -93,6 +98,7 @@ Partial Class frmRepuestoNuevo
         'Label6
         '
         Me.Label6.AutoSize = True
+        Me.Label6.BackColor = System.Drawing.Color.Transparent
         Me.Label6.Location = New System.Drawing.Point(315, 159)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(11, 13)
@@ -101,6 +107,9 @@ Partial Class frmRepuestoNuevo
         '
         'btnBuscar
         '
+        Me.btnBuscar.BackgroundImage = CType(resources.GetObject("btnBuscar.BackgroundImage"), System.Drawing.Image)
+        Me.btnBuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.btnBuscar.Font = New System.Drawing.Font("Microsoft NeoGothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnBuscar.Location = New System.Drawing.Point(234, 157)
         Me.btnBuscar.Name = "btnBuscar"
         Me.btnBuscar.Size = New System.Drawing.Size(75, 23)
@@ -110,6 +119,7 @@ Partial Class frmRepuestoNuevo
         '
         'txtProveedor
         '
+        Me.txtProveedor.Cursor = System.Windows.Forms.Cursors.Default
         Me.txtProveedor.Location = New System.Drawing.Point(141, 159)
         Me.txtProveedor.Name = "txtProveedor"
         Me.txtProveedor.ReadOnly = True
@@ -119,6 +129,7 @@ Partial Class frmRepuestoNuevo
         'lblProveedor
         '
         Me.lblProveedor.AutoSize = True
+        Me.lblProveedor.BackColor = System.Drawing.Color.Transparent
         Me.lblProveedor.Font = New System.Drawing.Font("Lucida Bright", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblProveedor.Location = New System.Drawing.Point(12, 157)
         Me.lblProveedor.Name = "lblProveedor"
@@ -129,6 +140,7 @@ Partial Class frmRepuestoNuevo
         'Label5
         '
         Me.Label5.AutoSize = True
+        Me.Label5.BackColor = System.Drawing.Color.Transparent
         Me.Label5.Location = New System.Drawing.Point(222, 284)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(110, 13)
@@ -137,6 +149,11 @@ Partial Class frmRepuestoNuevo
         '
         'btnRegistrar
         '
+        Me.btnRegistrar.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnRegistrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnRegistrar.Font = New System.Drawing.Font("Microsoft NeoGothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnRegistrar.Image = CType(resources.GetObject("btnRegistrar.Image"), System.Drawing.Image)
+        Me.btnRegistrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnRegistrar.Location = New System.Drawing.Point(191, 211)
         Me.btnRegistrar.Name = "btnRegistrar"
         Me.btnRegistrar.Size = New System.Drawing.Size(141, 39)
@@ -147,6 +164,7 @@ Partial Class frmRepuestoNuevo
         'Label1
         '
         Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Location = New System.Drawing.Point(315, 116)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(11, 13)
@@ -156,6 +174,7 @@ Partial Class frmRepuestoNuevo
         'Label2
         '
         Me.Label2.AutoSize = True
+        Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Location = New System.Drawing.Point(315, 79)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(11, 13)
@@ -165,17 +184,35 @@ Partial Class frmRepuestoNuevo
         'Label3
         '
         Me.Label3.AutoSize = True
+        Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Location = New System.Drawing.Point(315, 45)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(11, 13)
         Me.Label3.TabIndex = 45
         Me.Label3.Text = "*"
         '
+        'Button1
+        '
+        Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.Button1.Font = New System.Drawing.Font("Microsoft NeoGothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
+        Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button1.Location = New System.Drawing.Point(32, 211)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(141, 39)
+        Me.Button1.TabIndex = 46
+        Me.Button1.Text = "Borrar"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'frmRepuestoNuevo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(344, 306)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
@@ -191,6 +228,7 @@ Partial Class frmRepuestoNuevo
         Me.Controls.Add(Me.lblCantidad)
         Me.Controls.Add(Me.txtNombre)
         Me.Controls.Add(Me.lblNombre)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmRepuestoNuevo"
         Me.Text = "Nuevo Repuesto"
         Me.ResumeLayout(False)
@@ -212,4 +250,5 @@ Partial Class frmRepuestoNuevo
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents Button1 As System.Windows.Forms.Button
 End Class

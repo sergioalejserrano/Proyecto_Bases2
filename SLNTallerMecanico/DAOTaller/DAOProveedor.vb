@@ -211,4 +211,47 @@ Public Class DAOProveedor
         Return resultado
     End Function
 #End Region
+
+#Region "Borrar Proveedor"
+    Function SP_BORRAR_PROVEEDOR(ByVal proveedor As BEUProveedor) As Boolean
+        vloConnection = New OracleConnection(ConfigurationManager.ConnectionStrings("OracleConnectionString").ConnectionString) ' Se crea la conexion a la bd
+        Try
+            vloConnection.Open() 'Se abre la conexión
+        Catch ex As Exception
+            MsgBox("No se pudo conectar al servidor de bd...", MsgBoxStyle.Critical)
+            Throw New Exception("No se pudo conectar al servidor de bd...")
+        End Try
+        Try
+            Dim sql As String = "SP_PROVEEDOR_NUEVO" 'Nombre del procedimiento almacenado para agregar un nuevo cliente
+
+            Dim cmd As New OracleCommand(sql, vloConnection) 'Se crea la variable "cmd" que va contener el nombre del proceso almacenado y los datos
+            ' de la conexión a oracle
+            cmd.CommandType = CommandType.StoredProcedure ' Se le indica que se le va pasar un proceso almacenado
+            Dim parametro As New OracleParameter("ID_PROVEEDOR", OracleDbType.Int32) ' Se declara la variable "parametro" que contiene el nombre y el tipo
+            ' del atributo de la tabla en este caso la de Proveedor.
+            parametro.Value = proveedor.Id_Proveedor   ' Le asiganamos el valor de la variable
+            cmd.Parameters.Add(parametro) 'Agregamos el valor a la variable parametro
+            Dim resgistrosActualizados As Integer 'Se crea la variable "resgistrosActualizados"
+
+            Try
+                resgistrosActualizados = cmd.ExecuteNonQuery() 'Se solicita el # de filas afectadas.
+                MsgBox("Proveedor borrado correctamente.", MsgBoxStyle.Information)
+            Catch ex As Exception
+                MsgBox("No se pudo borrar el proveedor", MsgBoxStyle.Critical)
+                Throw New Exception("Proveedor no se borro")
+
+            End Try
+            If resgistrosActualizados = 0 Then
+                resultado = True
+            End If
+            '   End If
+            resultado = True
+        Catch ex As Exception
+            resultado = False
+        End Try
+        vloConnection.Close()
+
+            Return resultado
+    End Function
+#End Region
 End Class

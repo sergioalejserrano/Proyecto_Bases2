@@ -24,6 +24,7 @@ Partial Class frmReporteClientes
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim ReportDataSource1 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmReporteClientes))
         Me.CLIENTEBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.DTSReporteClientes = New UITaller.DTSReporteClientes()
         Me.CLIENTETableAdapter = New UITaller.DTSReporteClientesTableAdapters.CLIENTETableAdapter()
@@ -65,6 +66,7 @@ Partial Class frmReporteClientes
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1169, 506)
         Me.Controls.Add(Me.ReportViewer1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmReporteClientes"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "Reporte de Clientes"

@@ -22,6 +22,7 @@ Partial Class frmProveedorBuscar
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmProveedorBuscar))
         Me.btnSeleccionar = New System.Windows.Forms.Button()
         Me.txtCedulaResultado = New System.Windows.Forms.TextBox()
         Me.lblCedulaResultado = New System.Windows.Forms.Label()
@@ -36,6 +37,9 @@ Partial Class frmProveedorBuscar
         '
         'btnSeleccionar
         '
+        Me.btnSeleccionar.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnSeleccionar.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnSeleccionar.Font = New System.Drawing.Font("Microsoft NeoGothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnSeleccionar.Location = New System.Drawing.Point(463, 144)
         Me.btnSeleccionar.Name = "btnSeleccionar"
         Me.btnSeleccionar.Size = New System.Drawing.Size(98, 93)
@@ -54,6 +58,7 @@ Partial Class frmProveedorBuscar
         'lblCedulaResultado
         '
         Me.lblCedulaResultado.AutoSize = True
+        Me.lblCedulaResultado.BackColor = System.Drawing.Color.Transparent
         Me.lblCedulaResultado.Font = New System.Drawing.Font("Lucida Bright", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblCedulaResultado.Location = New System.Drawing.Point(26, 214)
         Me.lblCedulaResultado.Name = "lblCedulaResultado"
@@ -72,6 +77,7 @@ Partial Class frmProveedorBuscar
         'Label1
         '
         Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Lucida Bright", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(26, 155)
         Me.Label1.Name = "Label1"
@@ -81,6 +87,7 @@ Partial Class frmProveedorBuscar
         '
         'GroupBox1
         '
+        Me.GroupBox1.BackColor = System.Drawing.Color.Azure
         Me.GroupBox1.Controls.Add(Me.btnBuscar)
         Me.GroupBox1.Controls.Add(Me.txtIdProveedor)
         Me.GroupBox1.Controls.Add(Me.lblIdProveedor)
@@ -89,10 +96,12 @@ Partial Class frmProveedorBuscar
         Me.GroupBox1.Size = New System.Drawing.Size(552, 117)
         Me.GroupBox1.TabIndex = 16
         Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Buscar Proveedor"
         '
         'btnBuscar
         '
+        Me.btnBuscar.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnBuscar.Font = New System.Drawing.Font("Microsoft NeoGothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnBuscar.Location = New System.Drawing.Point(439, 59)
         Me.btnBuscar.Name = "btnBuscar"
         Me.btnBuscar.Size = New System.Drawing.Size(89, 31)
@@ -121,6 +130,7 @@ Partial Class frmProveedorBuscar
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.ClientSize = New System.Drawing.Size(579, 269)
         Me.Controls.Add(Me.btnSeleccionar)
         Me.Controls.Add(Me.txtCedulaResultado)
@@ -128,6 +138,7 @@ Partial Class frmProveedorBuscar
         Me.Controls.Add(Me.txtNombreResultado)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.GroupBox1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmProveedorBuscar"
         Me.Text = "Buscar Proveedor"
         Me.GroupBox1.ResumeLayout(False)

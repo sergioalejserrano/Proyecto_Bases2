@@ -9,6 +9,9 @@ Public Class frmHojadeParteNuevo
     Private tamano As Integer = 1
     Private vehiculo As New BEUVehiculo
     Private blfactura As New BLFactura
+    Dim frmbuscaremp As New frmEmpleadoBuscar
+    Dim frmbuscarvin As New frmVehiculoBuscar
+
 
     Private Sub btnRegistrar_Click(sender As Object, e As EventArgs) Handles btnRegistrar.Click
         If txtIdEmpleado.Text = "" Or txtVIN.Text = "" Or IsDataGridViewEmpty(DataGridView1) Then
@@ -20,8 +23,9 @@ Public Class frmHojadeParteNuevo
             hoja.ManodeObra = Nothing
             hoja.Detalle = txtBoxDetalle.Text
             hoja.VIN = txtVIN.Text
-            hoja.Id_Empleado = txtIdEmpleado.Text
+            hoja.Id_Empleado = frmbuscaremp.empleado.ID_EMPLEADO
             Dim ventana As frmFactura = New frmFactura
+            ventana.Text = "Nueva Factura"
             vehiculo.VIN = txtVIN.Text
             vehiculo = New BLTaller.BLVehiculo().SP_SELECT_VEHICULO(vehiculo)
             Dim CLIENTE As New BEUCliente
@@ -46,8 +50,9 @@ Public Class frmHojadeParteNuevo
                     ventana.Show()
                     ventana.factura.Id_Cliente = vehiculo.Id_Cliente
                     ventana.txtCliente.Text = CLIENTE.Nombre & " " & CLIENTE.Apellido
+                    ventana.txtEmpleado.Text = frmbuscaremp.empleado.Nombre & " " & frmbuscaremp.empleado.Apellido
                     If blfactura.SP_FACTURA_NUEVO(ventana.factura) Then
-                        
+                        Me.Close()
                     End If
                 End If
             End If
@@ -68,7 +73,6 @@ Public Class frmHojadeParteNuevo
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Dim ventana As frmRepuestoBuscar = New frmRepuestoBuscar
         Dim existe As Boolean = False
-
 
         ventana.ShowDialog()
         repuesto = ventana.repuesto
@@ -142,4 +146,15 @@ Public Class frmHojadeParteNuevo
             End If
         Next
     End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        frmbuscaremp.ShowDialog()
+        txtIdEmpleado.Text = frmbuscaremp.empleado.Nombre & " " & frmbuscaremp.empleado.Apellido
+    End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        frmbuscarvin.ShowDialog()
+        txtVIN.Text = frmbuscarvin.vehiculo.VIN
+    End Sub
+
 End Class

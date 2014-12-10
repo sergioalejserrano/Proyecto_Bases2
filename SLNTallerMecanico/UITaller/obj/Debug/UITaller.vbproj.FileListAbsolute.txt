@@ -112,3 +112,10 @@ C:\Users\Sergio\Dropbox\UIA\Bases de Datos 2\Proyecto\Proyecto_Bases2\SLNTallerM
 C:\Users\Sergio\Dropbox\UIA\Bases de Datos 2\Proyecto\Proyecto_Bases2\SLNTallerMecanico\UITaller\obj\Debug\UITaller.application
 C:\Users\Sergio\Dropbox\UIA\Bases de Datos 2\Proyecto\Proyecto_Bases2\SLNTallerMecanico\UITaller\obj\Debug\UITaller.xml
 C:\Users\Sergio\Dropbox\UIA\Bases de Datos 2\Proyecto\Proyecto_Bases2\SLNTallerMecanico\UITaller\obj\Debug\UITaller.frmReporteEmpleado.resources
+C:\Users\Sergio\Dropbox\UIA\Bases de Datos 2\Proyecto\Proyecto_Bases2\SLNTallerMecanico\UITaller\obj\Debug\UITaller.frmEmpleadoBuscar.resources
+C:\Users\Sergio\Dropbox\UIA\Bases de Datos 2\Proyecto\Proyecto_Bases2\SLNTallerMecanico\UITaller\obj\Debug\UITaller.frmVehiculoBuscar.resources
+C:\Users\Sergio\Dropbox\UIA\Bases de Datos 2\Proyecto\Proyecto_Bases2\SLNTallerMecanico\UITaller\obj\Debug\UITaller.frmReporteVehiculo.resources
+C:\Users\Sergio\Dropbox\UIA\Bases de Datos 2\Proyecto\Proyecto_Bases2\SLNTallerMecanico\UITaller\obj\Debug\UITaller.frmReporteFactura.resources
+C:\Users\Sergio\Dropbox\UIA\Bases de Datos 2\Proyecto\Proyecto_Bases2\SLNTallerMecanico\UITaller\obj\Debug\UITaller.frmReporteHojaDeParte.resources
+C:\Users\Sergio\Dropbox\UIA\Bases de Datos 2\Proyecto\Proyecto_Bases2\SLNTallerMecanico\UITaller\obj\Debug\UITaller.frmReporteProveedor.resources
+C:\Users\Sergio\Dropbox\UIA\Bases de Datos 2\Proyecto\Proyecto_Bases2\SLNTallerMecanico\UITaller\obj\Debug\UITaller.frmReporteRepuesto.resources

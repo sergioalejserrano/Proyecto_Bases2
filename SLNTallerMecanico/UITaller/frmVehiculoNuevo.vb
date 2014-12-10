@@ -105,4 +105,14 @@ Public Class frmVehiculoNuevo
             btnRegistrar.Enabled = False
         End If
     End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        If txtVIN.Text = "" Or txtPlaca.Text = "" Then
+            MsgBox("Ingrese un VIN valido.")
+        Else
+            Dim res As Boolean
+            vehiculo.VIN = txtVIN.Text
+            res = New BLTaller.BLVehiculo().SP_BORRAR_VEHICULO(vehiculo)
+        End If
+    End Sub
 End Class

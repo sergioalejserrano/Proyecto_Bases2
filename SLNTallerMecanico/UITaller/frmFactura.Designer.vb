@@ -22,13 +22,13 @@ Partial Class frmFactura
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmFactura))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txtNumero = New System.Windows.Forms.TextBox()
         Me.txtFecha = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.txtCliente = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.btnCliente = New System.Windows.Forms.Button()
         Me.txtEmpleado = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
@@ -46,11 +46,11 @@ Partial Class frmFactura
         '
         Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.Font = New System.Drawing.Font("Microsoft NeoGothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Font = New System.Drawing.Font("Lucida Bright", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.SystemColors.Window
-        Me.Label1.Location = New System.Drawing.Point(32, 32)
+        Me.Label1.Location = New System.Drawing.Point(24, 38)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(81, 26)
+        Me.Label1.Size = New System.Drawing.Size(93, 23)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Número"
         '
@@ -76,11 +76,11 @@ Partial Class frmFactura
         '
         Me.Label2.AutoSize = True
         Me.Label2.BackColor = System.Drawing.Color.Transparent
-        Me.Label2.Font = New System.Drawing.Font("Microsoft NeoGothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Font = New System.Drawing.Font("Lucida Bright", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.SystemColors.Window
-        Me.Label2.Location = New System.Drawing.Point(52, 80)
+        Me.Label2.Location = New System.Drawing.Point(44, 86)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(61, 26)
+        Me.Label2.Size = New System.Drawing.Size(68, 23)
         Me.Label2.TabIndex = 2
         Me.Label2.Text = "Fecha"
         '
@@ -96,24 +96,13 @@ Partial Class frmFactura
         '
         Me.Label3.AutoSize = True
         Me.Label3.BackColor = System.Drawing.Color.Transparent
-        Me.Label3.Font = New System.Drawing.Font("Microsoft NeoGothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Font = New System.Drawing.Font("Lucida Bright", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.SystemColors.Window
-        Me.Label3.Location = New System.Drawing.Point(42, 121)
+        Me.Label3.Location = New System.Drawing.Point(34, 127)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(71, 26)
+        Me.Label3.Size = New System.Drawing.Size(79, 23)
         Me.Label3.TabIndex = 4
         Me.Label3.Text = "Cliente"
-        '
-        'btnCliente
-        '
-        Me.btnCliente.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnCliente.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCliente.Location = New System.Drawing.Point(365, 126)
-        Me.btnCliente.Name = "btnCliente"
-        Me.btnCliente.Size = New System.Drawing.Size(28, 20)
-        Me.btnCliente.TabIndex = 6
-        Me.btnCliente.Text = "..."
-        Me.btnCliente.UseVisualStyleBackColor = True
         '
         'txtEmpleado
         '
@@ -127,11 +116,11 @@ Partial Class frmFactura
         '
         Me.Label4.AutoSize = True
         Me.Label4.BackColor = System.Drawing.Color.Transparent
-        Me.Label4.Font = New System.Drawing.Font("Microsoft NeoGothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Font = New System.Drawing.Font("Lucida Bright", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.SystemColors.Window
-        Me.Label4.Location = New System.Drawing.Point(19, 158)
+        Me.Label4.Location = New System.Drawing.Point(11, 164)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(94, 26)
+        Me.Label4.Size = New System.Drawing.Size(105, 23)
         Me.Label4.TabIndex = 7
         Me.Label4.Text = "Mecánico"
         '
@@ -190,9 +179,12 @@ Partial Class frmFactura
         '
         'Button1
         '
-        Me.Button1.Font = New System.Drawing.Font("Microsoft NeoGothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Image = Global.UITaller.My.Resources.Resources.cobrar
-        Me.Button1.Location = New System.Drawing.Point(611, 357)
+        Me.Button1.BackgroundImage = CType(resources.GetObject("Button1.BackgroundImage"), System.Drawing.Image)
+        Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.Button1.Font = New System.Drawing.Font("Microsoft NeoGothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.Location = New System.Drawing.Point(611, 317)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(184, 84)
         Me.Button1.TabIndex = 11
@@ -204,7 +196,7 @@ Partial Class frmFactura
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackgroundImage = Global.UITaller.My.Resources.Resources.blue
+        Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(830, 513)
         Me.Controls.Add(Me.Button1)
@@ -212,7 +204,6 @@ Partial Class frmFactura
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.txtEmpleado)
         Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.btnCliente)
         Me.Controls.Add(Me.txtCliente)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.txtFecha)
@@ -220,7 +211,7 @@ Partial Class frmFactura
         Me.Controls.Add(Me.txtNumero)
         Me.Controls.Add(Me.Label1)
         Me.Name = "frmFactura"
-        Me.Text = "frmFacturavb"
+        Me.Text = "Factura"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -232,7 +223,6 @@ Partial Class frmFactura
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents txtCliente As System.Windows.Forms.TextBox
     Friend WithEvents Label3 As System.Windows.Forms.Label
-    Friend WithEvents btnCliente As System.Windows.Forms.Button
     Friend WithEvents txtEmpleado As System.Windows.Forms.TextBox
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView

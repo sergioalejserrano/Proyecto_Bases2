@@ -85,9 +85,6 @@ Public Class frmMDITaller
     Private Sub ClienteToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles tsmClienteM.Click
         Dim ventana2 As frmClienteActualizar = New frmClienteActualizar
         ventana2.ShowDialog()
-        Dim ventana As frmClienteBorrar = New frmClienteBorrar
-        ventana.ShowDialog()
-
     End Sub
 
     Private Sub ClienteToolStripMenuItem2_Click(sender As Object, e As EventArgs) Handles tsmClienteR.Click
@@ -131,11 +128,13 @@ Public Class frmMDITaller
     Private Sub tsmProveedorN_Click(sender As Object, e As EventArgs) Handles tsmProveedorN.Click
         Dim ventana As frmProveedorNuevo = New frmProveedorNuevo
         ventana.Text = "Nuevo Proveedor"
+        ventana.Button1.Visible = False
         ventana.ShowDialog()
     End Sub
 
     Private Sub tsmRepuestoN_Click(sender As Object, e As EventArgs) Handles tsmRepuestoN.Click
         Dim ventana As frmRepuestoNuevo = New frmRepuestoNuevo
+        ventana.Button1.Visible = False
         ventana.ShowDialog()
     End Sub
 
@@ -153,6 +152,41 @@ Public Class frmMDITaller
 
     Private Sub tsmEmpleadoR_Click(sender As Object, e As EventArgs) Handles tsmEmpleadoR.Click
         Dim ventana As frmReporteEmpleado = New frmReporteEmpleado
+        ventana.ShowDialog()
+    End Sub
+
+    Private Sub tsmVehiculoR_Click(sender As Object, e As EventArgs) Handles tsmVehiculoR.Click
+        Dim ventana As frmReporteVehiculo = New frmReporteVehiculo
+        ventana.ShowDialog()
+    End Sub
+
+    Private Sub tsmFacturaR_Click(sender As Object, e As EventArgs) Handles tsmFacturaR.Click
+        Dim ventana As frmReporteFactura = New frmReporteFactura
+        ventana.ShowDialog()
+    End Sub
+
+    Private Sub tsmRepuestosR_Click(sender As Object, e As EventArgs) Handles tsmRepuestosR.Click
+        Dim ventana As frmReporteRepuesto = New frmReporteRepuesto
+        ventana.ShowDialog()
+    End Sub
+
+    Private Sub tsmHojaDeParteR_Click(sender As Object, e As EventArgs) Handles tsmHojaDeParteR.Click
+        Dim ventana As frmReporteHojaDeParte = New frmReporteHojaDeParte
+        ventana.ShowDialog()
+    End Sub
+
+    Private Sub tsmProveedorR_Click(sender As Object, e As EventArgs) Handles tsmProveedorR.Click
+        Dim ventana As frmReporteProveedor = New frmReporteProveedor
+        ventana.ShowDialog()
+    End Sub
+
+    Private Sub tsmRepuestosM_Click(sender As Object, e As EventArgs) Handles tsmRepuestosM.Click
+
+    End Sub
+
+    Private Sub tsmFacturaM_Click(sender As Object, e As EventArgs) Handles tsmFacturaM.Click
+        Dim ventana As frmFactura = New frmFactura
+        ventana.Text = "Actualizar Factura"
         ventana.ShowDialog()
     End Sub
 End Class

@@ -22,6 +22,7 @@ Partial Class frmProveedorNuevo
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmProveedorNuevo))
         Me.txtApellido = New System.Windows.Forms.TextBox()
         Me.lblApellido = New System.Windows.Forms.Label()
         Me.txtNombre = New System.Windows.Forms.TextBox()
@@ -42,6 +43,7 @@ Partial Class frmProveedorNuevo
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'txtApellido
@@ -54,6 +56,7 @@ Partial Class frmProveedorNuevo
         'lblApellido
         '
         Me.lblApellido.AutoSize = True
+        Me.lblApellido.BackColor = System.Drawing.Color.Transparent
         Me.lblApellido.Font = New System.Drawing.Font("Lucida Bright", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblApellido.Location = New System.Drawing.Point(40, 91)
         Me.lblApellido.Name = "lblApellido"
@@ -71,6 +74,7 @@ Partial Class frmProveedorNuevo
         'lblNombre
         '
         Me.lblNombre.AutoSize = True
+        Me.lblNombre.BackColor = System.Drawing.Color.Transparent
         Me.lblNombre.Font = New System.Drawing.Font("Lucida Bright", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblNombre.Location = New System.Drawing.Point(41, 57)
         Me.lblNombre.Name = "lblNombre"
@@ -88,6 +92,7 @@ Partial Class frmProveedorNuevo
         'lblProvincia
         '
         Me.lblProvincia.AutoSize = True
+        Me.lblProvincia.BackColor = System.Drawing.Color.Transparent
         Me.lblProvincia.Font = New System.Drawing.Font("Lucida Bright", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblProvincia.Location = New System.Drawing.Point(39, 162)
         Me.lblProvincia.Name = "lblProvincia"
@@ -105,12 +110,13 @@ Partial Class frmProveedorNuevo
         'lblPais
         '
         Me.lblPais.AutoSize = True
+        Me.lblPais.BackColor = System.Drawing.Color.Transparent
         Me.lblPais.Font = New System.Drawing.Font("Lucida Bright", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblPais.Location = New System.Drawing.Point(85, 126)
         Me.lblPais.Name = "lblPais"
         Me.lblPais.Size = New System.Drawing.Size(49, 23)
         Me.lblPais.TabIndex = 25
-        Me.lblPais.Text = "Pais"
+        Me.lblPais.Text = "País"
         '
         'txtCedulaJuridica
         '
@@ -122,6 +128,7 @@ Partial Class frmProveedorNuevo
         'lblCedulaJuridica
         '
         Me.lblCedulaJuridica.AutoSize = True
+        Me.lblCedulaJuridica.BackColor = System.Drawing.Color.Transparent
         Me.lblCedulaJuridica.Font = New System.Drawing.Font("Lucida Bright", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblCedulaJuridica.Location = New System.Drawing.Point(56, 25)
         Me.lblCedulaJuridica.Name = "lblCedulaJuridica"
@@ -139,6 +146,7 @@ Partial Class frmProveedorNuevo
         'lblTelefono
         '
         Me.lblTelefono.AutoSize = True
+        Me.lblTelefono.BackColor = System.Drawing.Color.Transparent
         Me.lblTelefono.Font = New System.Drawing.Font("Lucida Bright", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblTelefono.Location = New System.Drawing.Point(42, 195)
         Me.lblTelefono.Name = "lblTelefono"
@@ -156,6 +164,7 @@ Partial Class frmProveedorNuevo
         'lblDireccion
         '
         Me.lblDireccion.AutoSize = True
+        Me.lblDireccion.BackColor = System.Drawing.Color.Transparent
         Me.lblDireccion.Font = New System.Drawing.Font("Lucida Bright", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblDireccion.Location = New System.Drawing.Point(42, 234)
         Me.lblDireccion.Name = "lblDireccion"
@@ -165,9 +174,15 @@ Partial Class frmProveedorNuevo
         '
         'btnRegistrar
         '
-        Me.btnRegistrar.Location = New System.Drawing.Point(387, 94)
+        Me.btnRegistrar.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnRegistrar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.btnRegistrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnRegistrar.Font = New System.Drawing.Font("Microsoft NeoGothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnRegistrar.Image = CType(resources.GetObject("btnRegistrar.Image"), System.Drawing.Image)
+        Me.btnRegistrar.ImageAlign = System.Drawing.ContentAlignment.TopLeft
+        Me.btnRegistrar.Location = New System.Drawing.Point(391, 65)
         Me.btnRegistrar.Name = "btnRegistrar"
-        Me.btnRegistrar.Size = New System.Drawing.Size(111, 124)
+        Me.btnRegistrar.Size = New System.Drawing.Size(107, 84)
         Me.btnRegistrar.TabIndex = 35
         Me.btnRegistrar.Text = "Registrar"
         Me.btnRegistrar.UseVisualStyleBackColor = True
@@ -175,6 +190,7 @@ Partial Class frmProveedorNuevo
         'Label7
         '
         Me.Label7.AutoSize = True
+        Me.Label7.BackColor = System.Drawing.Color.Transparent
         Me.Label7.Location = New System.Drawing.Point(388, 292)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(110, 13)
@@ -184,6 +200,7 @@ Partial Class frmProveedorNuevo
         'Label10
         '
         Me.Label10.AutoSize = True
+        Me.Label10.BackColor = System.Drawing.Color.Transparent
         Me.Label10.Location = New System.Drawing.Point(347, 65)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(11, 13)
@@ -193,6 +210,7 @@ Partial Class frmProveedorNuevo
         'Label1
         '
         Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Location = New System.Drawing.Point(347, 134)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(11, 13)
@@ -202,6 +220,7 @@ Partial Class frmProveedorNuevo
         'Label2
         '
         Me.Label2.AutoSize = True
+        Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Location = New System.Drawing.Point(347, 201)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(11, 13)
@@ -211,17 +230,35 @@ Partial Class frmProveedorNuevo
         'Label3
         '
         Me.Label3.AutoSize = True
+        Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Location = New System.Drawing.Point(347, 33)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(11, 13)
         Me.Label3.TabIndex = 43
         Me.Label3.Text = "*"
         '
+        'Button1
+        '
+        Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.Button1.Font = New System.Drawing.Font("Microsoft NeoGothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
+        Me.Button1.ImageAlign = System.Drawing.ContentAlignment.TopLeft
+        Me.Button1.Location = New System.Drawing.Point(391, 175)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(107, 82)
+        Me.Button1.TabIndex = 44
+        Me.Button1.Text = "Borrar"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'frmProveedorNuevo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(510, 314)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
@@ -242,6 +279,7 @@ Partial Class frmProveedorNuevo
         Me.Controls.Add(Me.lblApellido)
         Me.Controls.Add(Me.txtNombre)
         Me.Controls.Add(Me.lblNombre)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmProveedorNuevo"
         Me.Text = "Nuevo Proveedor"
         Me.ResumeLayout(False)
@@ -268,4 +306,5 @@ Partial Class frmProveedorNuevo
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents Button1 As System.Windows.Forms.Button
 End Class

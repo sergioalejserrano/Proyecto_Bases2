@@ -23,6 +23,7 @@ Partial Class frmHojadeParteNuevo
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmHojadeParteNuevo))
         Me.txtVIN = New System.Windows.Forms.TextBox()
         Me.lblVIN = New System.Windows.Forms.Label()
         Me.lblNumHoja = New System.Windows.Forms.Label()
@@ -53,6 +54,8 @@ Partial Class frmHojadeParteNuevo
         '
         'txtVIN
         '
+        Me.txtVIN.Cursor = System.Windows.Forms.Cursors.Default
+        Me.txtVIN.Enabled = False
         Me.txtVIN.Location = New System.Drawing.Point(284, 71)
         Me.txtVIN.Name = "txtVIN"
         Me.txtVIN.Size = New System.Drawing.Size(197, 20)
@@ -103,16 +106,20 @@ Partial Class frmHojadeParteNuevo
         '
         'dateEntrada
         '
+        Me.dateEntrada.CalendarFont = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.dateEntrada.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.dateEntrada.Format = System.Windows.Forms.DateTimePickerFormat.Custom
         Me.dateEntrada.Location = New System.Drawing.Point(524, 71)
         Me.dateEntrada.MinDate = New Date(2000, 1, 1, 0, 0, 0, 0)
         Me.dateEntrada.Name = "dateEntrada"
-        Me.dateEntrada.Size = New System.Drawing.Size(200, 20)
+        Me.dateEntrada.Size = New System.Drawing.Size(200, 22)
         Me.dateEntrada.TabIndex = 28
         Me.dateEntrada.Value = New Date(2014, 11, 26, 10, 32, 39, 0)
         '
         'txtIdEmpleado
         '
+        Me.txtIdEmpleado.Cursor = System.Windows.Forms.Cursors.Default
+        Me.txtIdEmpleado.Enabled = False
         Me.txtIdEmpleado.Location = New System.Drawing.Point(28, 71)
         Me.txtIdEmpleado.Name = "txtIdEmpleado"
         Me.txtIdEmpleado.Size = New System.Drawing.Size(197, 20)
@@ -131,6 +138,7 @@ Partial Class frmHojadeParteNuevo
         'lblRepuestos
         '
         Me.lblRepuestos.AutoSize = True
+        Me.lblRepuestos.BackColor = System.Drawing.Color.Transparent
         Me.lblRepuestos.Font = New System.Drawing.Font("Lucida Bright", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblRepuestos.Location = New System.Drawing.Point(25, 196)
         Me.lblRepuestos.Name = "lblRepuestos"
@@ -140,6 +148,7 @@ Partial Class frmHojadeParteNuevo
         '
         'GroupBox1
         '
+        Me.GroupBox1.BackColor = System.Drawing.Color.Lavender
         Me.GroupBox1.Controls.Add(Me.Button3)
         Me.GroupBox1.Controls.Add(Me.Button2)
         Me.GroupBox1.Controls.Add(Me.lblIdEmpleado)
@@ -156,27 +165,36 @@ Partial Class frmHojadeParteNuevo
         '
         'Button3
         '
+        Me.Button3.BackgroundImage = CType(resources.GetObject("Button3.BackgroundImage"), System.Drawing.Image)
+        Me.Button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.Button3.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button3.Location = New System.Drawing.Point(487, 71)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(31, 19)
         Me.Button3.TabIndex = 34
-        Me.Button3.Text = "..."
         Me.Button3.UseVisualStyleBackColor = True
         '
         'Button2
         '
+        Me.Button2.BackgroundImage = CType(resources.GetObject("Button2.BackgroundImage"), System.Drawing.Image)
+        Me.Button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.Button2.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.ImageAlign = System.Drawing.ContentAlignment.BottomRight
         Me.Button2.Location = New System.Drawing.Point(231, 71)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(31, 19)
         Me.Button2.TabIndex = 33
-        Me.Button2.Text = "..."
+        Me.Button2.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage
         Me.Button2.UseVisualStyleBackColor = True
         '
         'lblDetalle
         '
         Me.lblDetalle.AutoSize = True
+        Me.lblDetalle.BackColor = System.Drawing.Color.Transparent
         Me.lblDetalle.Font = New System.Drawing.Font("Lucida Bright", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblDetalle.Location = New System.Drawing.Point(25, 471)
         Me.lblDetalle.Name = "lblDetalle"
@@ -195,7 +213,8 @@ Partial Class frmHojadeParteNuevo
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(12, 684)
+        Me.Label5.BackColor = System.Drawing.Color.Transparent
+        Me.Label5.Location = New System.Drawing.Point(12, 686)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(110, 13)
         Me.Label5.TabIndex = 42
@@ -236,20 +255,28 @@ Partial Class frmHojadeParteNuevo
         '
         'Button1
         '
+        Me.Button1.BackgroundImage = CType(resources.GetObject("Button1.BackgroundImage"), System.Drawing.Image)
+        Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button1.Image = Global.UITaller.My.Resources.Resources._new
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.Button1.Font = New System.Drawing.Font("Microsoft NeoGothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Button1.Location = New System.Drawing.Point(588, 249)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(135, 69)
+        Me.Button1.Size = New System.Drawing.Size(181, 52)
         Me.Button1.TabIndex = 46
         Me.Button1.Text = "Agregar Articulo"
+        Me.Button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.Button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.Button1.UseVisualStyleBackColor = True
         '
         'btnRegistrar
         '
-        Me.btnRegistrar.Image = Global.UITaller.My.Resources.Resources.paybill
+        Me.btnRegistrar.BackgroundImage = CType(resources.GetObject("btnRegistrar.BackgroundImage"), System.Drawing.Image)
+        Me.btnRegistrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.btnRegistrar.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnRegistrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnRegistrar.Font = New System.Drawing.Font("Microsoft NeoGothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnRegistrar.Location = New System.Drawing.Point(313, 640)
         Me.btnRegistrar.Name = "btnRegistrar"
         Me.btnRegistrar.Size = New System.Drawing.Size(162, 54)
@@ -266,6 +293,8 @@ Partial Class frmHojadeParteNuevo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(832, 706)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.lblNumHoja)
@@ -277,6 +306,7 @@ Partial Class frmHojadeParteNuevo
         Me.Controls.Add(Me.lblRepuestos)
         Me.Controls.Add(Me.lblNumHojaResultado)
         Me.Controls.Add(Me.GroupBox1)
+        Me.Cursor = System.Windows.Forms.Cursors.Default
         Me.Name = "frmHojadeParteNuevo"
         Me.Text = "Nueva Hoja de Parte"
         Me.GroupBox1.ResumeLayout(False)

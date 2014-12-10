@@ -80,9 +80,10 @@ Public Class DAOEmpleado
             Dim resgistrosActualizados As Integer 'Se crea la variable "resgistrosActualizados"
 
             Try
+
+                resgistrosActualizados = vloComando.ExecuteNonQuery() 'Se solicita el # de filas afectadas.
+                MsgBox("Usuario agregado correctamente.", MsgBoxStyle.Information)
                 SP_NUEVO_USUARIO(pNombre, pApellido, pusuario, ppass, ptipo, pestado)
-                'resgistrosActualizados = vloComando.ExecuteNonQuery() 'Se solicita el # de filas afectadas.
-                'MsgBox("Usuario agregado correctamente.", MsgBoxStyle.Information)
             Catch ex As Exception
                 MsgBox("No se pudo agregar el usuario", MsgBoxStyle.Critical)
                 Throw New Exception("Usuario no se agrego")
@@ -224,7 +225,7 @@ Public Class DAOEmpleado
         vloComando = New OracleCommand("SP_SELECT_EMPLEADO", vloConnection)
         vloComando.CommandType = CommandType.StoredProcedure
 
-        Dim parametro As New OracleParameter("P_ID_EMPLEADO", OracleDbType.Int32)
+        Dim parametro As New OracleParameter("P_ID_EMPLEADO", OracleDbType.Varchar2)
         parametro.Value = empleado.ID_EMPLEADO
         parametro.Direction = ParameterDirection.Input
         parametro.Size = 200

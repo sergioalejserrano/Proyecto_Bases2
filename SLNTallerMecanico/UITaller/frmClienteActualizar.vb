@@ -32,4 +32,27 @@ Public Class frmClienteActualizar
         txtTelefono.Text = cliente.Telefono
         txtEmail.Text = cliente.email
     End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        If txtNombre.Text = "" Or txtId_Cliente.Text = "" Or txtApellido.Text = "" Or txtTelefono.Text = "" Then
+            MessageBox.Show("Ingrese un id valido para continuar.")
+        Else
+            cliente.Id_Cliente = txtId_Cliente.Text
+            resultado = New BLTaller.BLCliente().SP_BORRAR_CLIENTE(cliente)
+        End If
+    End Sub
+
+    Private Sub txtId_Cliente_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtId_Cliente.KeyPress
+
+        '97 - 122 = Ascii codes for simple letters
+        '65 - 90  = Ascii codes for capital letters
+        '48 - 57  = Ascii codes for numbers
+
+        If Asc(e.KeyChar) <> 8 Then
+            If Asc(e.KeyChar) < 48 Or Asc(e.KeyChar) > 57 Then
+                e.Handled = True
+            End If
+        End If
+
+    End Sub
 End Class
