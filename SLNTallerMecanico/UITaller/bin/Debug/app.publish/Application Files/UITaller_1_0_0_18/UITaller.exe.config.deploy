@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+    <configSections>
+    </configSections>
+    <startup>
+        <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.5" />
+    </startup>
+  <connectionStrings>
+    <add name="OracleConnectionString" connectionString="Data Source=192.168.1.2;Persist Security Info=True;User ID=taller;Password=12345" />
+    <add name="UITaller.My.MySettings.OracleConnection" connectionString="Data Source=XE;Persist Security Info=True;User ID=taller;Password=12345;Unicode=True"
+      providerName="System.Data.OracleClient" />
+    <add name="UITaller.My.MySettings.ConnectionString" connectionString="Data Source=192.168.1.2;User ID=taller;Password=12345;Unicode=True"
+      providerName="System.Data.OracleClient" />
+  </connectionStrings>
+ </configuration>
