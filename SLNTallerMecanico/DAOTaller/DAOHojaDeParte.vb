@@ -4,19 +4,22 @@ Imports Oracle.DataAccess.Client
 
 Public Class DAOHojaDeParte
     Private resultado As Boolean
-    Private vloConnection As OracleConnection
+    '  Private vloConnection As OracleConnection
     Private vloComando As OracleCommand
     Private hoja As New BEUHojaDeParte
+    Private usuario As String = DAOEmpleado.usuario
+    Private pass As String = DAOEmpleado.pass
+    Private conectar As New DAOConexion
 
 #Region "Numero de Hoja"
     Public Function SP_NUM_HOJA() As BEUHojaDeParte
-        vloConnection = New OracleConnection(ConfigurationManager.ConnectionStrings("OracleConnectionString").ConnectionString) ' Se crea la conexion a la bd
+        '  vloConnection = New OracleConnection(ConfigurationManager.ConnectionStrings("OracleConnectionString").ConnectionString) ' Se crea la conexion a la bd
         Try
-            vloConnection.Open()
+            conectar.GetConexion(usuario, pass)
         Catch ex As Exception
             Throw New Exception("No se pudo conectar al servidor de bd...")
         End Try
-        vloComando = New OracleCommand("SP_NUM_HOJA", vloConnection)
+        vloComando = New OracleCommand("SP_NUM_HOJA", conectar.vloconnection)
         vloComando.CommandType = CommandType.StoredProcedure
 
         Dim parametro As New OracleParameter("P_NUM_HOJA", OracleDbType.Int32)
@@ -34,9 +37,9 @@ Public Class DAOHojaDeParte
 
 #Region "Crear Hoja"
     Function SP_HOJADEPARTE_NUEVO(ByVal hoja As BEUHojaDeParte) As Boolean
-        vloConnection = New OracleConnection(ConfigurationManager.ConnectionStrings("OracleConnectionString").ConnectionString) ' Se crea la conexion a la bd
+        ' vloConnection = New OracleConnection(ConfigurationManager.ConnectionStrings("OracleConnectionString").ConnectionString) ' Se crea la conexion a la bd
         Try
-            vloConnection.Open() 'Se abre la conexión
+            conectar.GetConexion(usuario, pass) 'Se abre la conexión
         Catch ex As Exception
             MsgBox("No se pudo conectar al servidor de bd...", MsgBoxStyle.Critical)
             Throw New Exception("No se pudo conectar al servidor de bd...")
@@ -44,7 +47,7 @@ Public Class DAOHojaDeParte
         Try
             Dim sql As String = "SP_HOJADEPARTE_NUEVO" 'Nombre del procedimiento almacenado para agregar un nuevo cliente
 
-            Dim cmd As New OracleCommand(sql, vloConnection) 'Se crea la variable "cmd" que va contener el nombre del proceso almacenado y los datos
+            Dim cmd As New OracleCommand(sql, conectar.vloconnection) 'Se crea la variable "cmd" que va contener el nombre del proceso almacenado y los datos
             ' de la conexión a oracle
             cmd.CommandType = CommandType.StoredProcedure ' Se le indica que se le va pasar un proceso almacenado
             Dim parametro As New OracleParameter("ID_HOJA", OracleDbType.Int32) ' Se declara la variable "parametro" que contiene el nombre y el tipo
@@ -96,8 +99,7 @@ Public Class DAOHojaDeParte
         Catch ex As Exception
             resultado = False
         End Try
-        vloConnection.Close()
-
+        conectar.CloseConexion()
         Return resultado
     End Function
 #End Region

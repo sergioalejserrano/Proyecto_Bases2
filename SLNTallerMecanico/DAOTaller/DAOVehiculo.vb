@@ -5,13 +5,14 @@ Imports Oracle.DataAccess.Client
 Public Class DAOVehiculo
     Private vehiculo As New BEUVehiculo
     Private resultado As Boolean = False
-    Private vloConnection As OracleConnection
+    Private usuario As String = DAOEmpleado.usuario
+    Private pass As String = DAOEmpleado.pass
+    Private conectar As New DAOConexion
     Private vloComando As OracleCommand
 #Region "Agregar Vehiculo"
     Function SP_VEHICULO_NUEVO(ByVal vehiculo As BEUVehiculo) As Boolean
-        vloConnection = New OracleConnection(ConfigurationManager.ConnectionStrings("OracleConnectionString").ConnectionString) ' Se crea la conexion a la bd
         Try
-            vloConnection.Open() 'Se abre la conexión
+            conectar.GetConexion(usuario, pass)
         Catch ex As Exception
             MsgBox("No se pudo conectar al servidor de bd...", MsgBoxStyle.Critical)
             Throw New Exception("No se pudo conectar al servidor de bd...")
@@ -19,7 +20,7 @@ Public Class DAOVehiculo
         Try
             Dim sql As String = "SP_VEHICULO_NUEVO" 'Nombre del procedimiento almacenado para agregar un nuevo cliente
 
-            Dim cmd As New OracleCommand(sql, vloConnection) 'Se crea la variable "cmd" que va contener el nombre del proceso almacenado y los datos
+            Dim cmd As New OracleCommand(sql, conectar.vloconnection) 'Se crea la variable "cmd" que va contener el nombre del proceso almacenado y los datos
             ' de la conexión a oracle
             cmd.CommandType = CommandType.StoredProcedure ' Se le indica que se le va pasar un proceso almacenado
             Dim parametro As New OracleParameter("P_VIN", OracleDbType.Char) ' Se declara la variable "parametro" que contiene el nombre y el tipo
@@ -69,16 +70,15 @@ Public Class DAOVehiculo
         Catch ex As Exception
             resultado = False
         End Try
-        vloConnection.Close()
+        conectar.CloseConexion()
         Return resultado
     End Function
 #End Region
 
 #Region "Actualizar Vehiculo"
     Function SP_ACTUALIZAR_VEHICULO(ByVal vehiculo As BEUVehiculo) As Boolean
-        vloConnection = New OracleConnection(ConfigurationManager.ConnectionStrings("OracleConnectionString").ConnectionString) ' Se crea la conexion a la bd
         Try
-            vloConnection.Open() 'Se abre la conexión
+            conectar.GetConexion(usuario, pass)
         Catch ex As Exception
             MsgBox("No se pudo conectar al servidor de bd...", MsgBoxStyle.Critical)
             Throw New Exception("No se pudo conectar al servidor de bd...")
@@ -86,7 +86,7 @@ Public Class DAOVehiculo
         Try
             Dim sql As String = "SP_ACTUALIZAR_VEHICULO" 'Nombre del procedimiento almacenado para agregar un nuevo cliente
 
-            Dim cmd As New OracleCommand(sql, vloConnection) 'Se crea la variable "cmd" que va contener el nombre del proceso almacenado y los datos
+            Dim cmd As New OracleCommand(sql, conectar.vloconnection) 'Se crea la variable "cmd" que va contener el nombre del proceso almacenado y los datos
             ' de la conexión a oracle
             cmd.CommandType = CommandType.StoredProcedure ' Se le indica que se le va pasar un proceso almacenado
             Dim parametro As New OracleParameter("AVIN", OracleDbType.Char) ' Se declara la variable "parametro" que contiene el nombre y el tipo
@@ -136,20 +136,19 @@ Public Class DAOVehiculo
         Catch ex As Exception
             resultado = False
         End Try
-        vloConnection.Close()
+        conectar.CloseConexion()
         Return resultado
     End Function
 #End Region
 
 #Region "Select Vehiculo"
     Function SP_SELECT_VEHICULO(ByVal vehiculo As BEUVehiculo) As BEUVehiculo
-        vloConnection = New OracleConnection(ConfigurationManager.ConnectionStrings("OracleConnectionString").ConnectionString) ' Se crea la conexion a la bd
         Try
-            vloConnection.Open()
+            conectar.GetConexion(usuario, pass)
         Catch ex As Exception
             Throw New Exception("No se pudo conectar al servidor de bd...")
         End Try
-        vloComando = New OracleCommand("SP_SELECT_VEHICULO", vloConnection)
+        vloComando = New OracleCommand("SP_SELECT_VEHICULO", conectar.vloconnection)
         vloComando.CommandType = CommandType.StoredProcedure
 
         Dim parametro As New OracleParameter("AVIN", OracleDbType.Char)
@@ -213,13 +212,12 @@ Public Class DAOVehiculo
 
 #Region "Buscar Vehiculo"
     Function SP_BUSCAR_VEHICULO(ByVal vehiculo As BEUVehiculo) As BEUVehiculo
-        vloConnection = New OracleConnection(ConfigurationManager.ConnectionStrings("OracleConnectionString").ConnectionString) ' Se crea la conexion a la bd
         Try
-            vloConnection.Open()
+            conectar.GetConexion(usuario, pass)
         Catch ex As Exception
             Throw New Exception("No se pudo conectar al servidor de bd...")
         End Try
-        vloComando = New OracleCommand("SP_BUSCAR_VEHICULO", vloConnection)
+        vloComando = New OracleCommand("SP_BUSCAR_VEHICULO", conectar.vloconnection)
         vloComando.CommandType = CommandType.StoredProcedure
 
         Dim parametro As New OracleParameter("AVIN", OracleDbType.Char)
@@ -283,9 +281,8 @@ Public Class DAOVehiculo
 
 #Region "Borrar Vehiculo"
     Function SP_BORRAR_VEHICULO(ByVal vehiculo As BEUVehiculo) As Boolean
-        vloConnection = New OracleConnection(ConfigurationManager.ConnectionStrings("OracleConnectionString").ConnectionString) ' Se crea la conexion a la bd
         Try
-            vloConnection.Open() 'Se abre la conexión
+            conectar.GetConexion(usuario, pass)
         Catch ex As Exception
             MsgBox("No se pudo conectar al servidor de bd...", MsgBoxStyle.Critical)
             Throw New Exception("No se pudo conectar al servidor de bd...")
@@ -293,7 +290,7 @@ Public Class DAOVehiculo
         Try
             Dim sql As String = "SP_BORRAR_VEHICULO" 'Nombre del procedimiento almacenado para agregar un nuevo cliente
 
-            Dim cmd As New OracleCommand(sql, vloConnection) 'Se crea la variable "cmd" que va contener el nombre del proceso almacenado y los datos
+            Dim cmd As New OracleCommand(sql, conectar.vloconnection) 'Se crea la variable "cmd" que va contener el nombre del proceso almacenado y los datos
             ' de la conexión a oracle
             cmd.CommandType = CommandType.StoredProcedure ' Se le indica que se le va pasar un proceso almacenado
             Dim parametro As New OracleParameter("AVIN", OracleDbType.Char) ' Se declara la variable "parametro" que contiene el nombre y el tipo
@@ -319,8 +316,7 @@ Public Class DAOVehiculo
         Catch ex As Exception
             resultado = False
         End Try
-        vloConnection.Close()
-
+        conectar.CloseConexion()
         Return resultado
     End Function
 #End Region

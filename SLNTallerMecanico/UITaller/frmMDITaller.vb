@@ -107,6 +107,7 @@ Public Class frmMDITaller
     Private Sub tsmVehiculoN_Click(sender As Object, e As EventArgs) Handles tsmVehiculoN.Click
         Dim ventana As frmVehiculoNuevo = New frmVehiculoNuevo
         ventana.Text = "Nuevo Vehiculo"
+        ventana.Button1.Visible = False
         ventana.ShowDialog()
     End Sub
 

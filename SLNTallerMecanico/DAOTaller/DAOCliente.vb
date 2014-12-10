@@ -5,22 +5,24 @@ Imports Oracle.DataAccess.Client
 
 Public Class DAOCliente
     Public resultado As Boolean = False
-    Private vloConnection As OracleConnection
+    ' Private vloConnection As OracleConnection
     Private vloComando As OracleCommand
-    Private GetConnection As DAOConexion
+    Private GetConnection As New DAOConexion
+    Private usuario As String = DAOEmpleado.usuario
+    Private pass As String = DAOEmpleado.pass
 
 #Region "Agregar Cliente"
     Function SP_CLIENTE_NUEVO(ByVal cliente As BEUCliente) As Boolean
         Try
-            GetConexion(DAOEmpleado.usuario, DAOEmpleado.pass)
+            GetConnection.GetConexion(usuario, pass)
         Catch ex As Exception
             MsgBox("No se pudo conectar al servidor de bd...", MsgBoxStyle.Critical)
             Throw New Exception("No se pudo conectar al servidor de bd...")
         End Try
         Try
-            Dim sql As String = "SP_CLIENTE_NUEVO" 'Nombre del procedimiento almacenado para agregar un nuevo cliente
+            Dim sql As String = "TALLER.SP_CLIENTE_NUEVO" 'Nombre del procedimiento almacenado para agregar un nuevo cliente
  
-            Dim cmd As New OracleCommand(sql, vloConnection) 'Se crea la variable "cmd" que va contener el nombre del proceso almacenado y los datos
+            Dim cmd As New OracleCommand(sql, GetConnection.vloconnection) 'Se crea la variable "cmd" que va contener el nombre del proceso almacenado y los datos
             ' de la conexión a oracle
             cmd.CommandType = CommandType.StoredProcedure ' Se le indica que se le va pasar un proceso almacenado
             Dim parametro As New OracleParameter("ID_CLIENTE", OracleDbType.Int32) ' Se declara la variable "parametro" que contiene el nombre y el tipo
@@ -66,25 +68,24 @@ Public Class DAOCliente
         Catch ex As Exception
             resultado = False
         End Try
-        CloseConexion()
+        GetConnection.CloseConexion()
         Return resultado
     End Function
 #End Region
 
 #Region "Borrar Cliente"
     Function SP_BORRAR_CLIENTE(ByVal cliente As BEUCliente) As Boolean
-        vloConnection = New OracleConnection(ConfigurationManager.ConnectionStrings("OracleConnectionString").ConnectionString) ' Se crea la conexion a la bd
         Try
-            vloConnection.Open() 'Se abre la conexión
+            GetConnection.GetConexion(usuario, pass)
 
         Catch ex As Exception
             MsgBox("No se pudo conectar al servidor de bd...", MsgBoxStyle.Critical)
             Throw New Exception("No se pudo conectar al servidor de bd...")
         End Try
         Try
-            Dim sql As String = "SP_BORRAR_CLIENTE" 'Nombre del procedimiento almacenado para agregar un nuevo cliente
+            Dim sql As String = "TALLER.SP_BORRAR_CLIENTE" 'Nombre del procedimiento almacenado para agregar un nuevo cliente
 
-            Dim cmd As New OracleCommand(sql, vloConnection) 'Se crea la variable "cmd" que va contener el nombre del proceso almacenado y los datos
+            Dim cmd As New OracleCommand(sql, GetConnection.vloconnection) 'Se crea la variable "cmd" que va contener el nombre del proceso almacenado y los datos
             ' de la conexión a oracle
             cmd.CommandType = CommandType.StoredProcedure ' Se le indica que se le va pasar un proceso almacenado
             Dim parametro As New OracleParameter("ID_CLIENTEB", OracleDbType.Int32) ' Se declara la variable "parametro" que contiene el nombre y el tipo
@@ -110,25 +111,24 @@ Public Class DAOCliente
         Catch ex As Exception
             resultado = False
         End Try
-        vloConnection.Close()
+        GetConnection.CloseConexion()
         Return resultado
     End Function
 #End Region
 
 #Region "Actualizar Cliente"
     Function SP_ACTUALIZAR_CLIENTE(ByVal cliente As BEUCliente) As Boolean
-        vloConnection = New OracleConnection(ConfigurationManager.ConnectionStrings("OracleConnectionString").ConnectionString) ' Se crea la conexion a la bd
         Try
-            vloConnection.Open() 'Se abre la conexión
+            GetConnection.GetConexion(usuario, pass) 'Se abre la conexión
 
         Catch ex As Exception
             MsgBox("No se pudo conectar al servidor de bd...", MsgBoxStyle.Critical)
             Throw New Exception("No se pudo conectar al servidor de bd...")
         End Try
         Try
-            Dim sql As String = "SP_ACTUALIZAR_CLIENTE" 'Nombre del procedimiento almacenado para agregar un nuevo cliente
+            Dim sql As String = "TALLER.SP_ACTUALIZAR_CLIENTE" 'Nombre del procedimiento almacenado para agregar un nuevo cliente
 
-            Dim cmd As New OracleCommand(sql, vloConnection) 'Se crea la variable "cmd" que va contener el nombre del proceso almacenado y los datos
+            Dim cmd As New OracleCommand(sql, GetConnection.vloconnection) 'Se crea la variable "cmd" que va contener el nombre del proceso almacenado y los datos
             ' de la conexión a oracle
             cmd.CommandType = CommandType.StoredProcedure ' Se le indica que se le va pasar un proceso almacenado
             Dim parametro As New OracleParameter("AID_CLIENTE", OracleDbType.Int32) ' Se declara la variable "parametro" que contiene el nombre y el tipo
@@ -174,21 +174,21 @@ Public Class DAOCliente
         Catch ex As Exception
             resultado = False
         End Try
-        vloConnection.Close()
+        GetConnection.CloseConexion()
         Return resultado
     End Function
 #End Region
 
 #Region "Seleccionar Cliente"
     Function SP_Select_Cliente(ByVal cliente As BEUCliente) As BEUCliente
-        vloConnection = New OracleConnection(ConfigurationManager.ConnectionStrings("OracleConnectionString").ConnectionString) ' Se crea la conexion a la bd
+        'vloConnection = New OracleConnection(ConfigurationManager.ConnectionStrings("OracleConnectionString").ConnectionString) ' Se crea la conexion a la bd
         Try
-            vloConnection.Open()
+            GetConnection.GetConexion(usuario, pass)
         Catch ex As Exception
             Throw New Exception("No se pudo conectar al servidor de bd...")
         End Try
 
-        vloComando = New OracleCommand("SP_SELECT_CLIENTE", vloConnection)
+        vloComando = New OracleCommand("TALLER.SP_SELECT_CLIENTE", GetConnection.vloconnection)
         vloComando.CommandType = CommandType.StoredProcedure
 
         Dim parametro As New OracleParameter("P_ID_CLIENTE", OracleDbType.Int32)
@@ -235,34 +235,9 @@ Public Class DAOCliente
         cliente.Direccion = vloComando.Parameters("P_DIRECCION").Value.ToString
         cliente.Telefono = vloComando.Parameters("P_TELEFONO").Value.ToString
         cliente.email = vloComando.Parameters("P_EMAIL").Value.ToString
-        vloConnection.Close()
+        GetConnection.CloseConexion()
         Return cliente
     End Function
-#End Region
-
-#Region "Conexión"
-    Public Sub GetConexion(ByVal usuario, ByVal pass)
-        Dim vSTRConn As String = ""
-
-        vSTRConn &= "Data Source=192.168.1.2;"
-
-        vSTRConn &= "User ID= " + usuario + " ;"
-        vSTRConn &= "Password= " + pass + " ;"
-        vSTRConn &= " Unicode = True;"
-        Try
-            vloConnection = New OracleConnection(vSTRConn)
-            vloConnection.Open()
-        Catch Exc As Exception
-            Throw New Exception(Exc.Message, Exc)
-        End Try
-    End Sub
-
-    Public Sub CloseConexion()
-        If Not (vloconnection Is Nothing) Then
-            vloconnection.Close()
-        End If
-    End Sub
-
 #End Region
    
 End Class

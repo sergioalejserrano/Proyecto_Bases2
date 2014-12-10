@@ -105,7 +105,7 @@ Partial Class frmNuevoUsuario
         'cmbTipo
         '
         Me.cmbTipo.FormattingEnabled = True
-        Me.cmbTipo.Items.AddRange(New Object() {"Administrativo", "Mecanico", "Contador ", "Secretario"})
+        Me.cmbTipo.Items.AddRange(New Object() {"Administrativo", "Mecanico", "Contador", "Secretario"})
         Me.cmbTipo.Location = New System.Drawing.Point(197, 192)
         Me.cmbTipo.Name = "cmbTipo"
         Me.cmbTipo.Size = New System.Drawing.Size(134, 21)

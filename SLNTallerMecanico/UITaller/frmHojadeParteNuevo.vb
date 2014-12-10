@@ -35,25 +35,29 @@ Public Class frmHojadeParteNuevo
                 MsgBox("EL VIN no corresponde a ninguno de los vehiculos en el sistema.")
                 Exit Sub
             Else
+                ventana.Show()
                 If blhoja.SP_HOJADEPARTE_NUEVO(hoja) Then
-                        For Each det In detalles
-                            If Not det Is Nothing Then
-                                det.Id_Factura = ventana.factura.Id_Factura
-                                agregarDetalle(det)
-                                Dim rep As New BEUStock
-                                rep.Id_Repuesto = det.Id_Repuesto
-                                rep = New BLTaller.BLStock().SP_SELECT_STOCK(rep)
-                                Dim row As String() = New String() {rep.Nombre, det.Cantidad, det.Precio, 0, (det.Cantidad * det.Precio)}
-                                ventana.DataGridView1.Rows.Add(row)
-                            End If
-                        Next
-                    ventana.Show()
                     ventana.factura.Id_Cliente = vehiculo.Id_Cliente
                     ventana.txtCliente.Text = CLIENTE.Nombre & " " & CLIENTE.Apellido
                     ventana.txtEmpleado.Text = frmbuscaremp.empleado.Nombre & " " & frmbuscaremp.empleado.Apellido
                     If blfactura.SP_FACTURA_NUEVO(ventana.factura) Then
                         Me.Close()
                     End If
+                    Dim total As Integer
+                    For Each det In detalles
+                        If Not det Is Nothing Then
+                            det.Id_Factura = ventana.factura.Id_Factura
+                            agregarDetalle(det)
+                            Dim rep As New BEUStock
+                            rep.Id_Repuesto = det.Id_Repuesto
+                            rep = New BLTaller.BLStock().SP_SELECT_STOCK(rep)
+                            Dim neto As Integer = (det.Cantidad * det.Precio)
+                            total += neto
+                            Dim row As String() = New String() {rep.Nombre, det.Cantidad, det.Precio, 0, neto}
+                            ventana.DataGridView1.Rows.Add(row)
+                        End If
+                    Next
+                    ventana.txtTotal.Text = total
                 End If
             End If
         End If

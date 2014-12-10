@@ -19,7 +19,7 @@ Public Class frmLoginTaller
 
             LISTEMP = New BLTaller.BLEmpleado().SP_INICIO_SESION(cliente, cliente.USERNAME, cliente.Contrasena)
 
-            If LISTEMP = "Administrador" Then
+            If LISTEMP = "Administrativo" Then
                 userlogon = txtUsuario.Text
                 frmMDITaller.tsmConectarse.Enabled = False
                 frmMDITaller.tsmNuevo.Enabled = True
@@ -37,7 +37,7 @@ Public Class frmLoginTaller
                 frmMDITaller.tsmDesconectarse.Visible = True
                 frmMDITaller.tsmConectarse.Visible = False
                 Me.Close()
-            ElseIf LISTEMP = "Coordinador" Then
+            ElseIf LISTEMP = "Secretario" Then
                 userlogon = txtUsuario.Text
                 frmMDITaller.tsmConectarse.Enabled = False
                 frmMDITaller.tsmNuevo.Enabled = True
@@ -46,7 +46,7 @@ Public Class frmLoginTaller
                 frmMDITaller.tsmDesconectarse.Visible = True
                 frmMDITaller.tsmConectarse.Visible = False
                 Me.Close()
-            ElseIf LISTEMP = "Normal" Then
+            ElseIf LISTEMP = "Contador" Then
                 userlogon = txtUsuario.Text
                 frmMDITaller.tsmConectarse.Enabled = False
                 'frmMDITaller.tsmNuevo.Enabled = True

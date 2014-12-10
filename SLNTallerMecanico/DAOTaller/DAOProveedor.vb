@@ -4,18 +4,21 @@ Imports Oracle.DataAccess.Client
 
 Public Class DAOProveedor
     Public resultado As Boolean = False
-    Private vloConnection As OracleConnection
+    ' Private vloConnection As OracleConnection
     Private vloComando As OracleCommand
+    Private usuario As String = DAOEmpleado.usuario
+    Private pass As String = DAOEmpleado.pass
+    Private conectar As New DAOConexion
 
 #Region "Select Proveedor"
     Public Function SP_SELECT_PROVEEDOR(ByVal proveedor As BEUProveedor) As BEUProveedor
-        vloConnection = New OracleConnection(ConfigurationManager.ConnectionStrings("OracleConnectionString").ConnectionString) ' Se crea la conexion a la bd
+        'vloConnection = New OracleConnection(ConfigurationManager.ConnectionStrings("OracleConnectionString").ConnectionString) ' Se crea la conexion a la bd
         Try
-            vloConnection.Open()
+            conectar.GetConexion(usuario, pass)
         Catch ex As Exception
             Throw New Exception("No se pudo conectar al servidor de bd...")
         End Try
-        vloComando = New OracleCommand("SP_SELECT_PROVEEDOR", vloConnection)
+        vloComando = New OracleCommand("SP_SELECT_PROVEEDOR", conectar.vloconnection)
         vloComando.CommandType = CommandType.StoredProcedure
 
         Dim parametro As New OracleParameter("P_ID_PROVEEDOR", OracleDbType.Int32)
@@ -79,9 +82,8 @@ Public Class DAOProveedor
 
 #Region "Agregar Proveedor"
     Function SP_PROVEEDOR_NUEVO(ByVal proveedor As BEUProveedor) As Boolean
-        vloConnection = New OracleConnection(ConfigurationManager.ConnectionStrings("OracleConnectionString").ConnectionString) ' Se crea la conexion a la bd
         Try
-            vloConnection.Open() 'Se abre la conexión
+            conectar.GetConexion(usuario, pass) 'Se abre la conexión
         Catch ex As Exception
             MsgBox("No se pudo conectar al servidor de bd...", MsgBoxStyle.Critical)
             Throw New Exception("No se pudo conectar al servidor de bd...")
@@ -89,7 +91,7 @@ Public Class DAOProveedor
         Try
             Dim sql As String = "SP_PROVEEDOR_NUEVO" 'Nombre del procedimiento almacenado para agregar un nuevo cliente
 
-            Dim cmd As New OracleCommand(sql, vloConnection) 'Se crea la variable "cmd" que va contener el nombre del proceso almacenado y los datos
+            Dim cmd As New OracleCommand(sql, conectar.vloconnection) 'Se crea la variable "cmd" que va contener el nombre del proceso almacenado y los datos
             ' de la conexión a oracle
             cmd.CommandType = CommandType.StoredProcedure ' Se le indica que se le va pasar un proceso almacenado
             Dim parametro As New OracleParameter("ID_PROVEEDOR", OracleDbType.Int32) ' Se declara la variable "parametro" que contiene el nombre y el tipo
@@ -139,17 +141,15 @@ Public Class DAOProveedor
         Catch ex As Exception
             resultado = False
         End Try
-        vloConnection.Close()
-
+        conectar.CloseConexion()
         Return resultado
     End Function
 #End Region
 
 #Region "Actualizar Proveedor"
     Function SP_ACTUALIZAR_PROVEEDOR(ByVal proveedor As BEUProveedor) As Boolean
-        vloConnection = New OracleConnection(ConfigurationManager.ConnectionStrings("OracleConnectionString").ConnectionString) ' Se crea la conexion a la bd
         Try
-            vloConnection.Open() 'Se abre la conexión
+            conectar.GetConexion(usuario, pass)
         Catch ex As Exception
             MsgBox("No se pudo conectar al servidor de bd...", MsgBoxStyle.Critical)
             Throw New Exception("No se pudo conectar al servidor de bd...")
@@ -157,7 +157,7 @@ Public Class DAOProveedor
         Try
             Dim sql As String = "SP_ACTUALIZAR_PROVEEDOR" 'Nombre del procedimiento almacenado para agregar un nuevo cliente
 
-            Dim cmd As New OracleCommand(sql, vloConnection) 'Se crea la variable "cmd" que va contener el nombre del proceso almacenado y los datos
+            Dim cmd As New OracleCommand(sql, conectar.vloconnection) 'Se crea la variable "cmd" que va contener el nombre del proceso almacenado y los datos
             ' de la conexión a oracle
             cmd.CommandType = CommandType.StoredProcedure ' Se le indica que se le va pasar un proceso almacenado
             Dim parametro As New OracleParameter("AID_PROVEEDOR", OracleDbType.Int32) ' Se declara la variable "parametro" que contiene el nombre y el tipo
@@ -207,16 +207,15 @@ Public Class DAOProveedor
         Catch ex As Exception
             resultado = False
         End Try
-        vloConnection.Close()
+        conectar.CloseConexion()
         Return resultado
     End Function
 #End Region
 
 #Region "Borrar Proveedor"
     Function SP_BORRAR_PROVEEDOR(ByVal proveedor As BEUProveedor) As Boolean
-        vloConnection = New OracleConnection(ConfigurationManager.ConnectionStrings("OracleConnectionString").ConnectionString) ' Se crea la conexion a la bd
         Try
-            vloConnection.Open() 'Se abre la conexión
+            conectar.GetConexion(usuario, pass)
         Catch ex As Exception
             MsgBox("No se pudo conectar al servidor de bd...", MsgBoxStyle.Critical)
             Throw New Exception("No se pudo conectar al servidor de bd...")
@@ -224,7 +223,7 @@ Public Class DAOProveedor
         Try
             Dim sql As String = "SP_PROVEEDOR_NUEVO" 'Nombre del procedimiento almacenado para agregar un nuevo cliente
 
-            Dim cmd As New OracleCommand(sql, vloConnection) 'Se crea la variable "cmd" que va contener el nombre del proceso almacenado y los datos
+            Dim cmd As New OracleCommand(sql, conectar.vloconnection) 'Se crea la variable "cmd" que va contener el nombre del proceso almacenado y los datos
             ' de la conexión a oracle
             cmd.CommandType = CommandType.StoredProcedure ' Se le indica que se le va pasar un proceso almacenado
             Dim parametro As New OracleParameter("ID_PROVEEDOR", OracleDbType.Int32) ' Se declara la variable "parametro" que contiene el nombre y el tipo
@@ -249,9 +248,9 @@ Public Class DAOProveedor
         Catch ex As Exception
             resultado = False
         End Try
-        vloConnection.Close()
-
+        conectar.CloseConexion()
             Return resultado
     End Function
 #End Region
+
 End Class
